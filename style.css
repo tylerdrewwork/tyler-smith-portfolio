@@ -1,0 +1,16 @@
+header {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.container-fluid {
+    background-color: lightsteelblue;
+}
+
+#header-fullname {
+    background-color: linen;
+}
+
+#nav-links {
+    background-color: lightyellow;
+}
