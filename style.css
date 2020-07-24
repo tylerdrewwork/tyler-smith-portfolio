@@ -1,16 +1,47 @@
+* {
+    /* border: 1px; */
+    /* border-style: dotted; */
+}
+
 header {
     text-align: center;
     font-size: xx-large;
 }
 
-.container-fluid {
-    background-color: lightsteelblue;
+body {
+    background-color: #E4E6ED;
+}
+
+.navbar {
+    background-color: #0A0624;
+}
+
+#navbar__logo {
+    color: #E4E6ED;
+    padding-left: 30px;
+}
+
+
+.nav-item {
+}
+
+.nav-link {
+    margin-left: 30px;
+    margin-right: 20px;
+    color: #E4E6ED;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0px;
+}
+
+.jumbotron {
+    font-size: 100px;
 }
 
 #header-fullname {
     background-color: linen;
+    /* margin-left: 100px; */
 }
 
-#nav-links {
+#nav-link {
     background-color: lightyellow;
 }
