@@ -37,6 +37,11 @@ body {
     font-size: 100px;
 }
 
+.jumbotron-main {
+    text-align: center;
+    height: 500px;
+}
+
 #header-fullname {
     background-color: linen;
     /* margin-left: 100px; */
