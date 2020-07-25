@@ -31,8 +31,8 @@ body {
 }
 
 #navbar-gradient-hack {
-    background: linear-gradient(180deg, rgba(10,6,36,1) 0%, rgba(102,110,135,1) 13%, rgba(228,230,237,1) 100%);
-    height: 10px
+    background: linear-gradient(180deg, rgba(10,6,36,1) 0%, rgba(10,6,36,0.5) 68%, rgba(10,6,36,0) 100%);
+    height: 40px
 }
 
 .jumbotron {
@@ -49,4 +49,20 @@ body {
 
 #nav-link {
     background-color: lightyellow;
+}
+
+#bio-description {
+    font-size: 300%;
+}
+
+#bio-picture-img {
+    z-index: -1;
+    max-height: 100%;
+    max-width: 90%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
 }
