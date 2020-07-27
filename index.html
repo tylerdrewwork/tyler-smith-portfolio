@@ -1,72 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- Styles -->
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-    
-    <title>Tyler Smith :: About</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<!-- Styles -->
+	<link rel="stylesheet" href="./reset.css">
+	<link rel="stylesheet" href="./style.css">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+	<title>Tyler Smith :: About</title>
 </head>
+
 <body>
-    <!-- Navbar! -->
-    <nav class="navbar py-3 pl-4 justify-content-between">
-        <div class="fa-layers">
-            <a id="navbar__logo" href="./index.html">
-                <i class="far fa-circle" data-fa-transform="grow-16"></i>
-                <div class="fa-layers-text">TS</div>
-            </a>
-        </div>
+	<!-- Navbar! -->
+	<nav class="navbar navbar-expand-lg py-3 pl-4 justify-content-between">
+		<div class="fa-layers">
+			<a id="navbar__logo" href="./index.html">
+				<i class="far fa-circle" data-fa-transform="grow-16"></i>
+				<div class="fa-layers-text">TS</div>
+			</a>
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbar-links">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- Navbar Links -->
+		<div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+			<ul class="navbar-nav mr-4">
+				<li class="nav-item">
+					<a class="nav-link" href="./index.html">about</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./portfolio.html">portfolio<a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./contact.html">contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Navbar Gradient -->
+	<div class="container-fluid" id="navbar-gradient-hack"></div>
 
-        <!-- Navbar Links -->
-        <ul class="nav mr-4">
-            <li class="nav-item">
-                <a class="nav-link" href="./index.html">about</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./portfolio.html">portfolio<a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./contact.html">contact</a>
-            </li>
-        </ul>
-    </nav>
+	<main>
+		<!-- img on left side of screen -->
+		<img src="https://www.fillmurray.com/1920/1080" class="img-fluid" alt="Tyler Smith" width="700" height="100%" id="bio-picture-img">
 
-    <main>
-        <!-- img on left side of screen -->
-        <img src="https://www.fillmurray.com/1920/1080" alt="" width="700" height="100%" id="bio-picture-img">  
+		<section class="container-fluid">
+			<div class="row">
+				<!-- Empty Div For img Spacing -->
+				<div class="col-5 justify-content-start ml-n4"></div>
+				<!-- Right Column Contains 1-2 columns with info -->
+				<div class="col-6 mt-5">
+					<div class="row justify-content-center">
+						<header class="jumbotron">
+							Tyler Smith
+						</header>
+					</div>
+					<div>
+						<p id="bio-description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+							Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis
+							sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+							Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per
+							conubia nostra, per inceptos himenaeos.
+							<button type="button" href="./portfolio.html" class="btn btn-dark float-right"
+							id="bio-description__button">
+								Click Here To View My Portfolio
+							</button>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- More Detailed Info -->
+		<section class="container">
 
-        <section class="container-fluid">
-            <div class="row">
-                <!-- Empty Div For img Spacing -->
-                <div class="col-5 justify-content-start ml-n4"></div>
-                <!-- Right Column Contains 1-2 columns with info -->
-                <div class="col-6 mt-5">
-                    <div class="row justify-content-center">
-                        <header class="jumbotron">
-                            Tyler Smith
-                        </header>
-                    </div>
-                    <div class="row">
-                        <p id="bio-description">
-                            This is placeholder text what's up placeholder tyler smith I'm the best blah blah blah This is placeholder text what's up placeholder tyler smith I'm the best blah blah blah
-                            <button type="button" class="btn btn-dark">Click Here To View My Portfolio</button>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- More Detailed Info -->
-        <section class="container">
-            
-        </section>
-    </main>
+		</section>
+	</main>
 
-    <script src="https://kit.fontawesome.com/e999b88b1e.js" crossorigin="anonymous"></script>
+	<footer>
+		<div class="container-fluid text-center">
+			<div class="row">
+				<div class="col">
+					<small>Copyright © 2020 Tyler Smith. All Rights Reserved.</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/e999b88b1e.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
 </html>

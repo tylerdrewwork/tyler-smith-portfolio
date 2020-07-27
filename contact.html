@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Tyler Smith :: Contact</title>
 </head>
+
 <body>
-    
+    <!-- Navbar! -->
+    <nav class="navbar py-3 pl-4 justify-content-between">
+        <div class="fa-layers">
+            <a id="navbar__logo" href="./index.html">
+                <i class="far fa-circle" data-fa-transform="grow-16"></i>
+                <div class="fa-layers-text">TS</div>
+            </a>
+        </div>
+
+        <!-- Navbar Links -->
+        <ul class="nav mr-4">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">about</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./portfolio.html">portfolio<a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./contact.html">contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navbar Gradient -->
+    <div class="container-fluid" id="navbar-gradient-hack"></div>
+
+    <main class="container">
+        <div class="row mt-4">
+            <div class="col d-flex justify-content-center align-items-center">
+                <form class="text-center">
+                    <div class="form-group pt-2">
+                        <label for="contact-input-name">Name *</label>
+                        <input type="text" class="form-control" id="contact-input-name" required="true" placeholder="Your Name">
+                    </div>
+                    <div class="form-group pt-2">
+                        <label for="contact-input-email">Email address *</label>
+                        <input type="email" class="form-control" id="contact-input-email" aria-describedby="emailHelp"
+                            placeholder="Enter your email address">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group pt-2">
+                        <label for="contact-input-about">Additional Information</label>
+                        <textarea class="form-control" name="contact-input-about" id="contact-input-about" cols="30" rows="3" placeholder="Any additional information?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/e999b88b1e.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
