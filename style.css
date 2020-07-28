@@ -14,11 +14,18 @@ body {
 }
 
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    width: 100%;
     background-color: #0A0624;
     color: #E4E6ED;
     padding: 10px;
+}
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 800;
+    font-size: 100px;
 }
 
 h5 {
@@ -26,7 +33,8 @@ h5 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* NAVBAR!! */
+/* ANCHOR NAVBAR!! */
+
 .navbar {
     background-color: #0A0624;
 }
@@ -53,29 +61,87 @@ h5 {
 .fa-caret-square-down {
     color: #E4E6ED;
 }
-/* end navbar */
 
-.jumbotron {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 800;
-    font-size: 100px;
-    background-color: #E4E6ED;
-}
 
-#header-fullname {
-    background-color: #E4E6ED;
-    /* margin-left: 100px; */
+/* ANCHOR INDEX */
+
+.btn--index {
+    height: 150%;
+    width: 75%;
+    background-color: #0A0624;
+    color: #E4E6ED;
 }
 
 #nav-link {
     background-color: lightyellow;
 }
 
-#bio-description {
-    font-size: 300%;
+/* SMALL SCREEN */
+@media screen and (max-width: 991px) {
+    .bio-header {
+        font-size: 300%;
+    }
+    .nav-link {
+        text-align: end;
+    }
+    #header-fullname {
+        font-size: 600%;
+    }
+}
+
+/* MEDIUM SCREEN */
+@media screen and (min-width: 992px) {
+    .bio-header {
+        font-size: 350%;
+    }
+    #header-fullname {
+        font-size: 350%
+    }
+}
+
+/* LARGE SCREEN OR BIGGER */
+@media screen and (min-width: 1200px) {
+    .bio-header {
+        font-size: 500%;
+    }
+    #header-fullname {
+        font-size: 450%;
+    }
+}
+
+#header-fullname {
+    
+}
+
+.bio-header {
+    font-family: 'Recursive', serif; /* fun easy-going serif text */
+    text-align: center;
+    padding-top: 5%;
+}
+
+.bio-desc {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 25px;
+    font-size: larger;
 }
 
 #bio-picture-img {
+    z-index: -1;
+    /* regardless of the size of the page, 
+    the height will always be 100% of the parent */
+    height: 100vh;
+    object-fit: cover;
+    /* Object Position declares the center of the image (will crop the image with this point as the anchor) */
+    object-position: 40% 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#bio-picture-img--sm {
     z-index: -1;
     /* regardless of the size of the page, 
     the height will always be 100% of the parent */
@@ -93,13 +159,13 @@ h5 {
     height: 200px;
 }
 
-/* CONTACT PAGE -- FORMS */
+/* ANCHOR CONTACT PAGE -- FORMS */
 
 .form-group label {
     font-size: larger;
 }
 
-/* PORTFOLIO PAGE */
+/* ANCHOR PORTFOLIO PAGE */
 
 .card {
     width: 100%;
@@ -109,3 +175,4 @@ h5 {
 .card-img-top {
     object-fit: cover;
 }
+
