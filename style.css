@@ -53,6 +53,14 @@ h5 {
     padding-left: 30px;
 }
 
+#navbar__fullname {
+    color: #E4E6ED;
+    font-family: 'Source Sans Pro', serif;
+    font-size: 250%;
+    letter-spacing: 5px;
+    margin-left: 30px;
+}
+
 #navbar-gradient-hack {
     background: linear-gradient(180deg, rgba(10,6,36,1) 0%, rgba(10,6,36,0.5) 68%, rgba(10,6,36,0) 100%);
     height: 10px
@@ -84,18 +92,12 @@ h5 {
     .nav-link {
         text-align: end;
     }
-    #header-fullname {
-        font-size: 600%;
-    }
 }
 
 /* MEDIUM SCREEN */
 @media screen and (min-width: 992px) {
     .bio-header {
         font-size: 350%;
-    }
-    #header-fullname {
-        font-size: 350%
     }
 }
 
@@ -104,13 +106,6 @@ h5 {
     .bio-header {
         font-size: 500%;
     }
-    #header-fullname {
-        font-size: 450%;
-    }
-}
-
-#header-fullname {
-    
 }
 
 .bio-header {
