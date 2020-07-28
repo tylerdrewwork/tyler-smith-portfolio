@@ -26,6 +26,7 @@ h5 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* NAVBAR!! */
 .navbar {
     background-color: #0A0624;
 }
@@ -48,6 +49,11 @@ h5 {
     background: linear-gradient(180deg, rgba(10,6,36,1) 0%, rgba(10,6,36,0.5) 68%, rgba(10,6,36,0) 100%);
     height: 10px
 }
+
+.fa-caret-square-down {
+    color: #E4E6ED;
+}
+/* end navbar */
 
 .jumbotron {
     font-family: 'Source Sans Pro', sans-serif;
