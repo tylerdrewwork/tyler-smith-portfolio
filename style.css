@@ -15,7 +15,7 @@ body {
 
 footer {
     position: fixed;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     background-color: #0A0624;
     color: #E4E6ED;
