@@ -8,6 +8,8 @@
 My goal in this refactor:
 - Create a portfolio that is responsive, elegant, and easy to navigate!
 
+### Note: I know my images are of Bill Murray! They are currently placeholder until I have photos of me to replace them with.
+
 Execution:
 - The hardest part of this was getting the text and images to be responsive how I needed them to be.
 - Currently in the process of implementing SASS to have responsive font sizes.
