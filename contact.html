@@ -17,31 +17,37 @@
 </head>
 
 <body>
-    <!-- Navbar! -->
-    <nav class="navbar py-3 pl-4 justify-content-between">
-        <div class="fa-layers">
-            <a id="navbar__logo" href="./index.html">
-                <i class="far fa-circle" data-fa-transform="grow-16"></i>
-                <div class="fa-layers-text">TS</div>
-            </a>
-        </div>
+	<!-- Navbar! -->
+	<nav class="navbar navbar-expand-lg py-3 justify-content-between">
+		<div class="fa-layers">
+			<a id="navbar__logo" href="./index.html">
+				<i class="far fa-circle" data-fa-transform="grow-16"></i>
+				<div class="fa-layers-text">TS</div>
+			</a>
+		</div>
+		<a href="index.html" id="navbar__fullname">Tyler Smith</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links">
+			<i class="far fa-caret-square-down" data-fa-transform="grow-10"></i>
+		</button>
+		<!-- Navbar Links -->
+		<div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+			<ul class="navbar-nav mr-4">
+				<li class="nav-item pt-2 pt-md-1">
+					<a class="nav-link" href="./index.html">about</a>
+				</li>
+				<li class="nav-item pt-2 pt-md-1">
+					<a class="nav-link" href="./portfolio.html">portfolio</a>
+				</li>
+				<li class="nav-item pt-2 pt-md-1">
+					<a class="nav-link" href="./contact.html">contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Navbar Gradient -->
+	<div class="container-fluid" id="navbar-gradient-hack"></div>
 
-        <!-- Navbar Links -->
-        <ul class="nav mr-4">
-            <li class="nav-item">
-                <a class="nav-link" href="./index.html">about</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./portfolio.html">portfolio<a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./contact.html">contact</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- Navbar Gradient -->
-    <div class="container-fluid" id="navbar-gradient-hack"></div>
-
+    <!-- MAIN CONTENT, Form -->
     <main class="container">
         <div class="row mt-4">
             <div class="col d-flex justify-content-center align-items-center">
@@ -66,7 +72,28 @@
         </div>
     </main>
 
-    <script src="https://kit.fontawesome.com/e999b88b1e.js" crossorigin="anonymous"></script>
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid text-center">
+			<div class="row">
+				<div class="col">
+					<small>Copyright © 2020 Tyler Smith. All Rights Reserved.</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./imgCollapser.js"></script>
+	<script src="https://kit.fontawesome.com/e999b88b1e.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>
