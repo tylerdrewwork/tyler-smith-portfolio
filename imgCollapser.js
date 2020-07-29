@@ -2,7 +2,7 @@ let bioImg = document.getElementById("bio-picture-img");
 let bioImgSmall = document.getElementById("bio-picture-img--sm");
 
 function imgMediaQuery(xWindowSize) {
-    if (xWindowSize.matches) {
+    if (xWindowSize.matches === true) {
         console.log("Showing Great Than Medium Image!");
         bioImg.style.visibility = "visible";
         bioImgSmall.style.visibility = "hidden";

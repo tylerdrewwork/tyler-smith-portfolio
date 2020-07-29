@@ -10,7 +10,7 @@ header {
 
 body {
     background-color: #E4E6ED;
-    height: 100%;
+    height: 100vh;
 }
 
 footer {
@@ -33,9 +33,17 @@ h5 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.debug {
+    border: red;
+    border-style: dotted;
+    border-width: 1px;
+    height: 100%;
+}
+
 /* ANCHOR NAVBAR!! */
 
 .navbar {
+    padding-left: 25px;
     background-color: #0A0624;
 }
 
@@ -80,32 +88,10 @@ h5 {
     color: #E4E6ED;
 }
 
-#nav-link {
-    background-color: lightyellow;
-}
-
-/* SMALL SCREEN */
-@media screen and (max-width: 991px) {
-    .bio-header {
-        font-size: 300%;
-    }
-    .nav-link {
-        text-align: end;
-    }
-}
-
-/* MEDIUM SCREEN */
-@media screen and (min-width: 992px) {
-    .bio-header {
-        font-size: 350%;
-    }
-}
-
-/* LARGE SCREEN OR BIGGER */
-@media screen and (min-width: 1200px) {
-    .bio-header {
-        font-size: 500%;
-    }
+.bio-row {
+    margin-top: 2vh;
+    height: 40vh;
+    align-items: center;
 }
 
 .bio-header {
@@ -121,6 +107,7 @@ h5 {
     font-size: larger;
 }
 
+
 #bio-picture-img {
     z-index: -1;
     /* regardless of the size of the page, 
@@ -129,7 +116,7 @@ h5 {
     object-fit: cover;
     /* Object Position declares the center of the image (will crop the image with this point as the anchor) */
     object-position: 40% 50%;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -141,8 +128,8 @@ h5 {
     /* regardless of the size of the page, 
     the height will always be 100% of the parent */
     height: 100%;
-    /* max-width: 30%; */
-    position: absolute;
+    max-height: 120%;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -169,5 +156,32 @@ h5 {
 
 .card-img-top {
     object-fit: cover;
+}
+
+/* SMALL SCREEN */
+@media screen and (max-width: 991px) {
+    .bio-row {
+        height: 75%;
+    }
+    .bio-header {
+        font-size: 300%;
+    }
+    .nav-link {
+        text-align: end;
+    }
+}
+
+/* MEDIUM SCREEN */
+@media screen and (min-width: 992px) {
+    .bio-header {
+        font-size: 350%;
+    }
+}
+
+/* LARGE SCREEN OR BIGGER */
+@media screen and (min-width: 1200px) {
+    .bio-header {
+        font-size: 500%;
+    }
 }
 
