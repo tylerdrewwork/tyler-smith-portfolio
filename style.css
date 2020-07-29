@@ -66,7 +66,7 @@ h5 {
     font-family: 'Source Sans Pro', serif;
     font-size: 250%;
     letter-spacing: 5px;
-    margin-left: 30px;
+    margin-left: 5%;
 }
 
 #navbar-gradient-hack {
@@ -125,6 +125,7 @@ h5 {
 
 #bio-picture-img--sm {
     z-index: -1;
+    opacity: 50%;
     /* regardless of the size of the page, 
     the height will always be 100% of the parent */
     height: 100%;
@@ -168,6 +169,9 @@ h5 {
     }
     .nav-link {
         text-align: end;
+    }
+    #navbar__fullname {
+        margin-left: 1%
     }
 }
 
