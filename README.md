@@ -4,11 +4,12 @@
 
 --
 
-**7/29/2020**
-My goal in this refactor:
-- Create a portfolio that is responsive, elegant, and easy to navigate!
+## **7/29/2020**
 
 ### Note: I know my images are of Bill Murray! They are currently placeholder until I have photos of me to replace them with.
+
+My goal in this refactor:
+- Create a portfolio that is responsive, elegant, and easy to navigate!
 
 Execution:
 - The hardest part of this was getting the text and images to be responsive how I needed them to be.
