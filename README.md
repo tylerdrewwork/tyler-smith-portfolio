@@ -13,6 +13,7 @@ Execution:
 - Currently in the process of implementing SASS to have responsive font sizes.
 - I am proud of it's current state. There is obviously still work to be done on the responsive font sizes and the overall prettiness of the site, but it's fully functional and responsive.
 - All of my links work, however all of my material is hosted on an external Squarespace website I'm not proud of so that's why my portfolio doesn't link over there.
+- Ran it through an HTML Validator. It says my img tags shouldn't use a percentage in width and height, but I'm not sure of another way to do that.
 
 Features:
 - Sleek navbar with a gradient
