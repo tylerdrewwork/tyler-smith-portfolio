@@ -1,6 +1,6 @@
 # tyler-smith-portfolio
 
-## My Professional Portfolio. Currently a work in progress that will continually be updated!
+# My Professional Portfolio. Currently a work in progress that will continually be updated!
 
 --
 
