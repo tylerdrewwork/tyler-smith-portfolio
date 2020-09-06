@@ -2,6 +2,7 @@ $color-white: #ffe6e6;
 $color-white-hex: ffe6e6;
 $color-main: #48728d;
 $color-main-hex: 48728d;
+$color-dark: #192024;
 
 @mixin pattern-charliebrown($bgColor, $fgColorNoHashtag, $opacity) {
     background-attachment: fixed;
@@ -15,9 +16,8 @@ $color-main-hex: 48728d;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23#{fgColorNoHashtag}' fill-opacity='#{$opacity}' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-body {
-    height: 100%;
-    width: 100%;
+body, html {
+    // height: 100%;
 }
 
 h1 {
@@ -32,7 +32,6 @@ h2 {
 
 .container {
     height: 100%;
-    width: 100%;
     background-color: $color-white;
 }
 
@@ -43,7 +42,6 @@ h2 {
     display: grid;
     grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     height: 90vh;
-    width: 100vw;
     @include pattern-charliebrown($color-white, $color-main-hex, 0.25);
 
     h1 {
@@ -89,7 +87,6 @@ h2 {
 #nav-wrapper {
     // Position
     height: 10vh;
-    width: 100vw;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
@@ -100,32 +97,42 @@ h2 {
     // Style
     @include pattern-texture($color-main, $color-white-hex, 0.25);
 
-    div {
+    .nav-icon {
         position: relative;
     }
     
+    // Font Awesome Icons
     svg {
-        // Font Awesome Icons
-        color: $color-white;
-        transition: color 0.5s;
+        // Style
         cursor: pointer;
+        color: $color-dark;
+        transition: color 0.5s;
     }
     
-    svg + span {
-        // Span sibling of Svg
+    // Span sibling of Svg
+    svg + .nav-label {
+        // Layout
         position: absolute;
-        bottom: 100px;
-        color: red;
+        left: 0px;
+        width: 100%;
+        bottom: 100%;
+        font-size: 1.5em;
+        text-align: center;
+        pointer-events: none;
+        // Style
+        color: $color-white;
+        background-color: $color-dark;
+        border-radius: 15%;
         opacity: 0%;
         transition: opacity 0.5s;
     }
     
     svg:hover {
         color: hue($color: green);
-        color: orange;
+        color: $color-white;
     }
 
-    svg:hover + span {
+    svg:hover + .nav-label {
         opacity: 100%;
     }
 }
@@ -134,6 +141,6 @@ h2 {
 
 #below-fold {
     height: 200vh;
-    @include pattern-charliebrown($color-main, $color-white-hex, 0.25);
+    // @include pattern-charliebrown($color-main, $color-white-hex, 0.25);
     background-attachment: local;
 }
