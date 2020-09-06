@@ -139,8 +139,25 @@ h2 {
 
 // ANCHOR Below Fold
 
-#below-fold {
-    height: 200vh;
-    // @include pattern-charliebrown($color-main, $color-white-hex, 0.25);
+#showcase {
+    height: 100vh;
+    width: 100%;
+    @include pattern-charliebrown($color-main, $color-white-hex, 0.25);
     background-attachment: local;
+    position: relative;
+    overflow: hidden;
+
+    article {
+        width: 80%;
+        height: 75%;
+        position: absolute;
+        border-radius: 10%;
+        background-color: $color-dark;
+        transition: left 1s;
+        left: 100%;
+    }
+
+    article.active {
+        left: 0%;
+    }
 }
