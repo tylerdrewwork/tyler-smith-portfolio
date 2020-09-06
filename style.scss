@@ -3,22 +3,31 @@ $color-white-hex: ffe6e6;
 $color-main: #48728d;
 $color-main-hex: 48728d;
 
-@mixin pattern($bgColor, $fgColorNoHashtag, $opacity) {
-    // Types of patterns: "charlie-brown", "", ""
-
+@mixin pattern-charliebrown($bgColor, $fgColorNoHashtag, $opacity) {
     background-attachment: fixed;
     background-color: $bgColor;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23#{$fgColorNoHashtag}' fill-opacity='#{$opacity}'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-body, html {
+@mixin pattern-texture($bgColor, $fgColorNoHashtag, $opacity) {
+    background-attachment: fixed;
+    background-color: $bgColor;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23#{fgColorNoHashtag}' fill-opacity='#{$opacity}' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+body {
     height: 100%;
     width: 100%;
 }
 
 h1 {
     text-align: center;
-    font-size: 15vw;
+    font-size: 10vw;
+}
+
+h2 {
+    text-align: center;
+    font-size: 6vw;
 }
 
 .container {
@@ -32,25 +41,99 @@ h1 {
 
 #splash {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    height: 100vh;
+    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    height: 90vh;
     width: 100vw;
-    @include pattern($color-white, $color-main-hex, 0.25);
+    @include pattern-charliebrown($color-white, $color-main-hex, 0.25);
 
     h1 {
         // Layout
-        grid-row: 3;
+        grid-row: 2;
+        
         // Style
         font-family: 'Louis George Cafe', sans-serif;
         color: $color-main;
+
+        // Anim
+        animation: splash-fade-in 1.8s ease-in;
+    }
+
+    h2 {
+        margin-top: 25px;
+        grid-row: 3;
+        font-family: 'Louis George Cafe', sans-serif;
     }
 }
 
-// ANCHOR Section below splash, below the fold
+@keyframes splash-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #splash h1 {
+        font-size: 17vw;
+    }
+
+    #splash h2 {
+        font-size: 10vw;
+    }
+}
+
+// ANCHOR Navbar
+
+#nav-wrapper {
+    // Position
+    height: 10vh;
+    width: 100vw;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    // Layout
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // Style
+    @include pattern-texture($color-main, $color-white-hex, 0.25);
+
+    div {
+        position: relative;
+    }
+    
+    svg {
+        // Font Awesome Icons
+        color: $color-white;
+        transition: color 0.5s;
+        cursor: pointer;
+    }
+    
+    svg + span {
+        // Span sibling of Svg
+        position: absolute;
+        bottom: 100px;
+        color: red;
+        opacity: 0%;
+        transition: opacity 0.5s;
+    }
+    
+    svg:hover {
+        color: hue($color: green);
+        color: orange;
+    }
+
+    svg:hover + span {
+        opacity: 100%;
+    }
+}
+
+// ANCHOR Below Fold
 
 #below-fold {
-    height: 100vh;
-    width: 100vw;
-    background-color: $color-main;
-    // @include pattern(a75060);
+    height: 200vh;
+    @include pattern-charliebrown($color-main, $color-white-hex, 0.25);
+    background-attachment: local;
 }
