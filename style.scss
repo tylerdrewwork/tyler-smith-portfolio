@@ -92,6 +92,7 @@ h2 {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    z-index: 10;
     // Layout
     display: flex;
     align-items: center;
@@ -145,18 +146,19 @@ h2 {
 }
 
 // ANCHOR Showcase
-#showcase {
+#showcase-wrapper {
     height: 100vh;
     width: 100%;
     @include pattern-charliebrown($color-main, $color-white-hex, 0.25);
-    background-size: 100%;
+    background-size: 250%;
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
 
     article {
+        margin-top: 25%;
         width: 80%;
-        height: 75%;
+        height: 50%;
         position: absolute;
         border-radius: 10%;
         background-color: $color-dark;
