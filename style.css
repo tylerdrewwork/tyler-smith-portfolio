@@ -52,7 +52,7 @@ h2 {
     font-size: 10vw;
   }
 }
-#nav-wrapper {
+#header-wrapper {
   height: 5vh;
   position: sticky;
   position: -webkit-sticky;
@@ -65,19 +65,19 @@ h2 {
   background-color: #48728d;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23fgColorNoHashtag' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
-#nav-wrapper .nav-icon {
+#header-wrapper .header-icon {
   position: relative;
 }
-#nav-wrapper .fa-circle {
+#header-wrapper .fa-circle {
   color: #ffe6e6;
 }
-#nav-wrapper svg {
+#header-wrapper svg {
   cursor: pointer;
   color: #192024;
   transition: color 0.5s;
   height: 5vh;
 }
-#nav-wrapper svg + .nav-label {
+#header-wrapper svg + .header-label {
   position: absolute;
   left: 0px;
   width: 100%;
@@ -91,11 +91,11 @@ h2 {
   opacity: 0%;
   transition: opacity 0.5s;
 }
-#nav-wrapper svg:hover {
+#header-wrapper svg:hover {
   color: 120deg;
   color: #ffe6e6;
 }
-#nav-wrapper svg:hover + .nav-label {
+#header-wrapper svg:hover + .header-label {
   opacity: 100%;
 }
 
@@ -112,7 +112,7 @@ h2 {
   overflow: hidden;
 }
 #showcase-wrapper article {
-  margin-top: 10vh;
+  margin-top: 20vh;
   width: 80%;
   height: 50%;
   position: absolute;

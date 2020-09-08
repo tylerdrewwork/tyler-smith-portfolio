@@ -86,7 +86,7 @@ h2 {
 }
 
 // ANCHOR Navbar
-#nav-wrapper {
+#header-wrapper {
     // Position
     height: 5vh;
     position: sticky;
@@ -100,7 +100,7 @@ h2 {
     // Style
     @include pattern-texture($color-main, $color-white-hex, 0.25);
 
-    .nav-icon {
+    .header-icon {
         position: relative;
     }
 
@@ -118,7 +118,7 @@ h2 {
     }
     
     // Nav-label sibling of Svg
-    svg + .nav-label {
+    svg + .header-label {
         // Layout
         position: absolute;
         left: 0px;
@@ -140,7 +140,7 @@ h2 {
         color: $color-white;
     }
 
-    svg:hover + .nav-label {
+    svg:hover + .header-label {
         opacity: 100%;
     }
 }
@@ -159,7 +159,7 @@ h2 {
     overflow: hidden;
 
     article {
-        margin-top: 10vh;
+        margin-top: 20vh;
         width: 80%;
         height: 50%;
         position: absolute;
