@@ -3,6 +3,8 @@ $color-white-hex: ffe6e6;
 $color-main: #48728d;
 $color-main-hex: 48728d;
 $color-dark: #192024;
+$font-libertine: 'LinLibertine_R', serif;
+$font-louisgeorge: 'Louis George Cafe', sans-serif;
 
 @mixin pattern-charliebrown($bgColor, $fgColorNoHashtag, $opacity) {
     background-attachment: fixed;
@@ -16,10 +18,7 @@ $color-dark: #192024;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23#{fgColorNoHashtag}' fill-opacity='#{$opacity}' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-body, html {
-    // height: 100%;
-}
-
+// ANCHOR Main
 h1 {
     text-align: center;
     font-size: 10vw;
@@ -27,7 +26,7 @@ h1 {
 
 h2 {
     text-align: center;
-    font-size: 6vw;
+    font-size: 4vw;
 }
 
 .container {
@@ -37,19 +36,22 @@ h2 {
 
 
 // ANCHOR Splash Section
-
 #splash {
+    // Layout
     display: grid;
     grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-    height: 90vh;
+    height: 95vh;
+
+    // Style
     @include pattern-charliebrown($color-white, $color-main-hex, 0.25);
+    background-size: 250%;
 
     h1 {
         // Layout
         grid-row: 2;
         
         // Style
-        font-family: 'Louis George Cafe', sans-serif;
+        font-family: $font-libertine;
         color: $color-main;
 
         // Anim
@@ -59,7 +61,8 @@ h2 {
     h2 {
         margin-top: 25px;
         grid-row: 3;
-        font-family: 'Louis George Cafe', sans-serif;
+        font-family: $font-libertine;
+        color: lighten($color: $color-main, $amount: 10);
     }
 }
 
@@ -83,10 +86,9 @@ h2 {
 }
 
 // ANCHOR Navbar
-
 #nav-wrapper {
     // Position
-    height: 10vh;
+    height: 5vh;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
@@ -100,6 +102,10 @@ h2 {
     .nav-icon {
         position: relative;
     }
+
+    .fa-circle {
+        color: $color-white;
+    }
     
     // Font Awesome Icons
     svg {
@@ -107,9 +113,10 @@ h2 {
         cursor: pointer;
         color: $color-dark;
         transition: color 0.5s;
+        height: 5vh;
     }
     
-    // Span sibling of Svg
+    // Nav-label sibling of Svg
     svg + .nav-label {
         // Layout
         position: absolute;
@@ -137,13 +144,13 @@ h2 {
     }
 }
 
-// ANCHOR Below Fold
-
+// ANCHOR Showcase
 #showcase {
     height: 100vh;
     width: 100%;
     @include pattern-charliebrown($color-main, $color-white-hex, 0.25);
-    background-attachment: local;
+    background-size: 100%;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
 
