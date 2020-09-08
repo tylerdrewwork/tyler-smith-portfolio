@@ -147,16 +147,19 @@ h2 {
 
 // ANCHOR Showcase
 #showcase-wrapper {
+    // Layout
+    display: grid;
     height: 100vh;
     width: 100%;
+    position: relative;
+    // Style
     @include pattern-charliebrown($color-main, $color-white-hex, 0.25);
     background-size: 250%;
     background-attachment: fixed;
-    position: relative;
     overflow: hidden;
 
     article {
-        margin-top: 25%;
+        margin-top: 10vh;
         width: 80%;
         height: 50%;
         position: absolute;
