@@ -8,50 +8,6 @@ h2 {
   font-size: 4vw;
 }
 
-.container {
-  height: 100%;
-  background-color: #ffe6e6;
-}
-
-#splash {
-  display: grid;
-  grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-  height: 95vh;
-  background-attachment: fixed;
-  background-color: #ffe6e6;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%2348728d' fill-opacity='0.25'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-size: 250%;
-}
-#splash h1 {
-  grid-row: 2;
-  font-family: "LinLibertine_R", serif;
-  color: #48728d;
-  animation: splash-fade-in 1.8s ease-in;
-}
-#splash h2 {
-  margin-top: 25px;
-  grid-row: 3;
-  font-family: "LinLibertine_R", serif;
-  color: #5c8dac;
-}
-
-@keyframes splash-fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
-@media only screen and (max-width: 420px) {
-  #splash h1 {
-    font-size: 17vw;
-  }
-
-  #splash h2 {
-    font-size: 10vw;
-  }
-}
 #header-wrapper {
   height: 5vh;
   position: sticky;
@@ -99,6 +55,76 @@ h2 {
   opacity: 100%;
 }
 
+#container-wrapper {
+  display: grid;
+  grid-template-columns: [nav] 10vw [content];
+  background-color: #ffe6e6;
+}
+
+#container-content {
+  grid-column: content/span end;
+  height: 100%;
+}
+
+#container-nav {
+  grid-column: nav;
+  height: 95vh;
+  background-color: #ffe6e6;
+  overflow-y: scroll;
+  position: sticky;
+  top: 5vh;
+}
+
+.navh-1 {
+  margin-top: 15%;
+  margin-left: 10%;
+  font-weight: 800;
+}
+
+.navh-2 {
+  margin-top: 5%;
+  margin-left: 13%;
+}
+
+#splash {
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  height: 95vh;
+  background-attachment: fixed;
+  background-color: #ffe6e6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%2348728d' fill-opacity='0.25'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 250%;
+}
+#splash h1 {
+  grid-row: 2;
+  font-family: "LinLibertine_R", serif;
+  color: #48728d;
+  animation: splash-fade-in 1.8s ease-in;
+}
+#splash h2 {
+  margin-top: 25px;
+  grid-row: 3;
+  font-family: "LinLibertine_R", serif;
+  color: #5c8dac;
+}
+
+@keyframes splash-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@media only screen and (max-width: 420px) {
+  #splash h1 {
+    font-size: 17vw;
+  }
+
+  #splash h2 {
+    font-size: 10vw;
+  }
+}
 #showcase-wrapper {
   display: grid;
   height: 100vh;

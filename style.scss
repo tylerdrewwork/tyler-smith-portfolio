@@ -1,3 +1,6 @@
+// Tyler Smith, 2020
+// Inspirations: w3schools.com ; platinumgod.co.uk
+
 $color-white: #ffe6e6;
 $color-white-hex: ffe6e6;
 $color-main: #48728d;
@@ -29,63 +32,7 @@ h2 {
     font-size: 4vw;
 }
 
-.container {
-    height: 100%;
-    background-color: $color-white;
-}
-
-
-// ANCHOR Splash Section
-#splash {
-    // Layout
-    display: grid;
-    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-    height: 95vh;
-
-    // Style
-    @include pattern-charliebrown($color-white, $color-main-hex, 0.25);
-    background-size: 250%;
-
-    h1 {
-        // Layout
-        grid-row: 2;
-        
-        // Style
-        font-family: $font-libertine;
-        color: $color-main;
-
-        // Anim
-        animation: splash-fade-in 1.8s ease-in;
-    }
-
-    h2 {
-        margin-top: 25px;
-        grid-row: 3;
-        font-family: $font-libertine;
-        color: lighten($color: $color-main, $amount: 10);
-    }
-}
-
-@keyframes splash-fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 100;
-    }
-}
-
-@media only screen and (max-width: 420px) {
-    #splash h1 {
-        font-size: 17vw;
-    }
-
-    #splash h2 {
-        font-size: 10vw;
-    }
-}
-
-// ANCHOR Navbar
+// ANCHOR Header
 #header-wrapper {
     // Position
     height: 5vh;
@@ -144,6 +91,90 @@ h2 {
         opacity: 100%;
     }
 }
+
+#container-wrapper {
+    display: grid;
+    grid-template-columns: [nav] 10vw [content];
+    background-color: $color-white;
+}
+
+#container-content {
+    grid-column: content / span end;
+    height: 100%;
+}
+
+// ANCHOR Nav section
+#container-nav {
+    grid-column: nav;
+    height: 95vh;   
+    background-color: $color-white;
+    overflow-y: scroll;
+    position: sticky;
+    top: 5vh;
+}
+
+.navh-1 {
+    margin-top: 15%;
+    margin-left: 10%;
+    font-weight: 800;
+}
+
+.navh-2 {
+    margin-top: 5%;
+    margin-left: 13%;
+}
+
+
+// ANCHOR Splash Section
+#splash {
+    // Layout
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    height: 95vh;
+
+    // Style
+    @include pattern-charliebrown($color-white, $color-main-hex, 0.25);
+    background-size: 250%;
+
+    h1 {
+        // Layout
+        grid-row: 2;
+        
+        // Style
+        font-family: $font-libertine;
+        color: $color-main;
+
+        // Anim
+        animation: splash-fade-in 1.8s ease-in;
+    }
+
+    h2 {
+        margin-top: 25px;
+        grid-row: 3;
+        font-family: $font-libertine;
+        color: lighten($color: $color-main, $amount: 10);
+    }
+}
+
+@keyframes splash-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #splash h1 {
+        font-size: 17vw;
+    }
+
+    #splash h2 {
+        font-size: 10vw;
+    }
+}
+
 
 // ANCHOR Showcase
 #showcase-wrapper {
