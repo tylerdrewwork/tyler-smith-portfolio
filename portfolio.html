@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<!-- Styles -->
-	<link rel="stylesheet" href="./reset.css">
-	<link rel="stylesheet" href="./style.css">
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
 
-	<title>Tyler Smith :: About</title>
+    <title>Tyler Smith :: Portfolio</title>
 </head>
-
 <body>
 	<!-- Navbar! -->
 	<nav class="navbar navbar-expand-lg py-3 justify-content-between">
@@ -48,52 +44,47 @@
 	<!-- Navbar Gradient -->
 	<div class="container-fluid" id="navbar-gradient-hack"></div>
 
-	<!-- Main Content -->
-	<main>
-		<!-- img on left side of screen -->
-		<!-- TODO replace this with actual picture and fix alt tags -->
-		<img src="https://www.fillmurray.com/1920/1080" class="img-fluid" alt="Tyler Smith" width="33%" height="100%"
-			id="bio-picture-img">
-		<img src="https://www.fillmurray.com/1200/800" class="d-flex" alt="Tyler Smith Smaller Image" width="100%" id="bio-picture-img--sm">
-
-		<section class="container-fluid">
-			<div class="row">
-				<!-- Empty Div For img Spacing -->
-				<div class="col-md-12 col-lg-4">
-					<div class="row">
-						<div class="col text-center"></div>
-					</div>
+	<!-- MAIN CONTENT, Projects -->
+    <main>
+		<div class="container">
+			<div class="row mt-4 justify-content-center text-center">
+				<div class="display-4">
+					Archived Projects
 				</div>
-				<!-- Right Column Contains 1-2 columns with info -->
-				<!-- NOTE Couldn't figure out how to vertically align these two divs each taking up 50% height -->
-				<div class="col-md-12 col-lg-8">
-					<div class="row bio-row">
-						<div class="col">
-							<div class=bio-header>
-								<p>Full-stack</p>
-								<p>Web Developer</p>
-							</div>
-							<p class="bio-desc">
-								HTML, CSS, JS, React, etc...
+			</div>
+			<!-- Two Projects Per Row, so it looks good responsively -->
+			<div class="row">
+				<div class="col">
+					<div class="card border border-secondary">
+						<img class="card-img-top" src="./Assets/my-images/pbab.gif" width="100%" height="100%" alt="Physics Based Arena Brawler">
+						<div class="card-body">
+							<h5 class="card-title">
+								PBAB
+							</h5>
+							<p class="card-text">
+								Physics-Based Arena Brawler (PBAB) is a top-down gladiator simulator. Fight your way through waves of enemies while you try to survive.
 							</p>
+							<p class="text-muted mt-2">2018-2019</p>
 						</div>
 					</div>
-					<div class="row bio-row">
-						<div class="col">
-							<p class="bio-header">Game Designer</p>
-							<p class="bio-desc">
-								C#, Unity, Physics-engines
+				</div>
+				<div class="col">
+					<div class="card border border-secondary">
+						<img class="card-img-top" src="./Assets/my-images/bm.jpg" width="100%" height="100%" alt="Physics Based Arena Brawler">
+						<div class="card-body">
+							<h5 class="card-title">
+								Backflip Master
+							</h5>
+							<p class="card-text">
+								Backflip Master is a physics-based backflipping game. Avenge the death of a loved one by backflipping your way to justice.
 							</p>
+							<p class="text-muted mt-2">2019-2020</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- More Detailed Info -->
-		<section class="container">
-
-		</section>
-	</main>
+		</div>
+    </main>
 
 	<!-- Footer -->
 	<footer>
@@ -118,5 +109,4 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 </body>
-
 </html>

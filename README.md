@@ -4,10 +4,6 @@
 
 --
 
-## **9/8/2020**
-
-
-
 ## **7/29/2020**
 
 ### Note: I know my images are of Bill Murray! They are currently placeholder until I have photos of me to replace them with.

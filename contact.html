@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<!-- Styles -->
-	<link rel="stylesheet" href="./reset.css">
-	<link rel="stylesheet" href="./style.css">
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
 
-	<title>Tyler Smith :: About</title>
+    <title>Tyler Smith :: Contact</title>
 </head>
 
 <body>
@@ -48,52 +47,30 @@
 	<!-- Navbar Gradient -->
 	<div class="container-fluid" id="navbar-gradient-hack"></div>
 
-	<!-- Main Content -->
-	<main>
-		<!-- img on left side of screen -->
-		<!-- TODO replace this with actual picture and fix alt tags -->
-		<img src="https://www.fillmurray.com/1920/1080" class="img-fluid" alt="Tyler Smith" width="33%" height="100%"
-			id="bio-picture-img">
-		<img src="https://www.fillmurray.com/1200/800" class="d-flex" alt="Tyler Smith Smaller Image" width="100%" id="bio-picture-img--sm">
-
-		<section class="container-fluid">
-			<div class="row">
-				<!-- Empty Div For img Spacing -->
-				<div class="col-md-12 col-lg-4">
-					<div class="row">
-						<div class="col text-center"></div>
-					</div>
-				</div>
-				<!-- Right Column Contains 1-2 columns with info -->
-				<!-- NOTE Couldn't figure out how to vertically align these two divs each taking up 50% height -->
-				<div class="col-md-12 col-lg-8">
-					<div class="row bio-row">
-						<div class="col">
-							<div class=bio-header>
-								<p>Full-stack</p>
-								<p>Web Developer</p>
-							</div>
-							<p class="bio-desc">
-								HTML, CSS, JS, React, etc...
-							</p>
-						</div>
-					</div>
-					<div class="row bio-row">
-						<div class="col">
-							<p class="bio-header">Game Designer</p>
-							<p class="bio-desc">
-								C#, Unity, Physics-engines
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- More Detailed Info -->
-		<section class="container">
-
-		</section>
-	</main>
+    <!-- MAIN CONTENT, Form -->
+    <main class="container">
+        <div class="row mt-4">
+            <div class="col d-flex justify-content-center align-items-center">
+                <form class="text-center">
+                    <div class="form-group pt-2">
+                        <label for="contact-input-name">Name *</label>
+                        <input type="text" class="form-control" id="contact-input-name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group pt-2">
+                        <label for="contact-input-email">Email address *</label>
+                        <input type="email" class="form-control" id="contact-input-email" aria-describedby="emailHelp"
+                            placeholder="Enter your email address">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group pt-2">
+                        <label for="contact-input-about">Additional Information</label>
+                        <textarea class="form-control" name="contact-input-about" id="contact-input-about" cols="30" rows="3" placeholder="Any additional information?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
 
 	<!-- Footer -->
 	<footer>
