@@ -92,21 +92,10 @@ h2 {
     }
 }
 
-#container-wrapper {
-    display: grid;
-    grid-template-columns: [nav] 10vw [content];
-    background-color: $color-white;
-}
-
-#container-content {
-    grid-column: content / span end;
-    height: 100%;
-}
-
 // ANCHOR Nav section
 #container-nav {
     grid-column: nav;
-    height: 95vh;   
+    height: 95vh;
     background-color: $color-white;
     overflow-y: scroll;
     position: sticky;

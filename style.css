@@ -55,17 +55,6 @@ h2 {
   opacity: 100%;
 }
 
-#container-wrapper {
-  display: grid;
-  grid-template-columns: [nav] 10vw [content];
-  background-color: #ffe6e6;
-}
-
-#container-content {
-  grid-column: content/span end;
-  height: 100%;
-}
-
 #container-nav {
   grid-column: nav;
   height: 95vh;
