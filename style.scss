@@ -96,7 +96,7 @@ h5 {
 
 .bio-row {
     margin-top: 2vh;
-    height: 40vh;
+    height: 20vh;
     align-items: center;
 }
 
@@ -110,7 +110,7 @@ h5 {
     text-align: center;
     padding-top: 20px;
     margin-bottom: 25px;
-    font-size: larger;
+    font-size: 200%;
 }
 
 
@@ -121,7 +121,7 @@ h5 {
     height: 100vh;
     object-fit: cover;
     /* Object Position declares the center of the image (will crop the image with this point as the anchor) */
-    object-position: 0% 50%;
+    object-position: 40% 50%;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -130,7 +130,7 @@ h5 {
 
 #bio-picture-img--sm {
     z-index: -1;
-    opacity: 50%;
+    opacity: 25%;
     /* regardless of the size of the page, 
     the height will always be 100% of the parent */
     height: 100%;
@@ -147,12 +147,12 @@ h5 {
 
 #main-content-gradient-hack {
     width: 30%;
-    height: 120%;
+    height: 90vh;
     background-color: #E4E6ED;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(228,230,237,1) 80%);
     position: absolute;
     right: 0;
-    top: -10%;
+    top: -5%;
     z-index: -1;
 }
 
@@ -175,9 +175,6 @@ h5 {
 
 /* SMALL SCREEN */
 @media screen and (max-width: 991px) {
-    .bio-row {
-        height: 75%;
-    }
     .bio-header {
         font-size: 300%;
     }
@@ -186,6 +183,9 @@ h5 {
     }
     #navbar__fullname {
         margin-left: 1%
+    }
+    #main-content-gradient-hack {
+        display: none;
     }
 }
 
