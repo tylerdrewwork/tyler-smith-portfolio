@@ -77,6 +77,11 @@ h5 {
   color: #E4E6ED;
 }
 
+.footer-muted {
+  color: #989fba;
+  font-style: italic;
+}
+
 /* ANCHOR INDEX */
 .btn--index {
   height: 150%;
