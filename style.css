@@ -8,8 +8,8 @@ h2 {
   font-size: 4vw;
 }
 
-#header-wrapper {
-  height: 5vh;
+#nav-wrapper {
+  height: 10vh;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -21,19 +21,19 @@ h2 {
   background-color: #48728d;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23fgColorNoHashtag' fill-opacity='0.25' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
-#header-wrapper .header-icon {
+#nav-wrapper .header-icon {
   position: relative;
 }
-#header-wrapper .fa-circle {
+#nav-wrapper .fa-circle {
   color: #ffe6e6;
 }
-#header-wrapper svg {
+#nav-wrapper svg {
   cursor: pointer;
   color: #192024;
   transition: color 0.5s;
   height: 5vh;
 }
-#header-wrapper svg + .header-label {
+#nav-wrapper svg + .header-label {
   position: absolute;
   left: 0px;
   width: 100%;
@@ -47,11 +47,11 @@ h2 {
   opacity: 0%;
   transition: opacity 0.5s;
 }
-#header-wrapper svg:hover {
+#nav-wrapper svg:hover {
   color: 120deg;
   color: #ffe6e6;
 }
-#header-wrapper svg:hover + .header-label {
+#nav-wrapper svg:hover + .header-label {
   opacity: 100%;
 }
 
