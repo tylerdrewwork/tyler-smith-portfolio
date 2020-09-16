@@ -4,6 +4,14 @@
 
 --
 
+## **9/16/2020**
+
+Second refactor!
+
+Portfolio now includes LinkedIn, GitHub, and Resume links.
+
+Includes images and links to highlighted projects.
+
 ## **7/29/2020**
 
 ### Note: I know my images are of Bill Murray! They are currently placeholder until I have photos of me to replace them with.
