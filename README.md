@@ -1,6 +1,6 @@
-# tyler-smith-portfolio
+# Tyler D. Smith | Portfolio
 
-# My Professional Portfolio. Currently a work in progress that will continually be updated!
+# [Click here to view my portfolio](https://sakiskid.github.io/tyler-smith-portfolio/)
 
 --
 
@@ -13,8 +13,6 @@ Portfolio now includes LinkedIn, GitHub, and Resume links.
 Includes images and links to highlighted projects.
 
 ## **7/29/2020**
-
-### Note: I know my images are of Bill Murray! They are currently placeholder until I have photos of me to replace them with.
 
 My goal in this refactor:
 - Create a portfolio that is responsive, elegant, and easy to navigate!
