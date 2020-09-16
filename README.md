@@ -2,7 +2,7 @@
 
 # [Click here to view my portfolio](https://sakiskid.github.io/tyler-smith-portfolio/)
 
---
+-------
 
 ## **9/16/2020**
 
