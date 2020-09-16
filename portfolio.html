@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Tyler Smith :: Portfolio</title>
+</head>
+<body>
+	<!-- Navbar! -->
+	<nav class="navbar navbar-expand-lg py-3 justify-content-between">
+		<div class="fa-layers">
+			<a id="navbar__logo" href="./index.html">
+				<i class="far fa-circle" data-fa-transform="grow-16"></i>
+				<div class="fa-layers-text">TS</div>
+			</a>
+		</div>
+		<a href="index.html" id="navbar__fullname">Tyler Smith</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links">
+			<i class="far fa-caret-square-down" data-fa-transform="grow-10"></i>
+		</button>
+		<!-- Navbar Links -->
+		<div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+			<ul class="navbar-nav mr-4">
+				<li class="nav-item pt-2 pt-md-1">
+					<a class="nav-link" href="./index.html">about</a>
+				</li>
+				<li class="nav-item pt-2 pt-md-1">
+					<a class="nav-link" href="./portfolio.html">portfolio</a>
+				</li>
+				<!-- <li class="nav-item pt-2 pt-md-1">
+					<a class="nav-link" href="./contact.html">contact</a>
+				</li> -->
+			</ul>
+		</div>
+	</nav>
+	<!-- Navbar Gradient -->
+	<div class="container-fluid" id="navbar-gradient-hack"></div>
+
+	<!-- MAIN CONTENT, Projects -->
+    <main>
+		<div class="container">
+			<div class="row mt-4 mb-4 justify-content-center text-center">
+				<div class="display-4">
+					Finished Projects
+				</div>
+			</div>
+			<!-- Two Projects Per Row, so it looks good responsively -->
+			<div class="row">
+				<div class="col">
+					<div class="card border border-secondary">
+						<img class="card-img-top" src="./Assets/my-images/big-picture.png" width="100%" height="100%" alt="Big Picture">
+						<div class="card-body">
+							<h5 class="card-title">Big Picture</h5>
+							<p class="card-text">
+								Big Picture lets you analyze job listings and view them in a graph. 
+								Find out what the most used keywords for your field are, or where your job is most prominent in the US.
+								<br> <a href="https://sakiskid.github.io/Big-Picture/" target="_blank">Click here to start.</a>
+							</p>
+							<p class="text-muted mt-2">Sept. 2020</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card border border-secondary">
+						<img class="card-img-top" src="./Assets/my-images/weather-preview.gif" width="100%" height="100%" alt="Minimalist Weather Dashboard">
+						<div class="card-body">
+							<h5 class="card-title">Minimalist Weather Dashboard</h5>
+							<p class="card-text">
+								This Weather Dashboard features up-to-date weather information from around the globe. 
+								View the weather of any city, state, or country with the click of a button.
+								Features a sleek design, City ID lookup, and a 5 day weather forecast.
+								<br> <a href="https://sakiskid.github.io/Weather-Dashboard/" target="_blank">Click here to start.</a>
+							</p>
+							<p class="text-muted mt-2">Aug. 2020</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row mt-4 justify-content-center text-center">
+				<div class="display-4">
+					Archived Projects
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center mb-4">
+					<p class="text-muted">
+						Archived Projects due to restraints in one form or another. <br>
+						These projects are archived on an old hard drive, long before I knew about Git and Github. I plan on uploading them :)
+						<br><br>
+						These games were both passion projects for me. Physics-Based games have always captivated me because of the endless possibilities brought on by physics!
+					</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					<div class="card border border-secondary">
+						<img class="card-img-top" src="./Assets/my-images/pbab.gif" width="100%" height="100%" alt="Physics Based Arena Brawler">
+						<div class="card-body">
+							<h5 class="card-title">
+								PBAB
+							</h5>
+							<p class="card-text">
+								Physics-Based Arena Brawler (PBAB) is a top-down gladiator simulator. Fight your way through waves of enemies while you try to survive.
+								<br>
+								<a href="https://sakiskid.itch.io/pbab" target="_blank">Click here</a> to view PBAB's Development Log. <br>
+								<a href="https://www.youtube.com/watch?v=iwSDHCeKnDw&ab_channel=SoundPaladin">
+									Click here</a> to watch a trailer of the last update released for PBAB.
+							</p>
+							<p class="text-muted mt-2">2018-2019</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card border border-secondary">
+						<img class="card-img-top" src="./Assets/my-images/bm.jpg" width="100%" height="100%" alt="Physics Based Arena Brawler">
+						<div class="card-body">
+							<h5 class="card-title">
+								Backflip Master
+							</h5>
+							<p class="card-text">
+								Backflip Master is a physics-based backflipping game. Avenge the death of a loved one by backflipping your way to justice. <br>
+								<a href="https://sakiskid.itch.io/backflip-master" target="_blank">Click here</a> for the BM Development Log.
+							</p>
+							<p class="text-muted mt-2">2019-2020</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid text-center">
+			<div class="row">
+				<div class="col">
+					<small> 
+						<a href="https://www.linkedin.com/in/tyler-smith-atx/" target="_blank">LinkedIn</a> |
+						<a href="https://github.com/Sakiskid" target="_blank">GitHub</a> |
+						<a href="./Assets/Files/Tyler Smith Full Stack Web Developer.pdf" target="_blank">Resume</a>
+					</small>
+					<br>
+					<small>713-854-6795 | tylerdrew.work@gmail.com</small>
+					<br>
+					<small class="footer-muted">Created by Tyler Smith | Last updated Sept. 2020</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./imgCollapser.js"></script>
+	<script src="https://kit.fontawesome.com/e999b88b1e.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,163 +1,204 @@
-$color-white: #ffe6e6;
-$color-white-hex: ffe6e6;
-$color-main: #48728d;
-$color-main-hex: 48728d;
-$color-dark: #192024;
-
-@mixin pattern-charliebrown($bgColor, $fgColorNoHashtag, $opacity) {
-    background-attachment: fixed;
-    background-color: $bgColor;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23#{$fgColorNoHashtag}' fill-opacity='#{$opacity}'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+* {
+    /* border: 1px; */
+    /* border-style: dotted; */
 }
 
-@mixin pattern-texture($bgColor, $fgColorNoHashtag, $opacity) {
-    background-attachment: fixed;
-    background-color: $bgColor;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23#{fgColorNoHashtag}' fill-opacity='#{$opacity}' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+header {
+    text-align: center;
+    font-size: xx-large;
 }
 
-body, html {
-    // height: 100%;
+body {
+    background-color: #E4E6ED;
+    height: 100vh;
+}
+
+footer {
+    position: fixed;
+    bottom: -1px;
+    width: 100%;
+    background-color: #0A0624;
+    color: #E4E6ED;
+    padding: 10px;
 }
 
 h1 {
-    text-align: center;
-    font-size: 10vw;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 800;
+    font-size: 100px;
 }
 
-h2 {
-    text-align: center;
-    font-size: 6vw;
+h5 {
+    font-size: 150%;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-.container {
+.debug {
+    border: red;
+    border-style: dotted;
+    border-width: 1px;
     height: 100%;
-    background-color: $color-white;
 }
 
+/* ANCHOR NAVBAR!! */
 
-// ANCHOR Splash Section
-
-#splash {
-    display: grid;
-    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-    height: 90vh;
-    @include pattern-charliebrown($color-white, $color-main-hex, 0.25);
-
-    h1 {
-        // Layout
-        grid-row: 2;
-        
-        // Style
-        font-family: 'Louis George Cafe', sans-serif;
-        color: $color-main;
-
-        // Anim
-        animation: splash-fade-in 1.8s ease-in;
-    }
-
-    h2 {
-        margin-top: 25px;
-        grid-row: 3;
-        font-family: 'Louis George Cafe', sans-serif;
-    }
+.navbar {
+    padding-left: 25px;
+    background-color: #0A0624;
 }
 
-@keyframes splash-fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 100;
-    }
+.nav-link {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: xx-large;
+    color: #E4E6ED;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding: 0px;
 }
 
-@media only screen and (max-width: 420px) {
-    #splash h1 {
-        font-size: 17vw;
-    }
-
-    #splash h2 {
-        font-size: 10vw;
-    }
+#navbar__logo {
+    color: #E4E6ED;
+    padding-left: 30px;
 }
 
-// ANCHOR Navbar
+#navbar__fullname {
+    color: #E4E6ED;
+    font-family: 'Source Sans Pro', serif;
+    font-size: 250%;
+    letter-spacing: 5px;
+    margin-left: 5%;
+}
 
-#nav-wrapper {
-    // Position
-    height: 10vh;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    // Layout
-    display: flex;
+#navbar-gradient-hack {
+    background: linear-gradient(180deg, rgba(10,6,36,1) 0%, rgba(10,6,36,0.5) 68%, rgba(10,6,36,0) 100%);
+    height: 10px
+}
+
+.fa-caret-square-down {
+    color: #E4E6ED;
+}
+
+// ANCHOR Footer
+
+.footer-muted {
+    color: darken(#999ca7, 0);
+    font-style: italic;
+}
+
+/* ANCHOR INDEX */
+
+.btn--index {
+    height: 150%;
+    width: 75%;
+    background-color: #0A0624;
+    color: #E4E6ED;
+}
+
+.bio-row {
+    margin-top: 2vh;
+    height: 20vh;
     align-items: center;
-    justify-content: center;
-    // Style
-    @include pattern-texture($color-main, $color-white-hex, 0.25);
+}
 
-    .nav-icon {
-        position: relative;
-    }
-    
-    // Font Awesome Icons
-    svg {
-        // Style
-        cursor: pointer;
-        color: $color-dark;
-        transition: color 0.5s;
-    }
-    
-    // Span sibling of Svg
-    svg + .nav-label {
-        // Layout
-        position: absolute;
-        left: 0px;
-        width: 100%;
-        bottom: 100%;
-        font-size: 1.5em;
-        text-align: center;
-        pointer-events: none;
-        // Style
-        color: $color-white;
-        background-color: $color-dark;
-        border-radius: 15%;
-        opacity: 0%;
-        transition: opacity 0.5s;
-    }
-    
-    svg:hover {
-        color: hue($color: green);
-        color: $color-white;
-    }
+.bio-header {
+    font-family: 'Recursive', serif; /* fun easy-going serif text */
+    text-align: center;
+    padding-top: 5%;
+}
 
-    svg:hover + .nav-label {
-        opacity: 100%;
+.bio-desc {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 25px;
+    font-size: 200%;
+}
+
+
+#bio-picture-img {
+    z-index: -1;
+    /* regardless of the size of the page, 
+    the height will always be 100% of the parent */
+    height: 100vh;
+    object-fit: cover;
+    /* Object Position declares the center of the image (will crop the image with this point as the anchor) */
+    object-position: 40% 50%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#bio-picture-img--sm {
+    z-index: -1;
+    opacity: 25%;
+    /* regardless of the size of the page, 
+    the height will always be 100% of the parent */
+    height: 100%;
+    max-height: 120%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+#bio-description__button {
+    height: 200px;
+}
+
+#main-content-gradient-hack {
+    width: 30%;
+    height: 90vh;
+    background-color: #E4E6ED;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(228,230,237,1) 80%);
+    position: absolute;
+    right: 0;
+    top: -5%;
+    z-index: -1;
+}
+
+/* ANCHOR CONTACT PAGE -- FORMS */
+
+.form-group label {
+    font-size: larger;
+}
+
+/* ANCHOR PORTFOLIO PAGE */
+
+.card {
+    width: 100%;
+    height: 50%;
+}
+
+.card-img-top {
+    object-fit: cover;
+}
+
+/* SMALL SCREEN */
+@media screen and (max-width: 991px) {
+    .bio-header {
+        font-size: 300%;
+    }
+    .nav-link {
+        text-align: end;
+    }
+    #navbar__fullname {
+        margin-left: 1%
+    }
+    #main-content-gradient-hack {
+        display: none;
     }
 }
 
-// ANCHOR Below Fold
-
-#showcase {
-    height: 100vh;
-    width: 100%;
-    @include pattern-charliebrown($color-main, $color-white-hex, 0.25);
-    background-attachment: local;
-    position: relative;
-    overflow: hidden;
-
-    article {
-        width: 80%;
-        height: 75%;
-        position: absolute;
-        border-radius: 10%;
-        background-color: $color-dark;
-        transition: left 1s;
-        left: 100%;
+/* MEDIUM SCREEN */
+@media screen and (min-width: 992px) {
+    .bio-header {
+        font-size: 350%;
     }
+}
 
-    article.active {
-        left: 0%;
+/* LARGE SCREEN OR BIGGER */
+@media screen and (min-width: 1200px) {
+    .bio-header {
+        font-size: 500%;
     }
 }
