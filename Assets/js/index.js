@@ -29,8 +29,8 @@ function moveToSection (section) {
         left: `${(-currentPosition.x * 100) * zoomAmount}vw`,
         top: `${(-currentPosition.y * 100) * zoomAmount}vh`,
         scale: zoomAmount,
-        ease: "power3.out",
-        duration: 1,
+        ease: "power3.inOut",
+        duration: 0.4,
         onComplete: move,
     })
 
@@ -40,7 +40,7 @@ function moveToSection (section) {
             // We need to multiply by zoom amount to prevent scaling that sends the container flying
             left: `${(-destination.x * 100) * zoomAmount}vw`,
             top: `${(-destination.y * 100) * zoomAmount}vh`,
-            duration: 0.5,
+            duration: 0.4,
             ease: "power1.out",
             onComplete: zoomIn,
         });
@@ -53,7 +53,7 @@ function moveToSection (section) {
             top: `${-destination.y * 100}vh`,
             ease: "power3.in",
             scale: 1,
-            duration: 1,
+            duration: 0.6,
         }).then(() => {
             currentPosition = destination;
         });
@@ -63,6 +63,12 @@ function moveToSection (section) {
 
 function init () {
     setInitialPositionsForSections();
+    // Fade out Splash
+    gsap.to("#splash", {
+        opacity: 0,
+        duration: 1,
+        ease: "power1.in",
+    });
     // Fade in header
     gsap.from("#header-name", {
         opacity: 0,
