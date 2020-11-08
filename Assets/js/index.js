@@ -29,7 +29,8 @@ function moveToSection (section) {
         left: `${(-currentPosition.x * 100) * zoomAmount}vw`,
         top: `${(-currentPosition.y * 100) * zoomAmount}vh`,
         scale: zoomAmount,
-        duration: 0.8,
+        ease: "power3.out",
+        duration: 1,
         onComplete: move,
     })
 
@@ -39,8 +40,8 @@ function moveToSection (section) {
             // We need to multiply by zoom amount to prevent scaling that sends the container flying
             left: `${(-destination.x * 100) * zoomAmount}vw`,
             top: `${(-destination.y * 100) * zoomAmount}vh`,
-            duration: 1,
-            easing: "power4.out",
+            duration: 0.5,
+            ease: "power1.out",
             onComplete: zoomIn,
         });
     }
@@ -50,6 +51,7 @@ function moveToSection (section) {
         gsap.to("#container", {
             left: `${-destination.x * 100}vw`,
             top: `${-destination.y * 100}vh`,
+            ease: "power3.in",
             scale: 1,
             duration: 1,
         }).then(() => {
