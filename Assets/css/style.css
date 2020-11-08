@@ -1,0 +1,9 @@
+body {
+  background-color: #0b2518;
+}
+
+#index-header {
+  height: 5vh;
+  background-color: #081810;
+  color: white;
+}

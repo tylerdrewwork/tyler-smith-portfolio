@@ -1,0 +1,12 @@
+$green-black: #081810;
+$green-dark: #0b2518;
+
+body {
+    background-color: $green-dark;
+}
+
+#index-header {
+    height: 5vh;
+    background-color: $green-black;
+    color: white;
+}
