@@ -1,6 +1,6 @@
 // Config
 const zoomAmount = 0.25;
-const portfolioCoords = {x: 2500, y: 2500};
+const portfolioCoords = {x: 2, y: 2};
 // Global Vars
 let currentPosition = {x: 0, y: 0};
 
@@ -22,8 +22,8 @@ function moveToSection (section) {
 
     // Zoom Out
     gsap.to("#container", {
-        left: -currentPosition.x * zoomAmount,
-        top: -currentPosition.y * zoomAmount,
+        left: `${(-currentPosition.x * 100) * zoomAmount}vw`,
+        top: `${(-currentPosition.y * 100) * zoomAmount}vh`,
         scale: zoomAmount,
         duration: 1,
     });
@@ -31,16 +31,16 @@ function moveToSection (section) {
     // Move to
     gsap.to("#container", {
         // We need to multiply by zoom amount to prevent scaling that sends the container flying
-        left: -destination.x * zoomAmount,
-        top: -destination.y * zoomAmount,
+        left: `${(-destination.x * 100) * zoomAmount}vw`,
+        top: `${(-destination.y * 100) * zoomAmount}vh`,
         duration: 1,
         delay: 1,
     });
 
     // Zoom In
     gsap.to("#container", {
-        left: -destination.x,
-        top: -destination.y,
+        left: `${-destination.x * 100}vw`,
+        top: `${-destination.y * 100}vh`,
         scale: 1,
         duration: 1,
         delay: 2,
@@ -63,9 +63,9 @@ function init () {
 
 function setInitialPositionsForSections () {
     gsap.set("#portfolio-container", {
-        left: portfolioCoords.x,
-        top: portfolioCoords.y,
-    })
+        left: `${portfolioCoords.x * 100}vw`,
+        top: `${portfolioCoords.y * 100}vh`,
+    });
 }
 
 init();
