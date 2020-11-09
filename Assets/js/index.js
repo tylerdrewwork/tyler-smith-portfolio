@@ -149,13 +149,13 @@ function startPortfolioTimeline () {
     const portfolioTrees = gsap.timeline({
         scrollTrigger: {
             trigger: "#portfolio-container",
-            start: "center bottom",
+            start: "center+=25% bottom",
             end: "bottom bottom",
             scrub: true,
             markers: true,
         }
     })
-    portfolioTrees.from("#portfolio-container #portfolio-bg-trees", {bottom: -400})
+    portfolioTrees.from("#portfolio-container #portfolio-bg-trees", {y: 400, x: 50})
 
     
     portfolioHeaderTl.from("#portfolio-container .section-header", {height: "0vh" })

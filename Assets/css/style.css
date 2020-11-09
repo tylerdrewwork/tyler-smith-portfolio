@@ -130,6 +130,8 @@ section header {
 }
 #portfolio-container .content-panel {
   background-color: green;
+  height: 70%;
+  width: 80vw;
 }
 
 #contact-container .content-panel {
