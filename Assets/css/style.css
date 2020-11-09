@@ -1,18 +1,17 @@
 body {
-  overflow: hidden;
   background-color: #081810;
 }
 
 section {
   position: absolute;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 #splash {
   position: absolute;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: 10;
   background-color: black;
   pointer-events: none;
@@ -20,17 +19,15 @@ section {
 
 #container {
   position: relative;
-  overflow: hidden;
-  width: 100vw;
   height: 100vh;
 }
 
 #index-container {
-  height: 100vh;
-  width: 100vw;
+  display: grid;
+  grid-template-rows: [start] 2fr [header-end] 2fr 2fr 2fr [links-start] 2fr 2fr [links-end] 1fr [end];
   background-color: #faddff;
 }
-#header-name {
+#index-container #header-name {
   padding-top: 15vh;
   font-size: 8vw;
   text-align: center;
@@ -42,4 +39,28 @@ section {
 
 #contact-container {
   background-color: blue;
+}
+
+.links-wrapper {
+  grid-row: links-start/links-end;
+  justify-content: center;
+  text-align: center;
+  font-size: 100%;
+}
+.links-wrapper .index-link {
+  font-size: 400%;
+  margin: 2% 5%;
+}
+
+.button-large {
+  background-color: #263f66;
+  border: 5px outset #0b2518;
+  border-radius: 20px;
+  color: #faddff;
+  cursor: pointer;
+  padding: 1% 2%;
+}
+
+.button-large:active {
+  border: inset;
 }

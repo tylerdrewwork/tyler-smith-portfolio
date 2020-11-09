@@ -1,7 +1,7 @@
 // Config
 const zoomAmount = 0.45;
 const portfolioCoords = {x: 0, y: 1};
-const contactCoords = {x: 1, y: 1};
+const contactCoords = {x: 0, y: 2};
 // Global Vars
 let currentPosition = {x: 0, y: 0};
 
