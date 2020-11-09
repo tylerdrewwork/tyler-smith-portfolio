@@ -36,6 +36,7 @@ section {
 
 header {
     @include glassFX($clr-headerfooter);
+    overflow: hidden;
     position: fixed;
     z-index: 10;
     text-align: center;
@@ -45,6 +46,11 @@ header {
     font-size: 200%;
     color: $clr-pink-light;
     border-bottom: rgba($color: $clr-headerfooter, $alpha: 0.2) solid 3px;
+
+    #header-section-wrapper {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 footer {
@@ -79,7 +85,7 @@ footer {
 }
 
 .header-section {
-    // display: none;
+    height: 100%;
 }
 
 #container {

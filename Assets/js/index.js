@@ -9,6 +9,7 @@ let currentPosition = {x: 0, y: 0};
 function init () {
     // This is the code that places the sections in different parts of the site for the camera zoom in/out special fx
     // setInitialPositionsForSections();
+    startHeaderSlotTimeline();
     startPortfolioTimeline();
     fogFX();
 
@@ -137,14 +138,7 @@ function fogFX () {
 }
 
 function startPortfolioTimeline () {
-    const portfolioHeaderTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#portfolio-container",
-            start: "top bottom",
-            end: "bottom bottom",
-            scrub: true,
-        }
-    });
+    
 
     const portfolioTrees = gsap.timeline({
         scrollTrigger: {
@@ -156,12 +150,36 @@ function startPortfolioTimeline () {
         }
     })
     portfolioTrees.from("#portfolio-container #portfolio-bg-trees", {y: 400, x: 50})
-
-    
-    portfolioHeaderTl.from("#portfolio-container .section-header", {height: "0vh" })
-    portfolioHeaderTl.from("#portfolio-container header", {fontSize: 0})
     // bgTimeline.to("#portfolio-container", {width: 10})
     // bgTimeline.to("#contact-container", {width: 10})
+}
+
+function startHeaderSlotTimeline() {
+    // User is in portfolio
+    const portfolioHeaderTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#portfolio-container",
+            start: "center bottom",
+            end: "bottom bottom",
+            scrub: true,
+        }
+    });
+    portfolioHeaderTl.to("#header-section-wrapper", {
+        y: "-100%",
+    })
+
+    // User is in contact
+    const contactHeaderTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#contact-container",
+            start: "center bottom",
+            end: "bottom bottom",
+            scrub: true,
+        }
+    });
+    contactHeaderTl.to("#header-section-wrapper", {
+        y: "-200%",
+    })
 }
 
 function random (min, max) {

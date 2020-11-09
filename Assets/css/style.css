@@ -16,6 +16,7 @@ header {
   background-color: rgba(11, 37, 24, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
   position: fixed;
   z-index: 10;
   text-align: center;
@@ -25,6 +26,10 @@ header {
   font-size: 200%;
   color: #faddff;
   border-bottom: rgba(11, 37, 24, 0.2) solid 3px;
+}
+header #header-section-wrapper {
+  height: 100%;
+  width: 100%;
 }
 
 footer {
@@ -56,6 +61,10 @@ footer {
   z-index: 10;
   background-color: black;
   pointer-events: none;
+}
+
+.header-section {
+  height: 100%;
 }
 
 #container {
