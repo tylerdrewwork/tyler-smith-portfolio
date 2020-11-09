@@ -64,8 +64,8 @@ section header {
   filter: blur(10px);
   -webkit-filter: blur(10px);
   position: absolute;
-  background: #b82d2d;
-  background: radial-gradient(circle, #b82d2d -30%, rgba(208, 210, 215, 0) 60%, rgba(228, 230, 237, 0) 100%);
+  background: #1b9094;
+  background: radial-gradient(circle, #1b9094 -30%, rgba(208, 210, 215, 0) 60%, rgba(228, 230, 237, 0) 100%);
   height: 100%;
   width: 100%;
 }
@@ -115,8 +115,18 @@ section header {
   margin: 2% 5%;
 }
 
-#portfolio-container .background-image {
-  background-image: url("../Images/backgrounds/pexels-efdal-yildiz-917494.jpg");
+#portfolio-container #portfolio-bg-trees {
+  bottom: 0;
+  background-image: url("../Images/backgrounds/portfolio-trees-efdal-yildiz.png");
+  background-position: bottom;
+  background-attachment: local;
+  background-size: 50%;
+  background-repeat: repeat-x;
+}
+#portfolio-container #portfolio-bg-stars {
+  background-image: url("../Images/backgrounds/portfolio-starry-felix-mittermeier.jpg");
+  background-size: 50%;
+  z-index: -6;
 }
 #portfolio-container .content-panel {
   background-color: green;

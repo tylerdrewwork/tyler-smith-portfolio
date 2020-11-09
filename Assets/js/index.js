@@ -9,7 +9,7 @@ let currentPosition = {x: 0, y: 0};
 function init () {
     // This is the code that places the sections in different parts of the site for the camera zoom in/out special fx
     // setInitialPositionsForSections();
-    startBackgroundScrollScrub();
+    startPortfolioTimeline();
     fogFX();
 
     // Fade out Splash
@@ -86,12 +86,12 @@ function moveToSection (section) {
 }
 
 function fogFX () {
-    const possibleColors = ["b82d2d", "83d164", "2d4cd4"]
+    const possibleColors = ["b82d2d", "83d164", "2d4cd4", "b82d8e", "ebcd23", "601074", "1b9094"]
     const xStartingRange = 500;
     const yStartingRange = 400;
     const xTranslationRange = 500;
     const durationMin = 5;
-    const durationMax = 20;
+    const durationMax = 10;
     const delayRange = 3;
 
     // Actual Fog Animation Timeline
@@ -107,7 +107,6 @@ function fogFX () {
             start: "top bottom",
             end: "bottom top",
             scrub: true,
-            markers: true,
             onEnterBack: () => { 
                 isInsideIndex = true; 
                 fogTimeline.play();
@@ -129,7 +128,7 @@ function fogFX () {
             return `radial-gradient(circle, #${color} -30%, rgba(208,210,215,0) 60%, rgba(228,230,237,0) 100%)`;
         }
     });
-    
+
     fogTimeline.to(".fog-particle", { 
         x: () => { return random(-xTranslationRange, xTranslationRange); },
         duration: () => { return random(durationMin, durationMax); },
@@ -137,17 +136,30 @@ function fogFX () {
     });
 }
 
-function startBackgroundScrollScrub () {
-    const bgTimeline = gsap.timeline({
+function startPortfolioTimeline () {
+    const portfolioHeaderTl = gsap.timeline({
         scrollTrigger: {
-            trigger: "#container",
-            start: "top top",
+            trigger: "#portfolio-container",
+            start: "top bottom",
             end: "bottom bottom",
             scrub: true,
         }
     });
 
-    bgTimeline.to("#background-image", {backgroundPositionY: "200px"})
+    const portfolioTrees = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#portfolio-container",
+            start: "center bottom",
+            end: "bottom bottom",
+            scrub: true,
+            markers: true,
+        }
+    })
+    portfolioTrees.from("#portfolio-container #portfolio-bg-trees", {bottom: -400})
+
+    
+    portfolioHeaderTl.from("#portfolio-container .section-header", {height: "0vh" })
+    portfolioHeaderTl.from("#portfolio-container header", {fontSize: 0})
     // bgTimeline.to("#portfolio-container", {width: 10})
     // bgTimeline.to("#contact-container", {width: 10})
 }
