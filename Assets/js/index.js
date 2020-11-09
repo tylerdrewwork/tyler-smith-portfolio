@@ -3,12 +3,14 @@ const zoomAmount = 0.45;
 const portfolioCoords = {x: 0, y: 1};
 const contactCoords = {x: 0, y: 2};
 // Global Vars
+let isInsideIndex = true;
 let currentPosition = {x: 0, y: 0};
 
 function init () {
     // This is the code that places the sections in different parts of the site for the camera zoom in/out special fx
     // setInitialPositionsForSections();
     startBackgroundScrollScrub();
+    fogFX();
 
     // Fade out Splash
     gsap.to("#splash", {
@@ -83,6 +85,26 @@ function moveToSection (section) {
 
 }
 
+function fogFX () {
+
+    const indexTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#index-container",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+            markers: true,
+            onEnterBack: () => { isInsideIndex = true; },
+            onLeave: () => { isInsideIndex = false; },
+        }
+    });
+
+    indexTimeline.to("#fx-fog", {
+        x: 0,
+        duration: 5,
+    });
+}
+
 function startBackgroundScrollScrub () {
     const bgTimeline = gsap.timeline({
         scrollTrigger: {
@@ -90,7 +112,6 @@ function startBackgroundScrollScrub () {
             start: "top top",
             end: "bottom bottom",
             scrub: true,
-            markers: true,
         }
     });
 
