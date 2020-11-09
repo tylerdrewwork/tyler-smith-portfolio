@@ -86,22 +86,54 @@ function moveToSection (section) {
 }
 
 function fogFX () {
+    const possibleColors = ["b82d2d", "83d164", "2d4cd4"]
+    const xStartingRange = 500;
+    const yStartingRange = 400;
+    const xTranslationRange = 500;
+    const durationMin = 5;
+    const durationMax = 20;
+    const delayRange = 3;
 
-    const indexTimeline = gsap.timeline({
+    // Actual Fog Animation Timeline
+    const fogTimeline = gsap.timeline({
+        repeat: -1,
+        yoyo: true,
+    });
+
+    // Index Scrolltrigger
+    gsap.timeline({
         scrollTrigger: {
             trigger: "#index-container",
             start: "top bottom",
             end: "bottom top",
             scrub: true,
             markers: true,
-            onEnterBack: () => { isInsideIndex = true; },
-            onLeave: () => { isInsideIndex = false; },
+            onEnterBack: () => { 
+                isInsideIndex = true; 
+                fogTimeline.play();
+            },
+            onLeave: () => { 
+                isInsideIndex = false; 
+            },
         }
     });
 
-    indexTimeline.to("#fx-fog", {
-        x: 0,
-        duration: 5,
+    fogTimeline.play(); // Start moving fog once, when page loads
+
+    gsap.set(".fog-particle", {
+        x: () => { return random(-xStartingRange, xStartingRange); },
+        y: () => { return random(-yStartingRange, yStartingRange); },
+        background: () => {
+            let color = possibleColors[random(0, possibleColors.length)];
+            console.log("color: ", color);
+            return `radial-gradient(circle, #${color} -30%, rgba(208,210,215,0) 60%, rgba(228,230,237,0) 100%)`;
+        }
+    });
+    
+    fogTimeline.to(".fog-particle", { 
+        x: () => { return random(-xTranslationRange, xTranslationRange); },
+        duration: () => { return random(durationMin, durationMax); },
+        delay: () => { return random(delayRange); },
     });
 }
 
@@ -120,6 +152,9 @@ function startBackgroundScrollScrub () {
     // bgTimeline.to("#contact-container", {width: 10})
 }
 
+function random (min, max) {
+    return Math.floor(min + Math.random() * (max - min));
+}
 
 function setInitialPositionsForSections () {
     gsap.set("#portfolio-container", {
