@@ -62,7 +62,9 @@ function moveToSection (section) {
 }
 
 function init () {
-    setInitialPositionsForSections();
+    // This is the code that places the sections in different parts of the site for the camera zoom in/out special fx
+    // setInitialPositionsForSections();
+
     // Fade out Splash
     gsap.to("#splash", {
         opacity: 0,

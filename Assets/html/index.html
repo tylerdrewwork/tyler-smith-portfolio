@@ -11,30 +11,39 @@
 
 <body>
 	<div id="splash"></div>
+	<div id="background-image"></div>
 
 	<div id="container">
 
 		<!-- ====== Index ======= -->
 		<section id="index-container">
-			<div id="header-name">
-				Tyler Smith
-			</div>
-			<div class="links-wrapper">
-				<a class="index-link button-large" onclick="moveToSection('portfolio')">Portfolio</a>
-				<a class="index-link button-large" onclick="moveToSection('contact')">Contact</a>
+			<div class="content-panel">
+				<div id="header-name">
+					Tyler Smith
+				</div>
+				<div class="links-wrapper">
+					<a class="index-link button-large" onclick="moveToSection('portfolio')">Portfolio</a>
+					<a class="index-link button-large" onclick="moveToSection('contact')">Contact</a>
+				</div>
 			</div>
 		</section>
 		
 		<!-- ====== Portfolio ======= -->
 		<section id="portfolio-container">
-			tesointoisentoinsoeitn
-			<a onclick="moveToSection('index')">Homepage</a>
+			<div class="content-panel">
+
+				tesointoisentoinsoeitn
+				<a onclick="moveToSection('index')">Homepage</a>
+			</div>
 		</section>
 
 		<!-- ====== Contact ======= -->
 		<section id="contact-container">
-			Yo, contact me
-			<button onclick="moveToSection('index')">Homepage</button>
+			<div class="content-panel">
+
+				Yo, contact me
+				<button onclick="moveToSection('index')">Homepage</button>
+			</div>
 		</section>
 	</div>
 

@@ -1,15 +1,25 @@
-body {
-  background-color: #081810;
-}
-
-section {
-  position: absolute;
-  height: 100%;
+html, body {
+  position: relative;
   width: 100%;
 }
 
-#splash {
+section {
+  background-color: none;
+  height: 100vh;
+  width: 100%;
+}
+
+#background-image {
+  background-image: url("../Images/backgrounds/gravel-daniel-absi.jpg");
   position: absolute;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#splash {
+  position: fixed;
   height: 100vh;
   width: 100%;
   z-index: 10;
@@ -19,11 +29,17 @@ section {
 
 #container {
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
-#index-container {
+.content-panel {
+  margin: auto;
+  width: 70%;
+  height: 100%;
   display: grid;
+}
+
+#index-container .content-panel {
   grid-template-rows: [start] 2fr [header-end] 2fr 2fr 2fr [links-start] 2fr 2fr [links-end] 1fr [end];
   background-color: #faddff;
 }
@@ -33,11 +49,11 @@ section {
   text-align: center;
 }
 
-#portfolio-container {
+#portfolio-container .content-panel {
   background-color: green;
 }
 
-#contact-container {
+#contact-container .content-panel {
   background-color: blue;
 }
 
