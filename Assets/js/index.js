@@ -5,6 +5,28 @@ const contactCoords = {x: 0, y: 2};
 // Global Vars
 let currentPosition = {x: 0, y: 0};
 
+function init () {
+    // This is the code that places the sections in different parts of the site for the camera zoom in/out special fx
+    // setInitialPositionsForSections();
+    startBackgroundScrollScrub();
+
+    // Fade out Splash
+    gsap.to("#splash", {
+        opacity: 0,
+        duration: 1,
+        ease: "power1.in",
+    });
+
+    // Fade in header
+    gsap.from("#header-name", {
+        opacity: 0,
+        y: 20,
+        duration: 6,
+        delay: 1,
+        ease: "power2.out",
+    });
+}
+
 function moveToSection (section) {
     let destination = {x: undefined, y: undefined};
     switch (section) {
@@ -15,7 +37,7 @@ function moveToSection (section) {
         case "portfolio":
             destination = portfolioCoords;
             break;
-        case "contact":
+            case "contact":
             destination = contactCoords;
             break;
         default:
@@ -61,25 +83,22 @@ function moveToSection (section) {
 
 }
 
-function init () {
-    // This is the code that places the sections in different parts of the site for the camera zoom in/out special fx
-    // setInitialPositionsForSections();
-
-    // Fade out Splash
-    gsap.to("#splash", {
-        opacity: 0,
-        duration: 1,
-        ease: "power1.in",
+function startBackgroundScrollScrub () {
+    const bgTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#container",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+            markers: true,
+        }
     });
-    // Fade in header
-    gsap.from("#header-name", {
-        opacity: 0,
-        y: 20,
-        duration: 6,
-        delay: 1,
-        ease: "power2.out",
-    })
+
+    bgTimeline.to("#background-image", {backgroundPositionY: "200px"})
+    // bgTimeline.to("#portfolio-container", {width: 10})
+    // bgTimeline.to("#contact-container", {width: 10})
 }
+
 
 function setInitialPositionsForSections () {
     gsap.set("#portfolio-container", {
