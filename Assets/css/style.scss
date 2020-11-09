@@ -46,11 +46,6 @@ header {
     font-size: 200%;
     color: $clr-pink-light;
     border-bottom: rgba($color: $clr-headerfooter, $alpha: 0.2) solid 3px;
-
-    #header-section-wrapper {
-        height: 100%;
-        width: 100%;
-    }
 }
 
 footer {
@@ -61,6 +56,19 @@ footer {
     height: 3vh;
     z-index: 10;
     border-top: rgba($color: $clr-headerfooter, $alpha: 0.2) solid 3px;
+    text-align: center;
+    font-size: 100%;
+    color: $clr-pink-light;
+    overflow: hidden;
+}
+
+.header-section, .footer-section {
+    height: 100%;
+}
+
+#header-section-wrapper, #footer-section-wrapper {
+    height: 100%;
+    width: 100%;
 }
 
 .background-image {
@@ -84,9 +92,7 @@ footer {
     pointer-events: none;
 }
 
-.header-section {
-    height: 100%;
-}
+
 
 #container {
     position: relative;

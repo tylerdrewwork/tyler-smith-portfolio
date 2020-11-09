@@ -138,8 +138,6 @@ function fogFX () {
 }
 
 function startPortfolioTimeline () {
-    
-
     const portfolioTrees = gsap.timeline({
         scrollTrigger: {
             trigger: "#portfolio-container",
@@ -150,11 +148,11 @@ function startPortfolioTimeline () {
         }
     })
     portfolioTrees.from("#portfolio-container #portfolio-bg-trees", {y: 400, x: 50})
-    // bgTimeline.to("#portfolio-container", {width: 10})
-    // bgTimeline.to("#contact-container", {width: 10})
 }
 
 function startHeaderSlotTimeline() {
+    const headerFooterWrappers = ["#header-section-wrapper", "#footer-section-wrapper"];
+
     // User is in portfolio
     const portfolioHeaderTl = gsap.timeline({
         scrollTrigger: {
@@ -164,7 +162,7 @@ function startHeaderSlotTimeline() {
             scrub: true,
         }
     });
-    portfolioHeaderTl.to("#header-section-wrapper", {
+    portfolioHeaderTl.to(headerFooterWrappers, {
         y: "-100%",
     })
 
@@ -177,7 +175,7 @@ function startHeaderSlotTimeline() {
             scrub: true,
         }
     });
-    contactHeaderTl.to("#header-section-wrapper", {
+    contactHeaderTl.to(headerFooterWrappers, {
         y: "-200%",
     })
 }
@@ -186,6 +184,7 @@ function random (min, max) {
     return Math.floor(min + Math.random() * (max - min));
 }
 
+// Deprecated
 function setInitialPositionsForSections () {
     gsap.set("#portfolio-container", {
         left: `${portfolioCoords.x * 100}vw`,

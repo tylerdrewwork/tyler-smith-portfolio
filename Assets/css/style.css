@@ -27,10 +27,6 @@ header {
   color: #faddff;
   border-bottom: rgba(11, 37, 24, 0.2) solid 3px;
 }
-header #header-section-wrapper {
-  height: 100%;
-  width: 100%;
-}
 
 footer {
   background-color: rgba(11, 37, 24, 0.5);
@@ -42,6 +38,19 @@ footer {
   height: 3vh;
   z-index: 10;
   border-top: rgba(11, 37, 24, 0.2) solid 3px;
+  text-align: center;
+  font-size: 100%;
+  color: #faddff;
+  overflow: hidden;
+}
+
+.header-section, .footer-section {
+  height: 100%;
+}
+
+#header-section-wrapper, #footer-section-wrapper {
+  height: 100%;
+  width: 100%;
 }
 
 .background-image {
@@ -61,10 +70,6 @@ footer {
   z-index: 10;
   background-color: black;
   pointer-events: none;
-}
-
-.header-section {
-  height: 100%;
 }
 
 #container {
