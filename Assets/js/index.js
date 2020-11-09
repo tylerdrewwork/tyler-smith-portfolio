@@ -74,6 +74,7 @@ function init () {
         opacity: 0,
         y: 20,
         duration: 6,
+        delay: 1,
         ease: "power2.out",
     })
 }
