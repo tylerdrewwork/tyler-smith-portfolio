@@ -228,11 +228,28 @@ footer {
     
     .content-panel {
         display: grid;
-        // border: 20px solid;
-        // border-image: url(../Images/textures/wood-logs.jpg);
+        // grid-template-rows: 2fr 1fr 1fr;
+        grid-template-rows: auto;
+        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "header header"
+        "project1 project2"
+        "project3 project4";
         background-color: green;
         height: 100%;
         width: 80vw;
+
+        h1 {
+            font-size: 300%;
+            text-align: center;
+            grid-area: header; 
+        }
+        #portfolio-project-1 { grid-area: project1; }
+        #portfolio-project-2 { grid-area: project2; }
+        #portfolio-project-3 { grid-area: project3; }
+        #portfolio-project-4 { grid-area: project4; }
+
     }
     
 }
