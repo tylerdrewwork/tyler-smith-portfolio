@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+
 $green-black: #081810;
 $green-dark: #0b2518;
 $clr-yellow-gray: #707065;
 $clr-pink-light: #faddff;
 $clr-button: #263f66;
 $clr-headerfooter: #0b2518;
+$clr-wood-carving: #1f160a;
+
+@mixin font_cabin {
+    font-family: 'Cabin', sans-serif;
+}
 
 @mixin pseudoElement {
     width: 100%;
@@ -18,7 +25,7 @@ $clr-headerfooter: #0b2518;
     -webkit-box-sizing: border-box;
 }
 
-@mixin glassFX ($glasscolor) {
+@mixin fx_glass ($glasscolor) {
     $blurAmount: 10px;
     background-color: rgba($color: $glasscolor, $alpha: 0.5);
     backdrop-filter: blur($blurAmount);
@@ -41,7 +48,7 @@ section {
 }
 
 header {
-    @include glassFX($clr-headerfooter);
+    @include fx_glass($clr-headerfooter);
     overflow: hidden;
     position: fixed;
     z-index: 10;
@@ -55,7 +62,7 @@ header {
 }
 
 footer {
-    @include glassFX($clr-headerfooter);
+    @include fx_glass($clr-headerfooter);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -228,23 +235,55 @@ footer {
     
     .content-panel {
         display: grid;
-        // grid-template-rows: 2fr 1fr 1fr;
-        grid-template-rows: auto;
-        // grid-template-columns: repeat(2, 1fr);
-        grid-template-columns: auto;
+        grid-template-rows: 0.5fr 1fr 1fr;
+        // grid-template-rows: auto;
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: auto;
         grid-template-areas: 
         "header header"
         "project1 project2"
         "project3 project4";
-        background-color: green;
+        background-image: url(../Images/textures/wood-old.jpg);
+        background-size: 25%;
         height: 100%;
         width: 80vw;
 
-        h1 {
-            font-size: 300%;
+        .panel-header {
             text-align: center;
-            grid-area: header; 
+            grid-area: header;
+            border-bottom: 26px solid;
+            border-image: url(../Images/textures/wood-logs.jpg) 53;
+            background-image: url(../Images/textures/wood-rough-seamless.jpg);
+            background-size: 25%;
+            // border-image: inherit;
+            
+            h1 {
+                @include font_cabin;
+                font-size: 400%;
+                text-shadow: #b38a64 0px 2px 2px;
+                color: $clr-wood-carving;
+                align-self: center;
+                
+            }
         }
+
+        .portfolio-project {
+            text-align: center;
+            justify-content: center;
+
+            h2 {
+                font-size: 150%;
+            }
+
+            img {
+                width: 50%;
+                height: 50%;
+                overflow: hidden;
+                border-radius: 5px;
+                border: 2px solid;
+            }
+        }
+
         #portfolio-project-1 { grid-area: project1; }
         #portfolio-project-2 { grid-area: project2; }
         #portfolio-project-3 { grid-area: project3; }
