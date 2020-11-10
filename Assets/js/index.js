@@ -138,6 +138,7 @@ function fogFX () {
 }
 
 function startPortfolioTimeline () {
+    // Move the Trees
     const portfolioTrees = gsap.timeline({
         scrollTrigger: {
             trigger: "#portfolio-container",
@@ -145,9 +146,20 @@ function startPortfolioTimeline () {
             end: "bottom bottom",
             scrub: true,
             markers: true,
+        },
+    });
+    portfolioTrees.from("#portfolio-container #portfolio-bg-trees", {y: 500})
+
+    // Parallax the stars
+    const portfolioStars = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#portfolio-container",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
         }
     })
-    portfolioTrees.from("#portfolio-container #portfolio-bg-trees", {y: 400, x: 50})
+    portfolioStars.to("#portfolio-container #portfolio-bg-stars", {backgroundPositionX: -50})
 }
 
 function startHeaderSlotTimeline() {

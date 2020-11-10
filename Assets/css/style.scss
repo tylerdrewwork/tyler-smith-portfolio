@@ -12,6 +12,12 @@ $clr-headerfooter: #0b2518;
     position: absolute;
 }
 
+@mixin borderBox () {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 @mixin glassFX ($glasscolor) {
     $blurAmount: 10px;
     background-color: rgba($color: $glasscolor, $alpha: 0.5);
@@ -196,26 +202,36 @@ footer {
     // }
 }
 
-
 #portfolio-container {
+    @include borderBox();
+    border: solid;
+    border-width: 26px 0;
+    border-image: url(../Images/textures/wood-logs.jpg) 53;
+    border-image-repeat: repeat;
+    
     #portfolio-bg-trees {
         bottom: 0;
         background-image: url("../Images/backgrounds/portfolio-trees-efdal-yildiz.png");
         background-position: bottom;
         background-attachment: local;
-        background-size: 50%;
+        background-size: 75%;
         background-repeat: repeat-x;
     }
 
     #portfolio-bg-stars {
+        left: 0;
+        width: 120%;
+        background-size: 120%;
         background-image: url("../Images/backgrounds/portfolio-starry-felix-mittermeier.jpg");
-        background-size: 50%;
         z-index: -6;
     }
     
     .content-panel {
+        display: grid;
+        // border: 20px solid;
+        // border-image: url(../Images/textures/wood-logs.jpg);
         background-color: green;
-        height: 70%;
+        height: 100%;
         width: 80vw;
     }
     
