@@ -179,11 +179,18 @@ footer {
   grid-template-areas: "header header" "project1 project2" "project3 project4";
   background-image: url(../Images/textures/wood-old.jpg);
   background-size: 25%;
+  border: 4px #8e735a;
+  border-style: ridge;
+  border-top: none;
+  border-bottom: none;
   height: 100%;
   width: 80vw;
 }
 #portfolio-container .content-panel .panel-header {
+  display: flex;
+  align-items: center;
   text-align: center;
+  justify-content: center;
   grid-area: header;
   border-bottom: 26px solid;
   border-image: url(../Images/textures/wood-logs.jpg) 53;
@@ -195,7 +202,6 @@ footer {
   font-size: 400%;
   text-shadow: #b38a64 0px 2px 2px;
   color: #1f160a;
-  align-self: center;
 }
 #portfolio-container .content-panel .portfolio-project {
   text-align: center;

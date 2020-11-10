@@ -159,7 +159,7 @@ function startPortfolioTimeline () {
             scrub: true,
         }
     })
-    portfolioStars.to("#portfolio-container #portfolio-bg-stars", {backgroundPositionX: -50})
+    portfolioStars.to("#portfolio-container #portfolio-bg-stars", {backgroundPositionX: -100})
 }
 
 function startHeaderSlotTimeline() {
