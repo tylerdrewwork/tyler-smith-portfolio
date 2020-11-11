@@ -230,11 +230,40 @@ footer {
   grid-area: project4;
 }
 
+#contact-container {
+  position: relative;
+}
 #contact-container .background-image {
-  background-image: url(../Images/backgrounds/plant-andreea-ch.jpg);
+  background-attachment: local;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 #contact-container .content-panel {
-  background-color: blue;
+  position: relative;
+  margin: auto;
+  height: 50%;
+  background-color: gray;
+  box-shadow: white 1px 1px, hotpink 2px 2px, hotpink 3px 3px, hotpink 4px 4px, hotpink 5px 5px, hotpink 6px 6px 6px;
+}
+#contact-container .contact-bubble {
+  margin: auto;
+  background-color: #263f66;
+  width: max(8vw, 45px);
+  height: max(8vw, 45px);
+  border-radius: 100%;
+}
+#contact-container .contact-bubble::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background-color: rgba(11, 37, 24, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  margin: inherit;
 }
 
 .links-wrapper {

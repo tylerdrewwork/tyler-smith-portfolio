@@ -300,12 +300,45 @@ footer {
 }
 
 #contact-container {
+    position: relative;
+
     .background-image {
-        background-image: url(../Images/backgrounds/plant-andreea-ch.jpg);
+        // background-image: url(../Images/backgrounds/topdown-coffee-brand-&-palms.jpg);
+        background-attachment: local;
+        background-repeat: no-repeat;
+        background-position: left;
     }
 
     .content-panel {
-        background-color: blue;
+        position: relative;
+        margin: auto;
+        height: 50%;
+        // left: 4%;
+        background-color: gray;
+        box-shadow: 
+            white 1px 1px,
+            hotpink 2px 2px,
+            hotpink 3px 3px,
+            hotpink 4px 4px,
+            hotpink 5px 5px,
+            hotpink 6px 6px 6px;
+    }
+
+    .contact-bubble {
+        margin: auto;
+        background-color: $clr-button;
+        width: max(8vw, 45px);
+        height: max(8vw, 45px);
+        border-radius: 100%;
+    }
+
+    .contact-bubble::before {
+        @include pseudoElement();
+        @include fx_glass($clr-headerfooter);
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        margin: inherit;
     }
 }
 
