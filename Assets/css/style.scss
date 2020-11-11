@@ -6,6 +6,7 @@ $clr-yellow-gray: #707065;
 $clr-pink-light: #faddff;
 $clr-button: #263f66;
 $clr-headerfooter: #0b2518;
+$clr-bubbleglass: #c4d6bf;
 $clr-wood-carving: #31220f;
 $clr-wood: #8e735a;
 
@@ -324,21 +325,54 @@ footer {
             hotpink 6px 6px 6px;
     }
 
+    .contact-bubbles-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
     .contact-bubble {
-        margin: auto;
-        background-color: $clr-button;
+        @include fx_glass($clr-bubbleglass);
+        // position: absolute;
+        display: flex;
+        align-self: center;
+        align-items: center;
+        // margin: auto;
         width: max(8vw, 45px);
         height: max(8vw, 45px);
         border-radius: 100%;
+        border: 2px solid darken($clr-bubbleglass, 20);
+        z-index: 5;
+
+        span {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
     }
 
-    .contact-bubble::before {
+    .contact-bubble:hover {
+        width: max(9vw, 55px);
+        height: max(9vw, 55px);
+    }
+
+    .contact-bubble::before, .contact-bubble::after {
         @include pseudoElement();
-        @include fx_glass($clr-headerfooter);
-        width: inherit;
-        height: inherit;
-        border-radius: inherit;
+        width: 30%;
+        height: 30%;
+        border-radius: 50px 800px;
         margin: inherit;
+        background-color: lighten($clr-bubbleglass, 15);
+        // background-color: red;
+        right: 7%;
+        top: 12%;
+    }
+
+    .contact-bubble::after {
+        width: 10%;
+        height: 10%;
+        border-radius: 100%;
+        right: 40%;
+        top: 4%;
     }
 }
 

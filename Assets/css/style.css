@@ -245,25 +245,51 @@ footer {
   background-color: gray;
   box-shadow: white 1px 1px, hotpink 2px 2px, hotpink 3px 3px, hotpink 4px 4px, hotpink 5px 5px, hotpink 6px 6px 6px;
 }
+#contact-container .contact-bubbles-wrapper {
+  display: flex;
+  justify-content: center;
+}
 #contact-container .contact-bubble {
-  margin: auto;
-  background-color: #263f66;
+  background-color: rgba(196, 214, 191, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-self: center;
+  align-items: center;
   width: max(8vw, 45px);
   height: max(8vw, 45px);
   border-radius: 100%;
+  border: 2px solid #8bae81;
+  z-index: 5;
 }
-#contact-container .contact-bubble::before {
+#contact-container .contact-bubble span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+#contact-container .contact-bubble:hover {
+  width: max(9vw, 55px);
+  height: max(9vw, 55px);
+}
+#contact-container .contact-bubble::before, #contact-container .contact-bubble::after {
   width: 100%;
   height: 100%;
   content: "";
   position: absolute;
-  background-color: rgba(11, 37, 24, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  width: inherit;
-  height: inherit;
-  border-radius: inherit;
+  width: 30%;
+  height: 30%;
+  border-radius: 50px 800px;
   margin: inherit;
+  background-color: #eff4ee;
+  right: 7%;
+  top: 12%;
+}
+#contact-container .contact-bubble::after {
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  right: 40%;
+  top: 4%;
 }
 
 .links-wrapper {

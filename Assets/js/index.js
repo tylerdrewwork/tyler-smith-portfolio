@@ -11,6 +11,7 @@ function init () {
     // setInitialPositionsForSections();
     startHeaderSlotTimeline();
     startPortfolioTimeline();
+    startContactTimeline();
     fogFX();
 
     // Fade out Splash
@@ -109,6 +110,7 @@ function fogFX () {
             end: "bottom top",
             scrub: true,
             onEnterBack: () => { 
+                console.log("entering index");
                 isInsideIndex = true; 
                 fogTimeline.play();
             },
@@ -159,6 +161,32 @@ function startPortfolioTimeline () {
         }
     })
     portfolioStars.to("#portfolio-container #portfolio-bg-stars", {backgroundPositionX: -100})
+}
+
+function startContactTimeline() {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: "#contact-container",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+            onEnter: () => {
+                bubbles.play();
+            },
+            onLeaveBack: () => {
+                bubbles.pause();
+            },
+        }
+    });
+    
+    // Start moving the Bubbles
+    const bubbles = gsap.timeline({})
+    bubbles.to(".contact-bubble", {
+        yoyo: true,
+        duration: 2,
+        repeat: -1,
+        y: 50,
+    });
 }
 
 function startHeaderSlotTimeline() {
