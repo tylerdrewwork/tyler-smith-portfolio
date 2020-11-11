@@ -145,10 +145,9 @@ function startPortfolioTimeline () {
             start: "center+=25% bottom",
             end: "bottom bottom",
             scrub: true,
-            markers: true,
         },
     });
-    portfolioTrees.from("#portfolio-container #portfolio-bg-trees", {y: 500})
+    portfolioTrees.from("#portfolio-container #portfolio-bg-trees", {y: 250})
 
     // Parallax the stars
     const portfolioStars = gsap.timeline({

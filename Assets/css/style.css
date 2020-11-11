@@ -201,7 +201,7 @@ footer {
   font-family: "Cabin", sans-serif;
   font-size: 400%;
   text-shadow: #b38a64 0px 2px 2px;
-  color: #1f160a;
+  color: #31220f;
 }
 #portfolio-container .content-panel .portfolio-project {
   text-align: center;
@@ -230,6 +230,9 @@ footer {
   grid-area: project4;
 }
 
+#contact-container .background-image {
+  background-image: url(../Images/backgrounds/plant-andreea-ch.jpg);
+}
 #contact-container .content-panel {
   background-color: blue;
 }

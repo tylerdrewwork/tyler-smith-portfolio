@@ -6,7 +6,7 @@ $clr-yellow-gray: #707065;
 $clr-pink-light: #faddff;
 $clr-button: #263f66;
 $clr-headerfooter: #0b2518;
-$clr-wood-carving: #1f160a;
+$clr-wood-carving: #31220f;
 $clr-wood: #8e735a;
 
 @mixin font_cabin {
@@ -300,6 +300,10 @@ footer {
 }
 
 #contact-container {
+    .background-image {
+        background-image: url(../Images/backgrounds/plant-andreea-ch.jpg);
+    }
+
     .content-panel {
         background-color: blue;
     }
