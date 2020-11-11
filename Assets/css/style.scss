@@ -220,7 +220,7 @@ footer {
     #portfolio-bg-trees {
         bottom: 0;
         background-image: url("../Images/backgrounds/portfolio-trees-efdal-yildiz.png");
-        background-position: bottom;
+        background-position: left bottom;
         background-attachment: local;
         background-size: 75%;
         background-repeat: repeat-x;
@@ -251,7 +251,7 @@ footer {
         border-top: none;
         border-bottom: none;
         height: 100%;
-        width: 80vw;
+        width: 60vw;
 
         .panel-header {
             display: flex;
