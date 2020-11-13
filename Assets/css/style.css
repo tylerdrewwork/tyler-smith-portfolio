@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+#portfolio-container .content-panel .portfolio-project a, #portfolio-container .content-panel .panel-header h1 {
+  font-family: "Cabin", sans-serif;
+}
+
+#index-container .content-panel .panel-body .contact-info {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+html, body {
+  position: relative;
+  width: 100%;
+}
+
+section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+header {
+  background-color: rgba(11, 37, 24, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+  position: fixed;
+  z-index: 10;
+  text-align: center;
+  order: 0;
+  width: 100%;
+  height: 7vh;
+  font-size: 200%;
+  color: #faddff;
+  border-bottom: rgba(11, 37, 24, 0.2) solid 3px;
+}
+
+footer {
+  background-color: rgba(11, 37, 24, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3vh;
+  z-index: 10;
+  border-top: rgba(11, 37, 24, 0.2) solid 3px;
+  text-align: center;
+  font-size: 100%;
+  color: #faddff;
+  overflow: hidden;
+}
+
+.header-section, .footer-section {
+  height: 100%;
+}
+
+#header-section-wrapper, #footer-section-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.background-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+  background-attachment: fixed;
+  background-position: 0px;
+  background-size: cover;
+}
+
+#splash {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  background-color: black;
+  pointer-events: none;
+}
+
+#container {
+  position: relative;
+  height: 100%;
+}
+
+.content-panel {
+  margin: auto;
+  width: 60%;
+  height: 100%;
+  display: grid;
+}
+
+#index-container .background-image {
+  background-image: url("../Images/backgrounds/foggy-gabriela-palai.jpg");
+  filter: grayscale(80%);
+  -webkit-filter: grayscale(80%);
+}
+#index-container #fx-fog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#index-container #fx-fog .fog-particle {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  position: absolute;
+  background: #1b9094;
+  background: radial-gradient(circle, #1b9094 -30%, rgba(208, 210, 215, 0) 60%, rgba(228, 230, 237, 0) 100%);
+  height: 100%;
+  width: 100%;
+}
+#index-container .content-panel {
+  grid-template-rows: [start] 2fr [links-start] 4fr [links-end end];
+  grid-template-columns: [start] 1fr [end];
+  height: 70%;
+  width: 60vw;
+  align-self: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px #0b2518;
+}
+#index-container .content-panel .panel-header {
+  grid-column: start/span end;
+  background-color: rgba(8, 24, 16, 0.8);
+  color: #ffffff;
+  font-size: 8vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border: 2px black solid;
+  border-bottom: none;
+}
+#index-container .content-panel .panel-header p {
+  font-size: 2vw;
+  color: #b4b4b4;
+}
+#index-container .content-panel .panel-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(112, 112, 101, 0.8);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border: 2px black solid;
+  border-top: none;
+  text-align: center;
+}
+#index-container .content-panel .panel-body #index-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+  height: 75%;
+}
+#index-container .content-panel .panel-body #index-about h1 {
+  font-size: max(2vw, 15px);
+}
+#index-container .content-panel .panel-body #index-about h2 {
+  font-size: max(1.8vw, 14px);
+}
+#index-container .content-panel .panel-body .contact-info {
+  order: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: min(6vw, 150%);
+}
+#index-container .content-panel .panel-body .contact-info #contact-personal {
+  order: 1;
+  width: 100%;
+}
+#index-container .content-panel .panel-body .contact-info .index-link {
+  order: 2;
+  margin: 2% 5%;
+  text-decoration: none;
+}
+#index-container .content-panel .panel-body .contact-info .index-link:hover {
+  background-color: #abc0e0;
+  text-decoration: underline;
+}
+
+#portfolio-container {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: solid;
+  border-width: 26px 0;
+  border-image: url(../Images/textures/wood-logs.jpg) 53;
+  border-image-repeat: repeat;
+  height: 100%;
+}
+#portfolio-container #portfolio-bg-trees {
+  bottom: 0;
+  background-image: url("../Images/backgrounds/portfolio-trees-efdal-yildiz.png");
+  background-position: left bottom;
+  background-attachment: local;
+  background-size: 75%;
+  background-repeat: repeat-x;
+}
+#portfolio-container #portfolio-bg-stars {
+  left: 0;
+  width: 120%;
+  background-size: 140%;
+  background-image: url("../Images/backgrounds/portfolio-starry-felix-mittermeier.jpg");
+  z-index: -6;
+}
+#portfolio-container .content-panel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-image: url(../Images/textures/wood-old.jpg);
+  background-size: 25%;
+  border: 4px #8e735a;
+  border-style: ridge;
+  border-top: none;
+  border-bottom: none;
+  height: 100%;
+  width: 60vw;
+}
+#portfolio-container .content-panel .panel-header {
+  order: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  grid-area: header;
+  border-bottom: 26px solid;
+  border-image: url(../Images/textures/wood-logs.jpg) 53;
+  background-image: url(../Images/textures/wood-rough-seamless.jpg);
+  background-size: 25%;
+}
+#portfolio-container .content-panel .panel-header h1 {
+  font-size: max(8vw, 25px);
+  text-shadow: #b38a64 0px 2px 2px;
+  color: #31220f;
+}
+#portfolio-container .content-panel .portfolio-project {
+  box-sizing: border-box;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: start;
+  padding: 2% 2%;
+}
+@media only screen and (max-width: 425px) {
+  #portfolio-container .content-panel .portfolio-project {
+    width: 100%;
+  }
+}
+#portfolio-container .content-panel .portfolio-project a {
+  font-size: max(2vw, 20px);
+}
+#portfolio-container .content-panel .portfolio-project p {
+  font-size: max(1vw, 12px);
+}
+#portfolio-container .content-panel .portfolio-project img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 2px solid;
+}
+#portfolio-container .content-panel #portfolio-project-1 {
+  order: 1;
+}
+#portfolio-container .content-panel #portfolio-project-2 {
+  order: 2;
+}
+#portfolio-container .content-panel #portfolio-project-3 {
+  order: 3;
+}
+#portfolio-container .content-panel #portfolio-project-4 {
+  order: 4;
+}
+
+#contact-container {
+  position: relative;
+}
+#contact-container .background-image {
+  background-attachment: local;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#contact-container .content-panel {
+  position: relative;
+  margin: auto;
+  height: 50%;
+  background-color: gray;
+  box-shadow: white 1px 1px, hotpink 2px 2px, hotpink 3px 3px, hotpink 4px 4px, hotpink 5px 5px, hotpink 6px 6px 6px;
+}
+#contact-container .contact-bubbles-wrapper {
+  display: flex;
+  justify-content: center;
+}
+#contact-container .contact-bubble {
+  background-color: rgba(196, 214, 191, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-self: center;
+  align-items: center;
+  width: max(8vw, 45px);
+  height: max(8vw, 45px);
+  border-radius: 100%;
+  border: 2px solid #8bae81;
+  z-index: 5;
+  box-shadow: gray 3px 3px 5px;
+}
+#contact-container .contact-bubble span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+#contact-container .contact-bubble:hover {
+  width: max(9vw, 55px);
+  height: max(9vw, 55px);
+}
+#contact-container .contact-bubble::before, #contact-container .contact-bubble::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border-radius: 50px 800px;
+  margin: inherit;
+  background-color: #eff4ee;
+  right: 7%;
+  top: 12%;
+}
+#contact-container .contact-bubble::after {
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  right: 40%;
+  top: 4%;
+}
+
+.button-large {
+  background-color: #263f66;
+  border: 3px outset #0b2518;
+  border-radius: 20px;
+  color: #faddff;
+  cursor: pointer;
+  padding: 1% 2%;
+}
+
+.button-large:active {
+  border: inset;
+}
