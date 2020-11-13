@@ -240,9 +240,7 @@ footer {
     .content-panel {
         display: grid;
         grid-template-rows: 0.5fr 1fr 1fr;
-        // grid-template-rows: auto;
         grid-template-columns: repeat(2, 1fr);
-        // grid-template-columns: auto;
         grid-template-areas: 
         "header header"
         "project1 project2"
@@ -270,18 +268,22 @@ footer {
             
             h1 {
                 @include font_cabin;
-                font-size: 400%;
+                font-size: max(8vw, 25px);
                 text-shadow: #b38a64 0px 2px 2px;
                 color: $clr-wood-carving;                
             }
         }
 
         .portfolio-project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
             justify-content: center;
+            padding: 2% 5%;
 
             h2 {
-                font-size: 150%;
+                font-size: max(4vw, 20px);
             }
 
             img {
