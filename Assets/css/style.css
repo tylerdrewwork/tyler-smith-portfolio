@@ -87,6 +87,8 @@ footer {
 
 #index-container .background-image {
   background-image: url("../Images/backgrounds/foggy-gabriela-palai.jpg");
+  filter: grayscale(80%);
+  -webkit-filter: grayscale(80%);
 }
 #index-container #fx-fog {
   position: absolute;
@@ -110,13 +112,13 @@ footer {
   align-self: center;
   justify-content: center;
   position: relative;
-  border-radius: 30px;
+  border-radius: 5px;
   box-shadow: 10px 10px 15px #0b2518;
 }
 #index-container .content-panel .panel-header {
   grid-column: start/span end;
-  background-color: #081810;
-  color: #faddff;
+  background-color: rgba(8, 24, 16, 0.8);
+  color: #ffffff;
   font-size: 8vw;
   display: flex;
   text-align: center;
@@ -136,7 +138,7 @@ footer {
   grid-template-columns: [start links-start] 1fr [links-end] 2fr [end];
   height: 100%;
   width: 100%;
-  background-color: #707065;
+  background-color: rgba(112, 112, 101, 0.8);
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
   border: 2px black solid;
@@ -156,6 +158,7 @@ footer {
   border-width: 26px 0;
   border-image: url(../Images/textures/wood-logs.jpg) 53;
   border-image-repeat: repeat;
+  height: 120vh;
 }
 #portfolio-container #portfolio-bg-trees {
   bottom: 0;

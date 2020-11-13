@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
 
-$green-black: #081810;
 $green-dark: #0b2518;
-$clr-yellow-gray: #707065;
+$clr-index-header: #081810;
+$clr-index-body: #707065;
+$clr-index-light: #ffffff;
 $clr-pink-light: #faddff;
 $clr-button: #263f66;
 $clr-headerfooter: #0b2518;
@@ -124,6 +125,8 @@ footer {
 #index-container {
     .background-image {
         background-image: url("../Images/backgrounds/foggy-gabriela-palai.jpg");
+        filter: grayscale(80%);
+        -webkit-filter: grayscale(80%);
     }
     
     $clr-fog: #1b9094;
@@ -147,20 +150,18 @@ footer {
     .content-panel {
         grid-template-rows: [start] 2fr [links-start] 4fr [links-end end];
         grid-template-columns: [start] 1fr [end];
-        // background-color: $green-black;
         height: 70%;
         width: 60vw;
         align-self: center;
         justify-content: center;
         position: relative;
-        // border: 10px solid red;
-        border-radius: 30px;
+        border-radius: 5px;
         box-shadow: 10px 10px 15px $green-dark;
 
         .panel-header {
             grid-column: start / span end;
-            background-color: $green-black;
-            color: $clr-pink-light;
+            background-color: rgba($color: $clr-index-header, $alpha: 0.8);
+            color: $clr-index-light;
             font-size: 8vw;
             display: flex;
             text-align: center;
@@ -182,8 +183,8 @@ footer {
             grid-template-columns: [start links-start] 1fr [links-end] 2fr [end];
 
             height: 100%;
-            width: 100%;
-            background-color: $clr-yellow-gray;
+            width: 100%;            
+            background-color: rgba($color: $clr-index-body, $alpha: 0.8);
             border-bottom-left-radius: inherit;
             border-bottom-right-radius: inherit;
             border: 2px black solid;
@@ -217,6 +218,7 @@ footer {
     border-width: 26px 0;
     border-image: url(../Images/textures/wood-logs.jpg) 53;
     border-image-repeat: repeat;
+    height: 120vh;
     
     #portfolio-bg-trees {
         bottom: 0;
