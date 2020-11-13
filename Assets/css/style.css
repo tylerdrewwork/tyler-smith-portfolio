@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+#portfolio-container .content-panel .portfolio-project a, #portfolio-container .content-panel .panel-header h1 {
+  font-family: "Cabin", sans-serif;
+}
+
+#index-container .content-panel .panel-body .links-wrapper, #index-container .content-panel .panel-body #contact-info {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 html, body {
   position: relative;
   width: 100%;
@@ -121,10 +130,10 @@ footer {
   color: #ffffff;
   font-size: 8vw;
   display: flex;
+  flex-direction: column;
   text-align: center;
-  justify-content: center;
+  justify-content: space-evenly;
   align-self: center;
-  align-items: center;
   height: 100%;
   width: 100%;
   border-top-left-radius: inherit;
@@ -132,10 +141,13 @@ footer {
   border: 2px black solid;
   border-bottom: none;
 }
+#index-container .content-panel .panel-header p {
+  font-size: 2vw;
+  color: #b4b4b4;
+}
 #index-container .content-panel .panel-body {
-  display: grid;
-  grid-template-rows: [start links-start] 1fr 1fr 1fr 1fr [links-end end];
-  grid-template-columns: [start links-start] 1fr [links-end] 2fr [end];
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   background-color: rgba(112, 112, 101, 0.8);
@@ -145,9 +157,30 @@ footer {
   border-top: none;
   text-align: center;
 }
-#index-container .links-wrapper .index-link {
+#index-container .content-panel .panel-body #index-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+  height: 75%;
+}
+#index-container .content-panel .panel-body #contact-info {
+  order: 2;
+}
+#index-container .content-panel .panel-body .links-wrapper {
+  order: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#index-container .content-panel .panel-body .links-wrapper .index-link {
   font-size: 200%;
   margin: 2% 5%;
+  text-decoration: none;
+}
+#index-container .content-panel .panel-body .links-wrapper .index-link:hover {
+  background-color: #abc0e0;
+  text-decoration: underline;
 }
 
 #portfolio-container {
@@ -202,7 +235,6 @@ footer {
   background-size: 25%;
 }
 #portfolio-container .content-panel .panel-header h1 {
-  font-family: "Cabin", sans-serif;
   font-size: max(8vw, 25px);
   text-shadow: #b38a64 0px 2px 2px;
   color: #31220f;
@@ -223,7 +255,6 @@ footer {
   }
 }
 #portfolio-container .content-panel .portfolio-project a {
-  font-family: "Cabin", sans-serif;
   font-size: max(2vw, 20px);
 }
 #portfolio-container .content-panel .portfolio-project p {
@@ -309,21 +340,6 @@ footer {
   border-radius: 100%;
   right: 40%;
   top: 4%;
-}
-
-.links-wrapper {
-  display: flex;
-  flex-direction: column;
-  grid-row: links-start/links-end;
-  grid-column: links-start/links-end;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 100%;
-  z-index: 2;
-}
-.links-wrapper .button:hover {
-  background-color: #abc0e0;
 }
 
 .button-large {
