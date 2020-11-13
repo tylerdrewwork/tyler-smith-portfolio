@@ -89,7 +89,7 @@ footer {
 
 .background-image {
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index: -5;
     // Creates parralax effect
@@ -232,7 +232,7 @@ footer {
     #portfolio-bg-stars {
         left: 0;
         width: 120%;
-        background-size: 120%;
+        background-size: 140%;
         background-image: url("../Images/backgrounds/portfolio-starry-felix-mittermeier.jpg");
         z-index: -6;
     }
