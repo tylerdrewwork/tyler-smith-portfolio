@@ -218,7 +218,7 @@ footer {
     border-width: 26px 0;
     border-image: url(../Images/textures/wood-logs.jpg) 53;
     border-image-repeat: repeat;
-    height: 120vh;
+    height: 100%;
     
     #portfolio-bg-trees {
         bottom: 0;
@@ -249,6 +249,7 @@ footer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        align-content: flex-start;
 
         background-image: url(../Images/textures/wood-old.jpg);
         background-size: 25%;
@@ -260,6 +261,7 @@ footer {
         width: 60vw;
 
         .panel-header {
+            order: 0;
             display: flex;
             align-items: center;
             text-align: center;
@@ -293,26 +295,30 @@ footer {
             flex-direction: column;
             align-items: center;
             text-align: center;
-            justify-content: center;
-            padding: 2% 5%;
+            justify-content: start;
+            padding: 2% 2%;
 
-            h2 {
-                font-size: max(4vw, 20px);
+            a {
+                @include font_cabin();
+                font-size: max(2vw, 20px);
+            }
+
+            p {
+                font-size: max(1vw, 12px);
             }
 
             img {
-                width: 50%;
-                height: 50%;
+                width: 100%;
                 overflow: hidden;
                 border-radius: 5px;
                 border: 2px solid;
             }
         }
 
-        #portfolio-project-1 { grid-area: project1; }
-        #portfolio-project-2 { grid-area: project2; }
-        #portfolio-project-3 { grid-area: project3; }
-        #portfolio-project-4 { grid-area: project4; }
+        #portfolio-project-1 { order: 1; }
+        #portfolio-project-2 { order: 2; }
+        #portfolio-project-3 { order: 3; }
+        #portfolio-project-4 { order: 4; }
 
     }
     
