@@ -176,10 +176,9 @@ footer {
   z-index: -6;
 }
 #portfolio-container .content-panel {
-  display: grid;
-  grid-template-rows: 0.5fr 1fr 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "header header" "project1 project2" "project3 project4";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-image: url(../Images/textures/wood-old.jpg);
   background-size: 25%;
   border: 4px #8e735a;
@@ -207,12 +206,19 @@ footer {
   color: #31220f;
 }
 #portfolio-container .content-panel .portfolio-project {
+  box-sizing: border-box;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
   padding: 2% 5%;
+}
+@media only screen and (max-width: 425px) {
+  #portfolio-container .content-panel .portfolio-project {
+    width: 100%;
+  }
 }
 #portfolio-container .content-panel .portfolio-project h2 {
   font-size: max(4vw, 20px);

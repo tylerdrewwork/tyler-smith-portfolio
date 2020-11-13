@@ -238,13 +238,18 @@ footer {
     }
     
     .content-panel {
-        display: grid;
-        grid-template-rows: 0.5fr 1fr 1fr;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
-        "header header"
-        "project1 project2"
-        "project3 project4";
+        // display: grid;
+        // grid-template-rows: 0.5fr 1fr 1fr;
+        // grid-template-columns: repeat(2, 1fr);
+        // grid-template-areas: 
+        // "header header"
+        // "project1 project2"
+        // "project3 project4";
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
         background-image: url(../Images/textures/wood-old.jpg);
         background-size: 25%;
         border: 4px $clr-wood;
@@ -275,6 +280,15 @@ footer {
         }
 
         .portfolio-project {
+            @media only screen and (max-width: 425px) {
+                // If less than 425px wide, set width to 100% so only one project per row
+                width: 100%;
+            }
+
+            box-sizing: border-box;
+            width: 50%;
+            // flex-basis: 50%;
+
             display: flex;
             flex-direction: column;
             align-items: center;
