@@ -342,6 +342,7 @@ footer {
         border-radius: 100%;
         border: 2px solid darken($clr-bubbleglass, 20);
         z-index: 5;
+        box-shadow: gray 3px 3px 5px;
 
         span {
             position: absolute;
