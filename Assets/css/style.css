@@ -164,6 +164,12 @@ footer {
   order: 1;
   height: 75%;
 }
+#index-container .content-panel .panel-body #index-about h1 {
+  font-size: max(2vw, 15px);
+}
+#index-container .content-panel .panel-body #index-about h2 {
+  font-size: max(1.8vw, 14px);
+}
 #index-container .content-panel .panel-body .contact-info {
   order: 2;
   display: flex;

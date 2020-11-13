@@ -207,6 +207,14 @@ footer {
                 justify-content: center;
                 order: 1;
                 height: 75%;
+
+                h1 {
+                    font-size: max(2vw, 15px);
+                }
+
+                h2 {
+                    font-size: max(1.8vw, 14px);
+                }
             }
 
             .contact-info {
