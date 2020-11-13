@@ -135,8 +135,8 @@ footer {
         -webkit-filter: grayscale(80%);
     }
     
-    $clr-fog: #1b9094;
     #fx-fog {
+        $clr-fog: #1b9094;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -200,8 +200,6 @@ footer {
             border: 2px black solid;
             border-top: none;
             text-align: center;
-            // border: 2px 0px 2px 2px;
-            // border: black solid;
 
             #index-about {
                 display: flex;
@@ -211,20 +209,23 @@ footer {
                 height: 75%;
             }
 
-            #contact-info {
+            .contact-info {
                 order: 2;
-                @extend %font_robotoCondensed;
-            }
 
-            .links-wrapper {
-                order: 3;
                 display: flex;
-                flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: center;
+
                 @extend %font_robotoCondensed;
-        
+                font-size: min(6vw, 150%);
+
+                #contact-personal {
+                    order: 1;
+                    width: 100%
+                }
+
                 .index-link {
-                    font-size: 200%;
+                    order: 2;
                     margin: 2% 5%;
                     text-decoration: none;
                 }

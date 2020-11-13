@@ -4,7 +4,7 @@
   font-family: "Cabin", sans-serif;
 }
 
-#index-container .content-panel .panel-body .links-wrapper, #index-container .content-panel .panel-body #contact-info {
+#index-container .content-panel .panel-body .contact-info {
   font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -164,21 +164,23 @@ footer {
   order: 1;
   height: 75%;
 }
-#index-container .content-panel .panel-body #contact-info {
+#index-container .content-panel .panel-body .contact-info {
   order: 2;
-}
-#index-container .content-panel .panel-body .links-wrapper {
-  order: 3;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  font-size: min(6vw, 150%);
 }
-#index-container .content-panel .panel-body .links-wrapper .index-link {
-  font-size: 200%;
+#index-container .content-panel .panel-body .contact-info #contact-personal {
+  order: 1;
+  width: 100%;
+}
+#index-container .content-panel .panel-body .contact-info .index-link {
+  order: 2;
   margin: 2% 5%;
   text-decoration: none;
 }
-#index-container .content-panel .panel-body .links-wrapper .index-link:hover {
+#index-container .content-panel .panel-body .contact-info .index-link:hover {
   background-color: #abc0e0;
   text-decoration: underline;
 }
