@@ -6,20 +6,29 @@ import {
   Switch,
 } from 'react-router-dom';
 import './app.css';
+import { styled, ThemeProvider } from 'styled-components';
 
-// Components
-import Header from '../header';
+// Themes
+import ColorScheme from "../../themes/colorScheme"
+
+// Pages
+import Home from '../../pages/home/home';
 
 function App() {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/">
-            <Header />
-          </Route>
-        </Switch>
-      </div>
+      <ThemeProvider theme={ColorScheme}>
+        <div>
+          <Switch>
+            <Route path="/gallery">
+              
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </ThemeProvider>
     </Router>
   );
 }
