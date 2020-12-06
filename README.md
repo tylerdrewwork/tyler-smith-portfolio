@@ -1,37 +1,70 @@
-# Tyler D. Smith | Portfolio
+# Getting Started with Create React App
 
-# [Click here to view my portfolio](https://sakiskid.github.io/tyler-smith-portfolio/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
--------
+## Available Scripts
 
-## **9/16/2020**
+In the project directory, you can run:
 
-Second refactor!
+### `npm start`
 
-Portfolio now includes LinkedIn, GitHub, and Resume links.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Includes images and links to highlighted projects.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## **7/29/2020**
+### `npm test`
 
-My goal in this refactor:
-- Create a portfolio that is responsive, elegant, and easy to navigate!
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Execution:
-- The hardest part of this was getting the text and images to be responsive how I needed them to be.
-- Currently in the process of implementing SASS to have responsive font sizes.
-- I am proud of it's current state. There is obviously still work to be done on the responsive font sizes and the overall prettiness of the site, but it's fully functional and responsive.
-- All of my links work, however all of my material is hosted on an external Squarespace website I'm not proud of so that's why my portfolio doesn't link over there.
-- Ran it through an HTML Validator. It says my img tags shouldn't use a percentage in width and height, but I'm not sure of another way to do that.
+### `npm run build`
 
-Features:
-- Sleek navbar with a gradient
-- Sticky Footer with copyright
-- Multiple sub-rows and sub-columns on every page
-- Fixed, responsive background images
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Noteworthy:
-- The use of a .debug class that gave my elements a border really helped me find where my sizing and vertical alignment issues were.
-- There was an issue with the footer where a small pixel-wide gap would appear under it sometimes. This was fixed by adding `bottom: -1px` to the footer class.
-- I utilized Font-Awesome to create the logo in the left-most side of the Navbar.
-- Found out that gifs are easily implemented in img tags.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
