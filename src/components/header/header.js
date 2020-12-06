@@ -11,24 +11,27 @@ const HeaderStyled = styled.header`
     box-shadow: 0px 2px 2px ${props => props.theme.black};
 `;
 
-const LinkStyleFunc = ({ className, children }) => (
-    <Link className={className}>
+const LinkStyleFunc = ({ className, children, to }) => (
+    <Link className={className} to={to}>
         {children}
     </Link>
 );
 
 const LinkStyled = styled(LinkStyleFunc)`
-    color: red;
+    color: white;
+    :hover {
+        color: red;
+    }
 `;
 
 function Header () {
     return (
         <HeaderStyled>
             <LinkStyled to="/">Home</LinkStyled>
-            <LinkStyled to="">Projects</LinkStyled>
-            <LinkStyled to="">Gallery</LinkStyled>
-            <LinkStyled to="">About</LinkStyled>
-            <LinkStyled to="">Contact</LinkStyled>
+            <LinkStyled to="/projects">Projects</LinkStyled>
+            <LinkStyled to="/gallery">Gallery</LinkStyled>
+            <LinkStyled to="/about">About</LinkStyled>
+            <LinkStyled to="/contact">Contact</LinkStyled>
         </HeaderStyled>
     )
 };
