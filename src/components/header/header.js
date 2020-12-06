@@ -3,24 +3,34 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 // import './header.css';
 
-const StyledHeader = styled.header`
+const HeaderStyled = styled.header`
     width: 100vw;
     height: 5vh;
     text-align: center;
-    background-color: ${props => props.theme.black};
+    background-color: ${props => props.theme.primarylight};
     box-shadow: 0px 2px 2px ${props => props.theme.black};
-`
+`;
+
+const LinkStyleFunc = ({ className, children }) => (
+    <Link className={className}>
+        {children}
+    </Link>
+);
+
+const LinkStyled = styled(LinkStyleFunc)`
+    color: red;
+`;
 
 function Header () {
     return (
-        <StyledHeader>
-            <Link to="/">Home</Link>
-            <Link to="">Projects</Link>
-            <Link to="">Gallery</Link>
-            <Link to="">About</Link>
-            <Link to="">Contact</Link>
-        </StyledHeader>
+        <HeaderStyled>
+            <LinkStyled to="/">Home</LinkStyled>
+            <LinkStyled to="">Projects</LinkStyled>
+            <LinkStyled to="">Gallery</LinkStyled>
+            <LinkStyled to="">About</LinkStyled>
+            <LinkStyled to="">Contact</LinkStyled>
+        </HeaderStyled>
     )
-}
+};
 
 export default Header;

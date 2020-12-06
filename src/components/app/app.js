@@ -6,19 +6,27 @@ import {
   Switch,
 } from 'react-router-dom';
 import './app.css';
-import { styled, ThemeProvider } from 'styled-components';
+import { Container } from 'react-bootstrap';
 
 // Themes
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import ColorScheme from "../../themes/colorScheme"
 
 // Pages
 import Home from '../../pages/home/home';
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: ${ColorScheme.primary};
+  } 
+`
+
 function App() {
   return (
     <Router>
+      <GlobalStyle />
       <ThemeProvider theme={ColorScheme}>
-        <div>
+        <Container>
           <Switch>
             <Route path="/gallery">
               
@@ -27,7 +35,7 @@ function App() {
               <Home />
             </Route>
           </Switch>
-        </div>
+        </Container>
       </ThemeProvider>
     </Router>
   );
