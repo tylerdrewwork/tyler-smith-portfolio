@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/header';
+import ProjectWrapper from '../../components/projectwrapper';
 import styled from 'styled-components';
 import { HeadingNameStyle } from './home-style';
 
@@ -10,6 +11,7 @@ function Home () {
         <div>
             <Header page="home"/>
             <HeadingName>TYLER SMITH</HeadingName>
+            <ProjectWrapper />
         </div>
     )
 }

@@ -7,7 +7,6 @@ const h1 = {
     viewportMax : "1000",
 }
 
-
 function responsiveTextFormula (properties) {
     let {sizeMin, sizeMax, viewportMin, viewportMax} = properties;
     return `${sizeMin}px + (${sizeMax} - ${sizeMin}) * ((100vw - ${viewportMin}px) / (${viewportMax} - ${viewportMin}))`
