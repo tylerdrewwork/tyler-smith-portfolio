@@ -25,8 +25,8 @@ const LinkStyled = styled(LinkStyleFunc)`
     height: 100%;
     line-height: 250%;
     vertical-align: middle;
-    padding: 0px 20px;
-    margin: 0px 5px;
+    padding: 0px 1%;
+    margin: 0px 0.5%;
     font-size: 1em;
     text-decoration: none;
     border-bottom: 3px solid transparent;
@@ -45,7 +45,6 @@ const LinkStyled = styled(LinkStyleFunc)`
 `;
 
 function Header (props) {
-    console.log("header: ", props.page);
     return (
         <HeaderStyled>
             <LinkStyled to="/" active={props.page === "home" ? "true" : "false"} >Home</LinkStyled>
