@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Project () {
+function Project (props) {
     return (
         <div>
-            proooject
+            {props.name}
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import Project from './project';
+import { OWLD } from '../../data/projectdata';
 
 function ProjectWrapper () {
     return (
-        <Project />
+        <Project project={{...OWLD}}/>
     )
 }
 
