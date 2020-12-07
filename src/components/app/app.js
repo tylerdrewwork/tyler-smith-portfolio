@@ -17,9 +17,9 @@ import Home from '../../pages/home/home';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: ${ColorScheme.primary};
+    background-color: ${ColorScheme.primarydark};
   } 
-`
+`;
 
 function App() {
   return (

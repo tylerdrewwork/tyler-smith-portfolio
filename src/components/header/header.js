@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 // import './header.css';
 
-const LinkStyleFunc = ({ className, children, to }) => (
-    <Link className={className} to={to}>
+const LinkStyleFunc = ({ className, children, to, active }) => (
+    <Link className={className} to={to} active={active}>
         {children}
     </Link>
 );
@@ -17,33 +17,42 @@ const HeaderStyled = styled.header`
     height: 5vh;
     text-align: center;
 
-    background-color: ${props => props.theme.primarylight};
+    background-color: ${props => props.theme.primary};
     box-shadow: 0px 2px 2px ${props => props.theme.black};
 `;
 
 const LinkStyled = styled(LinkStyleFunc)`
     height: 100%;
+    line-height: 250%;
     vertical-align: middle;
     padding: 0px 20px;
-    font-size: 1.5em;
+    margin: 0px 5px;
+    font-size: 1em;
     text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: ${props => props.theme.white};
 
+    /* Set Active */
+    &[active="true"] {
+        color: ${props => props.theme.primarylight};
+        border-bottom-color: ${props => props.theme.primarylight};
+    }
     /* Style */
-    color: white;
     :hover {
-        color: ${props => props.theme.primaryLight};
-        border-bottom: 3px solid ${props => props.theme.primaryLight};
+        color: ${props => props.theme.primarylight};
+        border-bottom: 3px solid;
     }
 `;
 
-function Header () {
+function Header (props) {
+    console.log("header: ", props.page);
     return (
         <HeaderStyled>
-            <LinkStyled to="/">Home</LinkStyled>
-            <LinkStyled to="/projects">Projects</LinkStyled>
-            <LinkStyled to="/gallery">Gallery</LinkStyled>
-            <LinkStyled to="/about">About</LinkStyled>
-            <LinkStyled to="/contact">Contact</LinkStyled>
+            <LinkStyled to="/" active={props.page === "home" ? "true" : "false"} >Home</LinkStyled>
+            <LinkStyled to="/projects" active={props.page === "projects" ? "true" : "false"}>Projects</LinkStyled>
+            <LinkStyled to="/gallery" active={props.page === "gallery" ? "true" : "false"}>Gallery</LinkStyled>
+            <LinkStyled to="/about" active={props.page === "about" ? "true" : "false"}>About</LinkStyled>
+            <LinkStyled to="/contact" active={props.page === "contact" ? "true" : "false"}>Contact</LinkStyled>
         </HeaderStyled>
     )
 };

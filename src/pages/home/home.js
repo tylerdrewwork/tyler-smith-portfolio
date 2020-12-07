@@ -4,7 +4,7 @@ import Header from '../../components/header';
 function Home () {
     return (
         <div>
-            <Header />
+            <Header page="home"/>
             this is home page
         </div>
     )
