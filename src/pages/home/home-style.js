@@ -7,12 +7,13 @@ const h1 = {
     viewportMax : "1000",
 }
 
+
 function responsiveTextFormula (properties) {
     let {sizeMin, sizeMax, viewportMin, viewportMax} = properties;
     return `${sizeMin}px + (${sizeMax} - ${sizeMin}) * ((100vw - ${viewportMin}px) / (${viewportMax} - ${viewportMin}))`
 }
 
-export const HeadingNameStyle = css`
+export const headingNameStyle = css`
     /* Font-Size: Minimum */
     font-size: ${h1.sizeMin}px;
     /* Font-Size: Medium */
@@ -33,4 +34,8 @@ export const HeadingNameStyle = css`
     text-align: center;
 
     color: ${props => props.theme.primarylight};
+`
+
+export const sectionHeadingStyle = css`
+
 `
