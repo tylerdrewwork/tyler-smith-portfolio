@@ -3,14 +3,18 @@ import { ResponsiveTextStatic } from '../../utils/responsiveText';
 
 export const sectionHeadingStyle = css`
     /* Text */
-    ${ResponsiveTextStatic(20, 80)}
-    /* font-family: 'Montserrat', sans-serif; */
+    ${ResponsiveTextStatic(15, 40)}
+    font-family: 'Lora', sans-serif;
+    font-weight: 400;
     text-align: center;
     color: ${props => props.theme.primarylight};
 
     /* Horizontal Rule */
     & hr {
         border-color: ${props => props.theme.primarylight};
-        width: 50%;
+        border-width: 2px;
+        border-style: solid;
+        margin-top: 10px;
+        width: 10vw;
     }
 `
