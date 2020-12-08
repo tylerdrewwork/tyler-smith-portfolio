@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { ResponsiveTextStatic } from '../../utils/responsiveText';
 
 export const LinkStyleFunc = ({ className, children, to, active }) => (
     <Link className={className} to={to} active={active}>
@@ -21,12 +22,13 @@ export const HeaderStyled = styled.header`
 `;
 
 export const LinkStyled = styled(LinkStyleFunc)`
+    ${ResponsiveTextStatic(13,20)}
+    /* font-size: 1em; */
     height: 100%;
     line-height: 250%;
     vertical-align: middle;
     padding: 0px 1%;
     margin: 0px 0.5%;
-    font-size: 1em;
     text-decoration: none;
     border-bottom: 3px solid transparent;
     color: ${props => props.theme.white};
