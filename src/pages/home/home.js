@@ -3,7 +3,7 @@ import Header from '../../components/header';
 import ProjectWrapper from '../../components/projectwrapper';
 import SectionHeading from '../../components/sectionheading';
 import styled from 'styled-components';
-import { headingNameStyle, sectionHeadingStyle } from './home-style';
+import { headingNameStyle } from './home-style';
 
 const HeadingName = styled.h1`${headingNameStyle}`;
 // const SectionHeading = styled.h2`${sectionHeadingStyle}`;
@@ -14,7 +14,7 @@ function Home () {
             <Header page="home"/>
             <HeadingName>TYLER SMITH</HeadingName>
             {/* <SectionHeading>Projects</SectionHeading> */}
-            <SectionHeading>Wowie</SectionHeading>
+            <SectionHeading>Projects</SectionHeading>
             <ProjectWrapper />
         </div>
     )
