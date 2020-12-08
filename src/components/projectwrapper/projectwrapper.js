@@ -4,7 +4,9 @@ import { OWLD } from '../../data/projectdata';
 
 function ProjectWrapper () {
     return (
-        <Project project={{OWLD}}/>
+        <section>
+            <Project project={OWLD}/>
+        </section>
     )
 }
 
