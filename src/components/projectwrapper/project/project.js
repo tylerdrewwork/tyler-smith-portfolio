@@ -1,13 +1,17 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card'
 
 function Project (props) {
-    const {name, description, image} = props.project;
+    const {title, description, image} = props.project;
+
     return (
-        <div>
-            {name}
-            {description}
-            {image}
-        </div>
+        <Card>
+            <Card.Img src={image}/>
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>
+                {description}
+            </Card.Text>
+        </Card>
     )
 }
 

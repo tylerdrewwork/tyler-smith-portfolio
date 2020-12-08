@@ -1,5 +1,5 @@
-function Project (name, description, image) {
-    this.name = name;
+function Project (title, description, image) {
+    this.title = title;
     this.description = description;
     this.image = image;
 }
