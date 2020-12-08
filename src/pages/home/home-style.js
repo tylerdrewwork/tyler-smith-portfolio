@@ -1,30 +1,9 @@
 import { css } from 'styled-components';
-
-const h1 = {
-    sizeMin : "20", // size min
-    sizeMax : "100", // size max
-    viewportMin : "320", // viewport
-    viewportMax : "1000",
-}
-
-
-function responsiveTextFormula (properties) {
-    let {sizeMin, sizeMax, viewportMin, viewportMax} = properties;
-    return `${sizeMin}px + (${sizeMax} - ${sizeMin}) * ((100vw - ${viewportMin}px) / (${viewportMax} - ${viewportMin}))`
-}
+import { ResponsiveTextStatic } from '../../utils/responsiveText';
 
 export const headingNameStyle = css`
-    /* Font-Size: Minimum */
-    font-size: ${h1.sizeMin}px;
-    /* Font-Size: Medium */
-    @media screen and (min-width: ${h1.viewportMin}px) {
-        font-size: calc(${responsiveTextFormula(h1)});
-    }
-    /* Font-Size: Maximum */
-    @media screen and (min-width: ${h1.viewportMax}px) {
-        font-size: ${h1.sizeMax}px;
-    }
-    
+    ${ResponsiveTextStatic(20, 100)}
+
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
 
@@ -34,8 +13,4 @@ export const headingNameStyle = css`
     text-align: center;
 
     color: ${props => props.theme.primarylight};
-`
-
-export const sectionHeadingStyle = css`
-
 `

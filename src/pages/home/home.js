@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import { headingNameStyle } from './home-style';
 
 const HeadingName = styled.h1`${headingNameStyle}`;
-// const SectionHeading = styled.h2`${sectionHeadingStyle}`;
 
 function Home () {
     return (
