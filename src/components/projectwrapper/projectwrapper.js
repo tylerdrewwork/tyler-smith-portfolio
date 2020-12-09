@@ -1,15 +1,16 @@
 import React from 'react';
 import Project from './project';
-import { OWLD } from '../../data/projectdata';
+import projectdata from '../../data/projectdata';
 import { Container, Row, Col } from 'react-bootstrap';
+import "./projectwrapper-style.css";
 
 function ProjectWrapper () {
     return (
         <section>
             <Container>
                 <Row>
-                    <Col>
-                        <Project project={OWLD}/>
+                    <Col className="project-container">
+                        {projectdata.map(p => <Project project={p}/>)}
                     </Col>
                 </Row>
             </Container>

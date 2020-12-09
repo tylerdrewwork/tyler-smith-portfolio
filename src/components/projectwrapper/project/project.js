@@ -1,11 +1,12 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
+import "./project-style.css";
 
 function Project (props) {
     const {title, description, image} = props.project;
 
     return (
-        <Card bg="primary">
+        <Card>
             <Card.Img src={image}/>
             <Card.Title>{title}</Card.Title>
             <Card.Text>
