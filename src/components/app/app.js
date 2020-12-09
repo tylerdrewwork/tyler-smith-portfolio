@@ -6,7 +6,6 @@ import {
   Switch,
 } from 'react-router-dom';
 import './app.css';
-import { Container } from 'react-bootstrap';
 
 // Themes
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
@@ -26,16 +25,14 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={ColorScheme}>
-        <Container>
-          <Switch>
-            <Route path="/gallery">
-              
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </Container>
+        <Switch>
+          <Route path="/gallery">
+            
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
       </ThemeProvider>
     </Router>
   );

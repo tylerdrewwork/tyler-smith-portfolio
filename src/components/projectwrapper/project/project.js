@@ -5,7 +5,7 @@ function Project (props) {
     const {title, description, image} = props.project;
 
     return (
-        <Card>
+        <Card bg="primary">
             <Card.Img src={image}/>
             <Card.Title>{title}</Card.Title>
             <Card.Text>
