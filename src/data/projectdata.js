@@ -13,7 +13,7 @@ const projectdata = [
         "Off Your Chest",
         "description",
         "img"
-    )
+    ),
 ]
 
 export default projectdata;
