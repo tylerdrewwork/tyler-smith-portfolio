@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tyler-smith-portfolio/static/css/main.16a9b3ee.chunk.css",
+    "main.js": "/tyler-smith-portfolio/static/js/main.7006d4ac.chunk.js",
+    "main.js.map": "/tyler-smith-portfolio/static/js/main.7006d4ac.chunk.js.map",
+    "runtime-main.js": "/tyler-smith-portfolio/static/js/runtime-main.29ad6b4f.js",
+    "runtime-main.js.map": "/tyler-smith-portfolio/static/js/runtime-main.29ad6b4f.js.map",
+    "static/js/2.3096e302.chunk.js": "/tyler-smith-portfolio/static/js/2.3096e302.chunk.js",
+    "static/js/2.3096e302.chunk.js.map": "/tyler-smith-portfolio/static/js/2.3096e302.chunk.js.map",
+    "static/js/3.2680ea30.chunk.js": "/tyler-smith-portfolio/static/js/3.2680ea30.chunk.js",
+    "static/js/3.2680ea30.chunk.js.map": "/tyler-smith-portfolio/static/js/3.2680ea30.chunk.js.map",
+    "index.html": "/tyler-smith-portfolio/index.html",
+    "static/css/main.16a9b3ee.chunk.css.map": "/tyler-smith-portfolio/static/css/main.16a9b3ee.chunk.css.map",
+    "static/js/2.3096e302.chunk.js.LICENSE.txt": "/tyler-smith-portfolio/static/js/2.3096e302.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.29ad6b4f.js",
+    "static/js/2.3096e302.chunk.js",
+    "static/css/main.16a9b3ee.chunk.css",
+    "static/js/main.7006d4ac.chunk.js"
+  ]
+}
