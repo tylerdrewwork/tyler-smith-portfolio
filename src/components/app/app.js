@@ -5,9 +5,9 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import './app.css';
 import Header from 'components/header';
 import PAGES from 'data/pagesdata';
+import './app.scss';
 
 // Themes
 // import { createGlobalStyle, ThemeProvider } from 'styled-components';
@@ -21,10 +21,10 @@ function App() {
     <Router>
       <Switch>
         <Header pages={PAGES}/>
-        <Route path="/gallery">
+        <Route exact path="/gallery">
           
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
       </Switch>

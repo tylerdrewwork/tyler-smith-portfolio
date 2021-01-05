@@ -8,7 +8,7 @@ import './header.scss';
 function Header (props) {
     const location = useLocation();
     return (
-        <Navbar expand="md">
+        <Navbar id="header" expand="md">
             {/* // Imgs are wrapped so they can be positioned evenly in the header */}
             <Navbar.Brand className="header-img-wrapper" id="header-logo-wrapper">
                 {/* <img alt="ELT Construction Logo" src={eltlogo}/> */}
@@ -19,15 +19,12 @@ function Header (props) {
                 {/* // The below is for mapping out the header links */}
                 <Nav>
                     {props.pages.map(page => (
-                        <Link to={page.url} key={"header-" + page.display} className={page.url === location.pathname ? "link-active" : null}>
+                        <Link to={page.url} key={page.id} className={page.url === location.pathname ? "link-active header-link" : "header-link"}>
                             {page.display}
                         </Link>
                     ))}
                 </Nav>
-            </Navbar.Collapse>
-
-
-            
+            </Navbar.Collapse>            
         </Navbar>
 
         // <HeaderStyled expand="md">

@@ -1,5 +1,26 @@
 @import 'style/_responsive.scss';
+@import 'style/_colors.scss';
 
-a {
-    @include responsive-static(font-size, 1, 100);
+#header {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border-bottom: 2px solid red;
+    background-color: color('primary', base);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0px 4px 10px black;
+
+    // Links for different pages in the header
+    .header-link {
+        @include responsive-static(font-size, 1, 100);
+    }
 }
