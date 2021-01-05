@@ -1,16 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 // import './sectionheading.css';
-import { sectionHeadingStyle } from './sectionheading-style';
+// import { sectionHeadingStyle } from './sectionheading-style';
 
-const SectionHeadingStyled = styled.h2`${sectionHeadingStyle}`;
+// const SectionHeadingStyled = styled.h2`${sectionHeadingStyle}`;
 
 function SectionHeading (props) {
     return (
-        <SectionHeadingStyled>
+        <h1>
             <span>{props.children}</span>
             <hr />
-        </SectionHeadingStyled>
+        </h1>
     );
 }
 

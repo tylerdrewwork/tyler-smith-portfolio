@@ -1,0 +1,5 @@
+@import 'style/_responsive.scss';
+
+a {
+    @include responsive-static(font-size, 1, 100);
+}

@@ -6,34 +6,28 @@ import {
   Switch,
 } from 'react-router-dom';
 import './app.css';
+import Header from 'components/header';
+import PAGES from 'data/pagesdata';
 
 // Themes
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import ColorScheme from "../../themes/colorScheme"
+// import { createGlobalStyle, ThemeProvider } from 'styled-components';
+// import ColorScheme from "../../themes/colorScheme"
 
 // Pages
 import Home from '../../pages/home/home';
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${ColorScheme.primarydark};
-  } 
-`;
-
 function App() {
   return (
     <Router>
-      <GlobalStyle />
-      <ThemeProvider theme={ColorScheme}>
-        <Switch>
-          <Route path="/gallery">
-            
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </ThemeProvider>
+      <Switch>
+        <Header pages={PAGES}/>
+        <Route path="/gallery">
+          
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </Router>
   );
 }
