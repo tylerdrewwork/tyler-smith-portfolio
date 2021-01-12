@@ -19,12 +19,12 @@ import Home from '../../pages/home/home';
 function App() {
   return (
     <Router>
+      <Header pages={PAGES}/>
       <Switch>
-        <Header pages={PAGES}/>
         <Route exact path="/gallery">
           
         </Route>
-        <Route exact path="/">
+        <Route path="/">
           <Home />
         </Route>
       </Switch>

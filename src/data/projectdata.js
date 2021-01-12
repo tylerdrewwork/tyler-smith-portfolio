@@ -6,8 +6,14 @@ function Project (title, description, image) {
 
 const projectdata = [
     new Project(
+        "ELT Construction TX",
+        "website for client",
+        "img"
+    ),
+    new Project(
         "Overwatch League Directory (OWLD)",
-        "directory"
+        "directory",
+        "img"
     ),
     new Project(
         "Off Your Chest",

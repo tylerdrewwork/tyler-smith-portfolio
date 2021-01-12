@@ -11,7 +11,6 @@ import SectionHeading from '../../components/sectionheading';
 function Home () {
     return (
         <div>
-            <Header page="home"/>
             <h1>TYLER SMITH</h1>
             {/* <SectionHeading>Projects</SectionHeading> */}
             <SectionHeading>Projects</SectionHeading>

@@ -21,8 +21,16 @@ $colors: (
         base: #4CE0DF,
         shade: #3A9493,
     ),
+    'white': (
+        base: #FFFFFF,
+        transparent: rgba(#FFFFFF, 0.7),
+    ),
+    'black': (
+        base: #000000,
+    ),
 );
 
+// Allows for easy color scheming!
 @function color($color-name, $tone: base) {
     @return map-get(map-get($colors, $color-name), $tone);
 }
