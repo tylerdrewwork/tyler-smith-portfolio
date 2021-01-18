@@ -9,4 +9,5 @@ nav {
     // Width is controlled from app.scss
 
     background-color: rgba($color: $clr-primary, $alpha: 0.8);
+    border-right: 2px solid $clr-primary;
 }

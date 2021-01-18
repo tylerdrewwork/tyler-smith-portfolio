@@ -2,7 +2,7 @@ import React from 'react';
 import Project from './project';
 import projectdata from '../../data/projectdata';
 import { Container, Row, Col } from 'react-bootstrap';
-import "./projectwrapper-style.css";
+import "./projectwrapper.css";
 
 function ProjectWrapper () {
     return (

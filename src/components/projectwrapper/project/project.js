@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import "./project-style.css";
+import "./project.css";
 
 function Project (props) {
     const {title, description, image} = props.project;
