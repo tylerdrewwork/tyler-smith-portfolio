@@ -1,0 +1,37 @@
+#header {
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-bottom: 2px solid red;
+  background-color: color("white", transparent);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  -webkit-box-shadow: 0px 4px 10px black;
+          box-shadow: 0px 4px 10px black;
+}
+
+#header .header-link {
+  font-size: 1px;
+}
+
+@media screen and (min-width: 320px) {
+  #header .header-link {
+    font-size: calc(1px + (100 - 1) * ((100vw - 320px) / (1000 - 320)));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #header .header-link {
+    font-size: 100px;
+  }
+}

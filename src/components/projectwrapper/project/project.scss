@@ -1,6 +1,12 @@
+@import '../../../style/_fonts.scss';
+
 .card {
     width: 45%;
     margin: 0% 2%;
 
     text-align: center;
+}
+
+.card-title {
+    font-family: $font-display, sans-serif;
 }

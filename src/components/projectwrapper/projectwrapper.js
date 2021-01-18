@@ -10,6 +10,7 @@ function ProjectWrapper () {
             <Container>
                 <Row>
                     <Col className="project-container">
+                        {/* Map projectdata for each project! :D */}
                         {projectdata.map(p => <Project project={p}/>)}
                     </Col>
                 </Row>

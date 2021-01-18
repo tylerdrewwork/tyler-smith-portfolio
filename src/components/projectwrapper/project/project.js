@@ -7,7 +7,7 @@ function Project (props) {
 
     return (
         <Card>
-            <Card.Img src={image}/>
+            {/* <Card.Img src={image}/> */}
             <Card.Title>{title}</Card.Title>
             <Card.Text>
                 {description}
