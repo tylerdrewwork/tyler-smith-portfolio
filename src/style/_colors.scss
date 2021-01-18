@@ -1,36 +1,42 @@
-$clr-primary: #E0A742;
-$clr-secondary: #4CE0DF;
-$clr-secondary-dark: #3A9493;
-$clr-tertiary: #3D36E0;
-$clr-tertiary-dark: #211C94;
-$clr-transparent: rgba(#FFF, 0.8);
+$clr-primary: #45A29E;
+$clr-primary-light: #66FCF1;
+$clr-primary-dark: #1F2833;
+$clr-gray: #C5C6C7;
+$clr-black: #0B0C10;
 
-$colors: (
-    'primary': (
-        tint: #FFB74A,
-        base: #E0A742,
-        shade: #A1772F,
-    ),
-    'secondary': (
-        tint: #3E36E0,
-        base: #221C94,
-        shade: #131054,
-    ),
-    'detail': (
-        tint: #7FE0DF,
-        base: #4CE0DF,
-        shade: #3A9493,
-    ),
-    'white': (
-        base: #FFFFFF,
-        transparent: rgba(#FFFFFF, 0.7),
-    ),
-    'black': (
-        base: #000000,
-    ),
-);
+// $clr-primary: #E0A742;
+// $clr-secondary: #4CE0DF;
+// $clr-secondary-dark: #3A9493;
+// $clr-tertiary: #3D36E0;
+// $clr-tertiary-dark: #211C94;
+// $clr-transparent: rgba(#FFF, 0.8);
 
-// Allows for easy color scheming!
-@function color($color-name, $tone: base) {
-    @return map-get(map-get($colors, $color-name), $tone);
-}
+// $colors: (
+//     'primary': (
+//         tint: #FFB74A,
+//         base: #E0A742,
+//         shade: #A1772F,
+//     ),
+//     'secondary': (
+//         tint: #3E36E0,
+//         base: #221C94,
+//         shade: #131054,
+//     ),
+//     'detail': (
+//         tint: #7FE0DF,
+//         base: #4CE0DF,
+//         shade: #3A9493,
+//     ),
+//     'white': (
+//         base: #FFFFFF,
+//         transparent: rgba(#FFFFFF, 0.7),
+//     ),
+//     'black': (
+//         base: #000000,
+//     ),
+// );
+
+// // Allows for easy color scheming!
+// @function color($color-name, $tone: base) {
+//     @return map-get(map-get($colors, $color-name), $tone);
+// }

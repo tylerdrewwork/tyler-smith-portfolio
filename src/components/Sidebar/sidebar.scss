@@ -1,0 +1,12 @@
+@import '../../style/_colors.scss';
+
+nav {
+    z-index: 20;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    // width: 20vw;
+    // Width is controlled from app.scss
+
+    background-color: rgba($color: $clr-primary, $alpha: 0.8);
+}

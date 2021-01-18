@@ -6,8 +6,9 @@ import {
   Switch,
 } from 'react-router-dom';
 import Header from 'components/header';
+import Sidebar from 'components/Sidebar';
 import PAGES from 'data/pagesdata';
-import './app.scss';
+import './app.css';
 
 // Themes
 // import { createGlobalStyle, ThemeProvider } from 'styled-components';
@@ -19,15 +20,17 @@ import Home from '../../pages/home/home';
 function App() {
   return (
     <Router>
-      <Header pages={PAGES}/>
-      <Switch>
-        <Route exact path="/gallery">
-          
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
+      <Sidebar/>
+      <main>
+        <Switch>
+          <Route exact path="/gallery">
+            
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </main>
     </Router>
   );
 }

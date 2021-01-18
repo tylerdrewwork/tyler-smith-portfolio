@@ -1,0 +1,7 @@
+nav {
+  z-index: 20;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(69, 162, 158, 0.8);
+}
