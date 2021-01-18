@@ -8,5 +8,5 @@
 }
 
 .card-title {
-    font-family: $font-display, sans-serif;
+    @include font-display;
 }

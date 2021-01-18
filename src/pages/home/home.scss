@@ -1,0 +1,13 @@
+// import { css } from 'styled-components';
+@import 'style/responsive', 'style/fonts';
+
+.jumbo {
+    @include responsive-static(font-size, 20, 100);
+    @include font-handwritten;
+
+    font-weight: 100;
+
+    letter-spacing: 0.2em;
+    width: 100vw;
+    text-align: center;
+}

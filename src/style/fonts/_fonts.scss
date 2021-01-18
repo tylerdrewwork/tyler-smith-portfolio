@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@mixin font-display () {
+    font-family: 'Staatliches', sans-serif;
+}
+
+@mixin font-handwritten () {
+    font-family: 'Permanent Marker', sans-serif;
+}
