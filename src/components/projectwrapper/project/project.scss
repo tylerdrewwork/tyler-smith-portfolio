@@ -1,12 +1,17 @@
-@import '../../../style/_fonts.scss';
+@import 'style/fonts', 'style/colors', 'style/responsive';
 
-.card {
-    width: 45%;
-    margin: 0% 2%;
-
+.project {
+    width: 46%;
+    margin: 2% 2%;
     text-align: center;
-}
 
-.card-title {
-    @include font-display;
+    background-color: white;
+    border-radius: 10px;
+
+    .project-title {
+        @include font-display;
+        @include responsive-static(font-size, 20, 40);
+        border-bottom: 1px gainsboro solid;
+
+    }
 }

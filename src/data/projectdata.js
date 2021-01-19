@@ -4,6 +4,7 @@ function Project (title, description, image) {
     this.image = image;
 }
 
+// 
 const projectdata = [
     new Project(
         "ELT Construction TX",

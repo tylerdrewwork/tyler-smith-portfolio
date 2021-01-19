@@ -1,20 +1,16 @@
 import React from 'react';
 import Project from './project';
 import projectdata from '../../data/projectdata';
-import { Container, Row, Col } from 'react-bootstrap';
-import "./projectwrapper.css";
+// import { Container, Row, Col } from 'react-bootstrap';
+import "./projectwrapper.scss";
 
 function ProjectWrapper () {
     return (
         <section>
-            <Container>
-                <Row>
-                    <Col className="project-container">
+                    <div id="project-container">
                         {/* Map projectdata for each project! :D */}
                         {projectdata.map(p => <Project project={p}/>)}
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
         </section>
     )
 }

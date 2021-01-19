@@ -1,4 +1,5 @@
-.col.project-container {
+#project-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }

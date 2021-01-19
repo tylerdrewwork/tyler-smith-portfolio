@@ -8,7 +8,7 @@ import {
 import Header from 'components/header';
 import Sidebar from 'components/Sidebar';
 import PAGES from 'data/pagesdata';
-import './app.css';
+import './app.scss';
 
 // Themes
 // import { createGlobalStyle, ThemeProvider } from 'styled-components';
