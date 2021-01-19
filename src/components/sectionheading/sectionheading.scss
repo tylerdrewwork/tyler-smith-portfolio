@@ -1,0 +1,18 @@
+@import 'style/colors', 'style/responsive';
+
+.section-heading {
+    @include responsive-static(font-size, 15, 40);
+    // font-family: 'Lora', sans-serif;
+    // font-weight: 400;
+    text-align: center;
+    color: $clr-primary-light;
+
+    /* Horizontal Rule */
+    & hr {
+        border-color: $clr-primary-light;
+        border-width: 2px;
+        border-style: solid;
+        margin-top: 10px;
+        width: 10vw;
+    }
+}

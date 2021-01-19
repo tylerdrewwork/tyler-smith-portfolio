@@ -47,9 +47,8 @@ h1 {
 .jumbo {
     @include responsive-static(font-size, 20, 100);
     @include font-handwritten;
-
+    width: 100%;
     font-weight: 100;
-
     letter-spacing: 0.2em;
     text-align: center;
 }

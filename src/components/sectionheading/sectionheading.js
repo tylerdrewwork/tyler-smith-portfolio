@@ -1,13 +1,9 @@
 import React from 'react';
-// import styled from 'styled-components';
-// import './sectionheading.css';
-// import { sectionHeadingStyle } from './sectionheading-style';
-
-// const SectionHeadingStyled = styled.h2`${sectionHeadingStyle}`;
+import './sectionheading.scss';
 
 function SectionHeading (props) {
     return (
-        <h1>
+        <h1 className="section-heading">
             <span>{props.children}</span>
             <hr />
         </h1>
