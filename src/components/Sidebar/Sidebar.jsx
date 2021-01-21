@@ -9,12 +9,14 @@ function Sidebar () {
     return (
         <nav>
             {/* Projects Page */}
-            <Link className='link-h1' to="/portfolio">Portfolio</Link>
+            <Link className='link link-h1' to="/portfolio">Portfolio</Link>
                 {/* Project Links */}
-                {projectdata.map(p => <Link className='link-h2'>{p.title}</Link>)}
+                <ul>
+                    {projectdata.map(p => <li><Link className='link link-h2'>{p.title}</Link></li>)}
+                </ul>
 
             {/* Gallery */}
-            <Link className='link-h1' to='/gallery'>Gallery</Link>
+            <Link className='link link-h1' to='/gallery'>Gallery</Link>
         </nav>
     );
 };

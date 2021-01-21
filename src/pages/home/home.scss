@@ -11,12 +11,9 @@
 }
 
 h1.home-title {
-    // margin-top: 30vh;
+    @include responsive(font-size, 40, 300, 320, 1450);
     position: relative;
-    @include responsive-static(font-size, 40, 200);
     text-shadow: 2px 2px 2px black;
-    
-    // background-color: $clr-primary;
 
     &::before {
         pointer-events: none;

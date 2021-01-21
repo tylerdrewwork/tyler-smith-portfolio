@@ -1,4 +1,4 @@
-@import 'style/colors', 'style/responsive';
+@import 'style/colors', 'style/responsive', 'style/fonts';
 
 // Config:
 $padding-h1: 0%;
@@ -9,18 +9,22 @@ nav {
     position: fixed;
     height: 100vh;
     left: 0;
-    padding-top: 8%;
     // width: 20vw;
     // Width is controlled from app.scss
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     background: rgb(255,255,255);
     background: -moz-linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0) 100%);
     background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0) 100%);
     background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+
+.link {
+        @include font-fancy;
 }
 
 .link-h1 {
