@@ -8,6 +8,9 @@ nav {
     // width: 20vw;
     // Width is controlled from app.scss
 
-    background-color: rgba($color: $clr-primary, $alpha: 0.8);
-    border-right: 2px solid $clr-primary;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
 }
