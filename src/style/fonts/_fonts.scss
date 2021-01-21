@@ -8,3 +8,7 @@
 @mixin font-handwritten () {
     font-family: 'Permanent Marker', sans-serif;
 }
+
+@mixin font-fancy () {
+    font-family: 'Lora', sans-serif;
+}

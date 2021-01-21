@@ -1,9 +1,8 @@
-@import 'style/colors', 'style/responsive';
+@import 'style/colors', 'style/responsive', 'style/fonts';
 
 .section-heading {
     @include responsive-static(font-size, 15, 40);
-    // font-family: 'Lora', sans-serif;
-    // font-weight: 400;
+    @include font-fancy;
     text-align: center;
     color: $clr-primary-light;
 

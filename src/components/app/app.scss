@@ -1,8 +1,6 @@
 @import 'style/colors', 'style/breakpoints', 'style/responsive', 'style/fonts';
 
-
-$sidebarWidth: 20vw;
-
+$sidebarWidth: 18vw;
 
 ///
 // MAIN / SIDEBAR positioning
@@ -40,15 +38,13 @@ nav {
 // HEADINGS 
 ///
 
-h1 {
-
-}
-
 .jumbo {
     @include responsive-static(font-size, 20, 100);
     @include font-handwritten;
-    width: 100%;
+
+    color: $clr-primary-light;
     font-weight: 100;
+
     letter-spacing: 0.2em;
     text-align: center;
 }
