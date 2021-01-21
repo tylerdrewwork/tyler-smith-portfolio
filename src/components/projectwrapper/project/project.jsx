@@ -7,7 +7,8 @@ function Project (props) {
 
     return (
         <div className="project">
-            {/* <Card.Img src={image}/> */}
+            {/* project-img needs to be a square image, so it can be scaled down and turned into a circle accordingly */}
+            <img className="project-img" src={image} alt={title}/>
             <div className="project-title">{title}</div>
             <div className="project-description">
                 {description}

@@ -1,3 +1,5 @@
+import eltImage from '../images/projects/project-elt.png';
+
 function Project (title, description, image) {
     this.title = title;
     this.description = description;
@@ -8,12 +10,12 @@ function Project (title, description, image) {
 const projectdata = [
     new Project(
         "ELT Construction TX",
-        "website for client",
-        "img"
+        "Construction Website",
+        eltImage,
     ),
     new Project(
         "Overwatch League Directory (OWLD)",
-        "directory",
+        "Full Directory of all the current players in the Overwatch League",
         "img"
     ),
     new Project(

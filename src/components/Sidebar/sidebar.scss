@@ -1,16 +1,35 @@
-@import 'style/colors';
+@import 'style/colors', 'style/responsive';
+
+// Config:
+$padding-h1: 0%;
+$padding-h2: 4%;
 
 nav {
     z-index: 20;
     position: fixed;
-    left: 0;
     height: 100vh;
+    left: 0;
+    padding-top: 8%;
     // width: 20vw;
     // Width is controlled from app.scss
+
+    display: flex;
+    flex-direction: column;
 
     background: rgb(255,255,255);
     background: -moz-linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0) 100%);
     background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0) 100%);
     background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+
+.link-h1 {
+    @include responsive-static(font-size, 15, 40);
+    padding-top: 10%;
+    padding-left: $padding-h1;
+}
+
+.link-h2 {
+    padding-top: 2%;
+    padding-left: $padding-h2;
 }
