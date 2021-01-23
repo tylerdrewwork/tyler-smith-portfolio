@@ -1,0 +1,36 @@
+@import 'style/colors', 'style/responsive', 'style/fonts', 'style/breakpoints';
+
+// Config:
+$padding-h1: 0%;
+$padding-h2: 4%;
+
+nav {
+    display: flex;
+    position: relative;
+    left: 0;
+
+    // DESKTOP NAVBAR
+    flex-direction: row;
+    justify-content: center;
+
+    // MOBILE NAVBAR
+    @media only screen and ($bp-mobile) {
+        
+    }
+
+}
+
+.link {
+        @include font-fancy;
+}
+
+.link-h1 {
+    @include responsive-static(font-size, 15, 40);
+    padding-top: 10%;
+    padding-left: $padding-h1;
+}
+
+.link-h2 {
+    padding-top: 2%;
+    padding-left: $padding-h2;
+}

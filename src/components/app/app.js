@@ -6,7 +6,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import Header from 'components/header';
-import Sidebar from 'components/Sidebar';
+import Navbar from 'components/Navbar';
 import PAGES from 'data/pagesdata';
 import './app.scss';
 
@@ -20,8 +20,8 @@ import Home from '../../pages/home/home';
 function App() {
   return (
     <Router>
-      <Sidebar/>
       <main>
+        <Navbar/>
         <Switch>
           <Route exact path="/gallery">
             
