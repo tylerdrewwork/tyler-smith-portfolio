@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import ProjectWrapper from '../../components/projectwrapper';
-import SectionHeading from '../../components/sectionheading';
-import maskSplatter1 from 'images/masks/mask-paint-splatter.png';
 import './home.scss';
 // Gsap Imports
 import { gsap } from "gsap";
