@@ -6,16 +6,18 @@ import projectdata from 'data/projectdata';
 import NavbarGroup from './NavbarGroup';
 import NavbarSeparator from "./NavbarSeparator";
 
-function Navbar () {
-    const location = useLocation();
+function Navbar (props) {
+    // const location = useLocation();
     return (
-        <nav>
+        <> {/*JSX Fragment for multiple conditional renders*/}
+
+        {/* IF ON HOMEPAGE, render the navbar that stays on bottom of the page */}
+        {props.variant === "home" && 
+        <nav class="variant-home">
             {/* Projects Page */}
             <NavbarGroup to="/portfolio" name="Portfolio">
                 {/* Project Links */}
-                {/* <ul> */}
                     {projectdata.map(p => <Link className='link link-h2'>{p.title}</Link>)}
-                {/* </ul> */}
             </NavbarGroup>
 
             <NavbarSeparator />
@@ -27,8 +29,15 @@ function Navbar () {
 
             {/* Contact */}
             <NavbarGroup to='/contact' name='Contact'></NavbarGroup>
-        </nav>
-    );
+        </nav>}
+
+        {/* IF variant is default */}
+        {props.variant === "default" && 
+        <nav class="variant-default">
+            
+        </nav>}
+        </>
+    )
 };
 
 export default Navbar;

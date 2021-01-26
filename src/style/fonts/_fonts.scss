@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
 @mixin font-display () {
     font-family: 'Staatliches', sans-serif;
@@ -10,5 +12,9 @@
 }
 
 @mixin font-fancy () {
-    font-family: 'Lora', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+
+@mixin font-lora () {
+    font-family: 'Lora', serif;
 }

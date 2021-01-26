@@ -10,10 +10,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0% 0% 25px 0%;
 }
 
 h1.home-title {
-    @include responsive(font-size, 40, 300, 320, 1450);
+    @include responsive(font-size, 40, 150, 320, 1450);
     position: relative;
     text-shadow: 2px 2px 2px black;
 

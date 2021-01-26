@@ -21,13 +21,15 @@ function App() {
   return (
     <Router>
       <main>
-        <Navbar/>
         <Switch>
+          {/* Gallery */}
           <Route exact path="/gallery">
-            
+            <Navbar variant="default"/>
           </Route>
+          {/* Home Page, needs to be last so it is the default page */}
           <Route path="/">
             <Home />
+            <Navbar variant="home"/>
           </Route>
         </Switch>
       </main>

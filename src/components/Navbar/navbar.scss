@@ -4,6 +4,10 @@
 $padding-h1: 0%;
 $padding-h2: 4%;
 
+// 
+// ANCHOR ALL DEVICES NAVBAR:
+// 
+
 nav {
     display: flex;
     position: relative;
@@ -14,51 +18,63 @@ nav {
     justify-content: center;
 
     // MOBILE NAVBAR
-    @media only screen and ($bp-mobile) {
-        
-    }
-
+    
 }
 
 .navbar-group {
     display: flex;
     flex-direction: column;
     text-align: center;
+    text-transform: uppercase;
 
     width: 300px;
-}
+}   
 
+// Navbar Separator, aka divider
 .nav-divider-wrapper {
     @include responsive-static(height, 22, 60);
     width: 10px;
-    border: 1px dotted green;
     display: flex;
     align-items: center;
 
     .nav-divider {
-        // content: '';
-        width: 100%;
-        padding-top: 100%;
+        width: 80%;
+        padding-top: 80%;
         border-radius: 100%;
-        background-color: red;
+        background-color: black;
     }
-    // border-left: 2px solid black;
-    // box-sizing: content-box;
-    // padding: 10% 0%;
-    // height: 10px;
 }
 
 .link {
-        @include font-fancy;
+    $hoverScale: 1.2;
+    $hoverTime: 0.2s;
+
+    @include font-fancy;
+    display: block;
+    transition: ease $hoverTime transform;
+
+
+    &:hover {
+        color: blue;
+        -webkit-transform: scale($hoverScale);
+        transform: scale($hoverScale);
+    }
 }
 
 .link-h1 {
     @include responsive-static(font-size, 15, 40);
-    // padding-top: 10%;
-    padding-left: $padding-h1;
+    color: $clr-primary-dark;
 }
 
 .link-h2 {
-    padding-top: 2%;
-    padding-left: $padding-h2;
+    @include responsive-static(font-size, 5, 10);
+    padding: 1% 0;
+    color: $clr-primary-dark;
+    text-transform: initial;
+}
+
+// 
+// ANCHOR Mobile Devices Navbar:
+@media only screen and ($bp-mobile) {
+    
 }

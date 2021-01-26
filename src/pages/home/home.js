@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProjectWrapper from '../../components/projectwrapper';
 import SectionHeading from '../../components/sectionheading';
 import maskSplatter1 from 'images/masks/mask-paint-splatter.png';
 import './home.scss';
+// Gsap Imports
+import { gsap } from "gsap";
+import { CSSPlugin, CSSRulePlugin } from "gsap/all"
+gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
+
 
 function Home () {
+    function startAnimations () {
+        // const paintSpatter = CSSRulePlugin.getRule(".home-title:before");
+        // gsap.to(paintSpatter, 
+        // { backgroundPositionX: 200, repeat: -1, yoyo: true, })
+    }
+
+    // useEffect triggers once on page load, which triggers the animations
+    useEffect (() => {
+        startAnimations();
+    }, []);
+    
     return (
         <div id="home-title-container">
             {/* <img className="mask-splatter" src={maskSplatter1} alt="Splatter"></img> */}
