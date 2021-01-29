@@ -18,17 +18,16 @@
 
         color: transparent;
         background: url('../../images/masks/paint-splatter-tiled.png');
-        // background-clip: text;
-        // -webkit-background-clip: text;
-        // -moz-background-clip: text;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
         background-position-y: 50%;
         background-repeat: repeat;
         background-attachment: local;
-        background-size: 150%;
+        background-size: 100%;
 
-        // backdrop-filter: hue-rotate(90deg);
-        filter: invert(100%);
-        // -webkit-text-fill-color: transparent;
-        // color: transparent;
+        // filter:drop-shadow(50%);
+        filter: invert(80%);
+        // filter: hue-rotate(90deg);
     }
 }
