@@ -5,9 +5,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import Header from 'components/header';
 import Navbar from 'components/Navbar';
-import PAGES from 'data/pagesdata';
 import './app.scss';
 
 // Themes
@@ -22,15 +20,22 @@ function App() {
     <Router>
       <main>
         <Switch>
-          {/* Gallery */}
+          {/* ANCHOR Gallery */}
           <Route exact path="/gallery">
             <Navbar variant="default"/>
           </Route>
-          {/* Home Page, needs to be last so it is the default page */}
+
+          {/* ANCHOR Portfolio */}
+          <Route exact path="/portfolio">
+            
+          </Route> 
+          
+          {/* ANCHOR Home Page, needs to be last so it is the default page */}
           <Route path="/">
             <Home />
             <Navbar variant="home"/>
           </Route>
+          
         </Switch>
       </main>
     </Router>

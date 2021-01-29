@@ -36,6 +36,6 @@ function Header (props) {
         //     </Navbar.Collapse>
         // </HeaderStyled>
     )
-};
+}
 
 export default Header;

@@ -62,12 +62,12 @@ nav {
 }
 
 .link-h1 {
-    @include responsive-static(font-size, 15, 40);
+    @include responsive-static(font-size, 15, 50);
     color: $clr-primary-dark;
 }
 
 .link-h2 {
-    @include responsive-static(font-size, 5, 10);
+    @include responsive-static(font-size, 8, 20);
     padding: 1% 0;
     color: $clr-primary-dark;
     text-transform: initial;

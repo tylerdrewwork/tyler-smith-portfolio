@@ -1,0 +1,34 @@
+.fxtext {
+    position: relative;
+
+    .fxtext__text {
+        // background-color: black;
+        position: relative;
+        // text-shadow: 2px 2px 2px black;
+        // color: transparent;
+    }
+
+    .fxtext__overlay {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 2;
+
+        color: transparent;
+        background: url('../../images/masks/paint-splatter-tiled.png');
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        // -moz-background-clip: text;
+        background-position-y: 50%;
+        background-repeat: repeat;
+        background-attachment: local;
+        background-size: 150%;
+
+        // backdrop-filter: hue-rotate(90deg);
+        filter: invert(100%);
+        // -webkit-text-fill-color: transparent;
+        // color: transparent;
+    }
+}
