@@ -8,12 +8,9 @@ import {
 import Navbar from 'components/Navbar';
 import './app.scss';
 
-// Themes
-// import { createGlobalStyle, ThemeProvider } from 'styled-components';
-// import ColorScheme from "../../themes/colorScheme"
-
 // Pages
 import Home from '../../pages/home/home';
+import Portfolio from '../../pages/PagePortfolio'
 
 function App() {
   return (
@@ -27,7 +24,8 @@ function App() {
 
           {/* ANCHOR Portfolio */}
           <Route exact path="/portfolio">
-            
+            <Navbar variant="default"/>
+            <Portfolio />
           </Route> 
           
           {/* ANCHOR Home Page, needs to be last so it is the default page */}
