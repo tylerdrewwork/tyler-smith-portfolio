@@ -1,0 +1,39 @@
+.main-fx {
+    // Where the blur or overlay takes effect
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-repeat: repeat;
+    
+    &::before, &::after {
+        // Where the pattern is
+        // content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+#main-fx-1 {
+    z-index: 2;
+
+   
+    // background: url('../../images/svg/splatter.svg');
+    // background: url('../../images/masks/paint-splatter-tiled.png');
+    background-size: 500%;
+    opacity: .75;
+    // mix-blend-mode: multiply;
+    filter: blur(10px) sepia(1);
+}
+
+#main-fx-2 {
+    z-index: 1;
+    filter: blur(5px);
+    background: url('../../images/masks/paint-splatter-tiled.png');
+    // background: url('../../images/svg/splatter.svg');
+    background-size: 100%;
+}

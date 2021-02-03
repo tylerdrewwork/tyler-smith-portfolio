@@ -7,12 +7,13 @@ import NavbarSeparator from "./NavbarSeparator";
 
 function Navbar (props) {
     // const location = useLocation();
-    return (
-        <> {/*JSX Fragment for multiple conditional renders*/}
+    const variant = props.variant;
 
-        {/* IF ON HOMEPAGE, render the navbar that stays on bottom of the page */}
-        {props.variant === "home" && 
-        <nav className="variant-home">
+    return (
+        <> 
+        {/* ANCHOR Conditionally puts the variant into the classname, which matters!! Also, some of these elements will be conditionally rendered */}
+        {/* The classname here for example would be "variant-home" for the homepage */}
+        <nav className={`variant-${variant} ${props.className}`}> 
             {/* Projects Page */}
             <NavbarGroup to="/portfolio" name="Portfolio">
                 {/* Project Links */}
@@ -30,13 +31,7 @@ function Navbar (props) {
 
             {/* Contact */}
             <NavbarGroup to='/contact' name='Contact'></NavbarGroup>
-        </nav>}
-
-        {/* IF variant is default */}
-        {props.variant === "default" && 
-        <nav className="variant-default">
-            
-        </nav>}
+        </nav>
         </>
     )
 }
