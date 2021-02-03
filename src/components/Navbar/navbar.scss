@@ -10,12 +10,13 @@ $padding-h2: 4%;
 
 nav {
     // ANCHOR ALL variants
+    z-index: 50;
     display: flex;
     position: relative;
     left: 0;
     justify-content: center;
     flex-direction: row;
-    background-color: $clr-primary-light;
+    background-color: $clr-primary-light;   
 
     &.variant-home {
         background-color: unset;

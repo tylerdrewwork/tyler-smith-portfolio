@@ -7,10 +7,10 @@ import "./projectwrapper.scss";
 function ProjectWrapper () {
     return (
         <section>
-                    <div id="project-container">
-                        {/* Map projectdata for each project! :D */}
-                        {projectdata.map(p => <Project project={p}/>)}
-                    </div>
+            <div id="project-container">
+                {/* Map projectdata for each project! :D */}
+                {projectdata.map(p => <Project project={p} key={p.title}/>)}
+            </div>
         </section>
     )
 }

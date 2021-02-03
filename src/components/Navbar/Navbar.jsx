@@ -17,7 +17,7 @@ function Navbar (props) {
             {/* Projects Page */}
             <NavbarGroup to="/portfolio" name="Portfolio">
                 {/* Project Links */}
-                    {projectdata.map(p => 
+                    {variant === 'home' && projectdata.map(p => 
                         <Link className='link link-h2' key={"nav-link-" + p.title}>{p.title}</Link>
                     )}
             </NavbarGroup>
