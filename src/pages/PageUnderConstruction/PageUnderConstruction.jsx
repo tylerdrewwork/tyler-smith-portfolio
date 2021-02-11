@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 // import FXText from 'components/FXText';
-import resume_pdf from 'data/Tyler Smith - Experienced Full Stack Web Developer Resume.pdf';
+import resume_pdf from 'data/Tyler Smith - Full Stack Developer Resume.pdf';
 import './PageUnderConstruction.scss';
 import UnderConstructionTape from 'components/UnderConstructionTape/UnderConstructionTape';
 
