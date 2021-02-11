@@ -15,7 +15,7 @@ const PageUnderConstruction = () => {
                 <h2>Welcome!</h2>
                 <h1>Tyler Smith</h1>
                 <p>My portfolio is currently under construction for a new gorgeous React rework.</p>
-                <p>Please look at my other materials in the meantime:</p>
+                <p>Please refer to my other materials in the meantime:</p>
                 <span>
                     <a href={resume_pdf} download>Resume</a>
                     <a href="https://github.com/sakiskid" target="_blank">GitHub</a>
