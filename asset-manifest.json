@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tyler-smith-portfolio/static/css/main.d5d6f5b5.chunk.css",
-    "main.js": "/tyler-smith-portfolio/static/js/main.35260ee0.chunk.js",
-    "main.js.map": "/tyler-smith-portfolio/static/js/main.35260ee0.chunk.js.map",
+    "main.js": "/tyler-smith-portfolio/static/js/main.cb58c369.chunk.js",
+    "main.js.map": "/tyler-smith-portfolio/static/js/main.cb58c369.chunk.js.map",
     "runtime-main.js": "/tyler-smith-portfolio/static/js/runtime-main.7931434d.js",
     "runtime-main.js.map": "/tyler-smith-portfolio/static/js/runtime-main.7931434d.js.map",
     "static/js/2.df8e2164.chunk.js": "/tyler-smith-portfolio/static/js/2.df8e2164.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.7931434d.js",
     "static/js/2.df8e2164.chunk.js",
     "static/css/main.d5d6f5b5.chunk.css",
-    "static/js/main.35260ee0.chunk.js"
+    "static/js/main.cb58c369.chunk.js"
   ]
 }
