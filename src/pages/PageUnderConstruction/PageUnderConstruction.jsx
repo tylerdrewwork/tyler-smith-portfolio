@@ -17,7 +17,7 @@ const PageUnderConstruction = () => {
                 <p>My portfolio is currently under construction for a new gorgeous React rework.</p>
                 <p>Please refer to my other materials in the meantime:</p>
                 <span>
-                    <a href={resume_pdf} download>Resume</a>
+                    <a href={resume_pdf} download="Tyler Smith - Experienced Full Stack Web Developer Resume">Resume</a>
                     <a href="https://github.com/sakiskid" target="_blank">GitHub</a>
                     <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
                 </span>
@@ -26,7 +26,7 @@ const PageUnderConstruction = () => {
             <hr />
 
             <small>
-                My name is Tyler Smith. I am a former C# Game Developer that turned to Full Stack development after one too many game jams. My portfolio will be up soon, I just have been busy working on <a href="www.ELTConstructionTX.com" target="_blank">client websites</a> as well as starting a new job.
+                My name is Tyler Smith. I am a former C# Game Developer that turned to Full Stack development after one too many game jams. My portfolio will be up soon, I just have been busy working on <a href="https://www.ELTConstructionTX.com" target="_blank">client websites</a> as well as starting a new job.
             </small>
         </div>
     );
