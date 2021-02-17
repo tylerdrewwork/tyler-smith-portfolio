@@ -12,7 +12,6 @@ import './app.scss';
 // Pages
 import Home from '../../pages/home/home';
 import Portfolio from '../../pages/PagePortfolio';
-import PageUnderConstruction from 'pages/PageUnderConstruction';
 import MainFX from './MainFX/MainFX';
 
 function App() {
