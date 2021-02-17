@@ -13,19 +13,14 @@ function Navbar (props) {
         <> 
         {/* ANCHOR Conditionally puts the variant into the classname, which matters!! Also, some of these elements will be conditionally rendered */}
         {/* The classname here for example would be "variant-home" for the homepage */}
-        <nav className={`variant-${variant} ${props.className}`}> 
-            {/* Projects Page */}
-            <NavbarGroup to="/portfolio" name="Portfolio">
+        <nav className={`variant-${variant} ${props.className}`}>
+
+            <NavbarGroup to='/projects' name="Projects">
                 {/* Project Links */}
                     {variant === 'home' && projectdata.map(p => 
                         <Link className='link link-h2' key={"nav-link-" + p.title}>{p.title}</Link>
                     )}
             </NavbarGroup>
-
-            <NavbarSeparator />
-
-            {/* Gallery */}
-            <NavbarGroup to='/projects' name="Projects"></NavbarGroup>
 
             <NavbarSeparator />
 

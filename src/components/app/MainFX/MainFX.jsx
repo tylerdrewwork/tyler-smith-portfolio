@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
+import './MainFX.scss';
 import { gsap } from "gsap";
 
 const MainFX = () => {

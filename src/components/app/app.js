@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 import Navbar from 'components/Navbar';
 import './app.scss';
-import './mainfx.scss';
 
 // Pages
 import Home from '../../pages/home/home';
