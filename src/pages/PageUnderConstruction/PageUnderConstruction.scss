@@ -1,0 +1,72 @@
+@import 'style/responsive', 'style/fonts';
+
+#construction-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+}
+
+.fxtext {
+    margin-bottom: 10%;
+}
+
+.fxtext__overlay, .fxtext__text {
+    // line-height: 100%;
+    width: 100%;
+    @include responsive-static(font-size, 20, 80);
+}
+
+h1 {
+    @include responsive-static(font-size, 20, 60);
+    opacity: 1;
+    font-style: italic;
+    text-align: center;
+}
+
+h2 {
+    @include responsive-static(font-size, 40, 90);
+    text-align: center;
+}
+
+p {
+    @include responsive-static(font-size, 16, 20);
+    text-align: center;
+}
+
+a {
+    @include responsive-static(font-size, 20, 24);
+}
+
+span {
+    @media screen and (max-width: 770px) {
+        width: 90%;
+    }
+
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+hr {
+    width: 50%;
+    margin: 4% 0;
+}
+
+small {
+    width: 50%;
+    @include responsive-static(font-size, 12, 14);
+
+    a {
+        font-size: inherit;
+    }
+}
