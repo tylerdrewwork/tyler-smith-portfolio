@@ -30,7 +30,7 @@ function App() {
           </Route>
 
           {/* ANCHOR Portfolio */}
-          <Route exact path="/portfolio">
+          <Route exact path="/projects">
             <Navbar variant="default"/>
             <div className="container">
               <Portfolio />

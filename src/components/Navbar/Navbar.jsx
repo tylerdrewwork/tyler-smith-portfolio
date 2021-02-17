@@ -25,7 +25,7 @@ function Navbar (props) {
             <NavbarSeparator />
 
             {/* Gallery */}
-            <NavbarGroup to='/gallery' name="Gallery"></NavbarGroup>
+            <NavbarGroup to='/projects' name="Projects"></NavbarGroup>
 
             <NavbarSeparator />
 

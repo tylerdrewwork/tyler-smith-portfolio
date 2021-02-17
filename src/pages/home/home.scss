@@ -1,8 +1,7 @@
-@import 'style/responsive', 'style/colors';
+@import 'style/responsive', 'style/colors', 'style/fonts';
 
 
 #home-title-container {
-
     order: -1;
     justify-self: center;
     height: 100%;
@@ -14,18 +13,26 @@
     margin: 0% 0% 25px 0%;
 }
 
+hr {
+    width: 50%;
+    border-color: black;
+    opacity: 0.25;
+}
+
 // 
 // ANCHOR "Tyler Smith" title!!
 // 
 .home-title {
+    // This includes both fxtexts
     @include responsive(font-size, 40, 200, 320, 1450);
-    // text-shadow: 2px 2px 2px black;
-
+    @include font-fancier;
+    letter-spacing: normal;
+    color: black;
 }
 
 .fxtext__text {
     text-shadow: 
-        black 0px 5px 10px,
-        black 5px 0px 10px,
+        // black 0px 5px 10px;
+        // black 5px 0px 10px,
         black -5px 0px 10px;
 }

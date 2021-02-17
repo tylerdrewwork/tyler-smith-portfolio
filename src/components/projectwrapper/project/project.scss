@@ -1,28 +1,33 @@
 @import 'style/fonts', 'style/colors', 'style/responsive';
 
 .project {
-    width: 46%;
-    margin: 2% 2%;
+    width: 100%;
+    margin: 2% 2% 7vh 2%;
     text-align: center;
 
-    // background-color: white;
-    // border-radius: 10px;
+    .project__info {
+        display: flex;
 
-    .project-img {
-        // border: 2px solid $clr-primary;
-        background-color: $clr-black;
-        width: 20%;
-        border-radius: 100%;
+
+        .project-img {
+            // border: 2px solid $clr-primary;
+            background-color: $clr-black;
+            height: 25%;
+            min-width: 25%;
+            width: 25%;
+        }
+
+        .project-description {
+            height: 100%;
+            padding: 0% 10%;
+            line-height: 200%;
+        }
     }
 
     .project-title {
         @include font-display;
-        @include responsive-static(font-size, 20, 40);
+        @include responsive-static(font-size, 20, 50);
         color: $clr-gray;
-        border-bottom: 1px gainsboro solid;
-    }
-
-    .project-description {
-
-    }
+        // border-bottom: 1px gainsboro solid;
+    }    
 }

@@ -9,11 +9,12 @@ function Home () {
     return (
         <div id="home-title-container">
             <FXText layers={3} id={"fxtext-firstname"} className="jumbo home-title">
-                TYLER
+                Tyler Smith
             </FXText>
-            <FXText id={"fxtext-lastname"} className="jumbo home-title">
-                SMITH
-            </FXText>
+            <hr></hr>
+            {/* <FXText id={"fxtext-lastname"} className="jumbo home-title"> */}
+                {/* Smith */}
+            {/* </FXText> */}
         </div>
     )
 }
