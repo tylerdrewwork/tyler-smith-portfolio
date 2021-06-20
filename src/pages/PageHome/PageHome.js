@@ -1,14 +1,19 @@
 import React from 'react';
-import './PageHome.scss';
 import HomeAboutSection from './sections/HomeAboutSection';
 import HomeProjectsSection from './sections/HomeProjectsSection';
-// Gsap Imports\
+// Components
+import SectionBrowser from 'components/SectionBrowser/SectionBrowser';
+// CSS
+import './PageHome.scss';
 
 function Home () {
     return (
         <>
         <HomeAboutSection/>
-        <HomeProjectsSection/>
+        
+        <SectionBrowser>
+            <HomeProjectsSection/>
+        </SectionBrowser>
         </>
     )
 }
