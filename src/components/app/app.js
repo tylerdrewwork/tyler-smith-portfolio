@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { 
   BrowserRouter as Router, 
@@ -6,15 +5,11 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import Navbar from 'components/Navbar';
 import './app.scss';
 import './mainfx.scss';
 
 // Pages
-import Home from '../../pages/home/home';
-import Portfolio from '../../pages/PagePortfolio';
-import PageUnderConstruction from 'pages/PageUnderConstruction';
-import MainFX from './MainFX/MainFX';
+import PageHome from '../../pages/PageHome/PageHome';
 
 function App() {
 
@@ -22,7 +17,7 @@ function App() {
   return (
     <Router>
       <main>
-        <MainFX />
+        {/* <MainFX /> */}
         <Switch>
           {/* FIXME All of the commented out lines here are JUST for the PageUnderConstruction quickfix. Please uncomment! */}
           {/* ANCHOR Gallery */}
@@ -42,11 +37,7 @@ function App() {
           
           {/* ANCHOR Home Page, needs to be last so it is the default page */}
           <Route path="/">
-            <div className="container">
-              <PageUnderConstruction />
-              {/* <Home /> */}
-              {/* <Navbar variant="home"/> */}
-            </div>
+            <PageHome/>
           </Route>
           
         </Switch>

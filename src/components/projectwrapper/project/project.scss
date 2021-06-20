@@ -1,28 +1,28 @@
-@import 'style/fonts', 'style/colors', 'style/responsive';
+// @import 'style/fonts', 'style/colors', 'style/responsive';
 
-.project {
-    width: 46%;
-    margin: 2% 2%;
-    text-align: center;
+// .project {
+//     width: 46%;
+//     margin: 2% 2%;
+//     text-align: center;
 
-    // background-color: white;
-    // border-radius: 10px;
+//     // background-color: white;
+//     // border-radius: 10px;
 
-    .project-img {
-        // border: 2px solid $clr-primary;
-        background-color: $clr-black;
-        width: 20%;
-        border-radius: 100%;
-    }
+//     .project-img {
+//         // border: 2px solid $clr-primary;
+//         background-color: $clr-black;
+//         width: 20%;
+//         border-radius: 100%;
+//     }
 
-    .project-title {
-        @include font-display;
-        @include responsive-static(font-size, 20, 40);
-        color: $clr-gray;
-        border-bottom: 1px gainsboro solid;
-    }
+//     .project-title {
+//         @include font-display;
+//         @include responsive-static(font-size, 20, 40);
+//         color: $clr-gray;
+//         border-bottom: 1px gainsboro solid;
+//     }
 
-    .project-description {
+//     .project-description {
 
-    }
-}
+//     }
+// }

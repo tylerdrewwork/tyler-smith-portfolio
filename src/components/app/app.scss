@@ -8,6 +8,7 @@ $navbarWidth: 18vw;
 main {
     position: relative;
     background-color: $clr-primary-dark;
+    min-height: 100vh;
     // height: 100%;
 }
 
