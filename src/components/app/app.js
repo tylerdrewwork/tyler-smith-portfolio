@@ -17,13 +17,15 @@ function App() {
   return (
     <Router>
       <main>
-        <Switch>
-          {/* ANCHOR Home Page, needs to be last so it is the default page */}
-          <Route path="/">
-            <PageHome/>
-          </Route>
-          
-        </Switch>
+        <div id="page-container">
+          <Switch>
+            {/* ANCHOR Home Page, needs to be last so it is the default page */}
+            <Route path="/">
+              <PageHome/>
+            </Route>
+            
+          </Switch>
+        </div>
       </main>
     </Router>
   );
