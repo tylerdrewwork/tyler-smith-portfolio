@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import './HomeAboutSection.scss';
 
 function HomeAboutSection () {
     return (
-        <section>
+        <section id="home-about-section">
             <h1>
                 Tyler Smith
             </h1>

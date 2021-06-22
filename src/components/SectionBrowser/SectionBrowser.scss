@@ -1,11 +1,28 @@
 @import 'style/colors';
 
 #section-browser-header {
-    background-color: wheat;   
+    background-color: $clr-base-300;
     text-align: center; 
+    padding: 10px 0 10px 0;
+
+    a {
+        background-color: $clr-base-700;
+        border-radius: 4px;
+        color: $clr-base-900;
+        margin: 0 5px;
+        padding: 2px;
+
+        font-size: 100%;
+    }
 }
 
 .section-browser {
-    background-color: rgba($color: $clr-white, $alpha: 1.0); 
+    background-color: $clr-base-300;
     border-radius: 10px;
+    border: 2px solid $clr-base-500;
+    overflow: hidden;
+
+    hr {
+        margin: 0;
+    }
 }
