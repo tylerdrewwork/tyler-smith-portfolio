@@ -15,14 +15,16 @@ function Home () {
     let sections = {
         gamedev: {
             name: "Game Development",
+            hrefId: "section-browser-gamedev",
             component: function() {
-                return <ProjectsGallery name={this.name} project={projectdata.gamedev}/>
+                return <ProjectsGallery id={this.hrefId} name={this.name} project={projectdata.gamedev} key={this.name}/>
             },
         },
         web: {
             name: "Web Development",
+            hrefId: "section-browser-web",
             component: function() {
-                return <ProjectsGallery name={this.name} project={projectdata.web}/>
+                return <ProjectsGallery id={this.hrefId} name={this.name} project={projectdata.web} key={this.name}/>
             },
         },
     }

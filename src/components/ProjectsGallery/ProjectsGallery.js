@@ -6,7 +6,7 @@ import "./ProjectsGallery.scss";
 function ProjectsGallery (props) {
     return (
         <>
-            <div className="projects-container">
+            <div className="projects-container" id={props.id}>
                 <h2 className="projects-headerbar">{props.name}</h2>
                 {GetProjectsJSX(props.project)}
             </div>
