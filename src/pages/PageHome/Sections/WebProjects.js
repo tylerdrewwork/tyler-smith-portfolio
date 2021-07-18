@@ -1,12 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
-// import ProjectsGallery from 'components/ProjectsGallery/ProjectsGallery';
+import Project from 'components/Project/Project';
 import React from 'react';
+import projectdata from 'data/projectdata';
 
-function FeaturedProjects () {
+function WebProjects () {
     return (
         <div>
             <h2>
-                Featured Projects
+                Web Projects
                 <hr/>
             </h2> 
 
@@ -14,9 +15,9 @@ function FeaturedProjects () {
                 Projects in both Game and Web Development that I'm proud of.
             </p>
 
-            {/* <ProjectsGallery /> */}
+            <Project project={projectdata.offYourChest}/>
         </div>
     )
 }
 
-export default FeaturedProjects;
+export default WebProjects;

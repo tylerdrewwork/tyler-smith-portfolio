@@ -37,7 +37,12 @@ const projectdata = {
             "lorem ipsum are tea lkan eain eflorem ipsum are tea lkan eain eflorem ipsum are tea lkan eain ef",
             "img",
         )
-    ]
+    ],
+    offYourChest: new Project(
+        "Off Your Chest",
+        "completely anonymous online message wall to get otherwise stationary thoughts off of your chest",
+        "img",
+    ),
 }
 
 export default projectdata;

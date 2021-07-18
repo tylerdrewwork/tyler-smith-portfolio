@@ -5,16 +5,47 @@
     // color: $clr-black;   
 
     .sectionbrowser-header {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+
         display: flex;
-        width: 100%;
         justify-content: space-around;
 
+        width: 100%;
+        padding: 0.5em 0.5em;
+        
         background-color: gray;
         color: black;
+        
+        a {
+            background-color: white;
+            padding: 0.5em 2em;
+            border-radius: 10px;
+        }
     }
 
+    .sectionbrowser-content-section {
+        padding: 20px 0 10px 0;
+    }
+
+    // The HR between each content
     hr {
         border-top: 1px solid gray;
         margin: 1rem 5%;
+    }
+
+    // The colorful HR
+    h2 hr {
+        margin: 1rem 35%;
+        border-top: 0;
+        height: 2px;
+        border-radius: 50px;
+
+        background: rgb(142,55,166);
+        background: -moz-linear-gradient(90deg, rgba(142,55,166,1) 0%, rgba(202,41,41,1) 51%, rgba(253,29,235,1) 88%, rgba(250,253,29,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(142,55,166,1) 0%, rgba(202,41,41,1) 51%, rgba(253,29,235,1) 88%, rgba(250,253,29,1) 100%);
+        background: linear-gradient(90deg, rgba(142,55,166,1) 0%, rgba(202,41,41,1) 51%, rgba(253,29,235,1) 88%, rgba(250,253,29,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8e37a6",endColorstr="#fafd1d",GradientType=1);
     }
 }

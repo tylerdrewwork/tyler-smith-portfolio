@@ -4,7 +4,7 @@ import "./SectionBrowser.scss";
 function SectionBrowser (props) {
     return (
         <div className="sectionbrowser" sections={props.sections}>
-            <div className="sectionbrowser-header">{RenderSectionHeader(props.sections)}</div>
+            <nav className="sectionbrowser-header">{RenderSectionHeader(props.sections)}</nav>
             <div className="sectionbrowser-content">
                 {RenderSections(props.sections)}
             </div>
@@ -15,7 +15,9 @@ function SectionBrowser (props) {
 function RenderSectionHeader (sections) {
     return sections.map(section => {
         return (
-            <p key={section.title}>{section.title}</p>
+            <a key={"header-" + section.title}>
+                {section.title}
+            </a>
         )
     })
 }
@@ -23,10 +25,10 @@ function RenderSectionHeader (sections) {
 function RenderSections (sections) {
     return sections.map(section => {
         return (
-            <>
-            {section.component}
-            <hr/>
-            </>
+            <div key={"content-" + section.title} className="sectionbrowser-content-section">
+                {section.component}
+                <hr/>
+            </div>
         )
     })
 }

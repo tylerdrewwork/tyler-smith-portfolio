@@ -3,15 +3,16 @@ import React from 'react';
 
 function AboutMe () {
     return (
-        <section>
-            <h1>
+        <div>
+            <h2>
                 About Me
-            </h1>   
-            
+                <hr/>
+            </h2>   
+
             <p>
                 I'm a C# Unity Game Developer who participated in too many game jams and started making websites. I have Full-Stack MERN, C# Unity Editor, and audio production experience.
             </p>
-        </section>
+        </div>
     )
 }
 
