@@ -16,7 +16,7 @@ section {
     h1 {
         @include responsive-static(font-size, 30, 50);
         padding-top: 20px;
-        color: $clr-gray;
+        // color: $clr-gray;
     }
     
     h2 {
@@ -25,6 +25,6 @@ section {
 
     p {
         margin-top: 20px;
-        color: $clr-gray;
+        // color: $clr-gray;
     }
 }
