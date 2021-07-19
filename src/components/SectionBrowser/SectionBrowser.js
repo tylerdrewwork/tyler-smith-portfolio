@@ -15,7 +15,7 @@ function SectionBrowser (props) {
 function RenderSectionHeader (sections) {
     return sections.map(section => {
         return (
-            <a key={"header-" + section.title}>
+            <a key={"header-" + section.title} href={"#sectionbrowser-" + section.title}>
                 {section.title}
             </a>
         )
@@ -25,7 +25,7 @@ function RenderSectionHeader (sections) {
 function RenderSections (sections) {
     return sections.map(section => {
         return (
-            <div key={"content-" + section.title} className="sectionbrowser-content-section">
+            <div key={"content-" + section.title} className="sectionbrowser-content-section" id={"sectionbrowser-" + section.title}>
                 {section.component}
                 <hr/>
             </div>

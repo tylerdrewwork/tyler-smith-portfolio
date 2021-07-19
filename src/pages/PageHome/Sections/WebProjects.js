@@ -16,6 +16,7 @@ function WebProjects () {
             </p>
 
             <Project project={projectdata.offYourChest}/>
+            <Project project={projectdata.elt}/>
         </div>
     )
 }

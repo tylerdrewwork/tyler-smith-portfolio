@@ -1,4 +1,5 @@
 import eltImage from '../images/projects/project-elt.png';
+import offYourChestImage from '../images/projects/sticky_note_white.svg';
 
 function Project (title, description, image) {
     this.title = title;
@@ -41,7 +42,12 @@ const projectdata = {
     offYourChest: new Project(
         "Off Your Chest",
         "completely anonymous online message wall to get otherwise stationary thoughts off of your chest",
-        "img",
+        offYourChestImage,
+    ),
+    elt: new Project(
+        "ELT Construction TX",
+        "construction site built for a client ludum udaniu aiwudn iauwnd iuawn diu anw",
+        eltImage,
     ),
 }
 

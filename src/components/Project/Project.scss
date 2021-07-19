@@ -1,8 +1,40 @@
 @import 'style/colors', 'style/breakpoints', 'style/responsive', 'style/fonts';
 
 .project {
-    background-color: gray;
+    display: inline-block;
     min-width: 40%;
+    max-width: 250px;
+    margin: 0;
 
     border-radius: 100px;
+
+    padding: 1em;
+    margin: 0.5em;
+
+    .project-image-wrapper {
+        display: grid;
+        place-items: center;
+        grid-template-areas: "inner-div";
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+
+        img {
+            // position: absolute;
+            grid-area: inner-div;
+            // max-width: 80%;
+            // max-height: 80%;
+        }
+    }
+
+    .project-image-outline {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .project-image {
+        max-width: 70%;
+        max-height: 70%;
+        color: red;
+    }
 }
