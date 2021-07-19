@@ -2,21 +2,14 @@ import React from 'react';
 import Project from '../Project/Project';
 
 import "./ProjectsGallery.scss";
-import projectdata from 'data/projectdata';
 
-function ProjectsGallery () {
-
+function ProjectsGallery (props) {
     return (
         <>
-        <div className="projects-container">
-            <h2 className="projects-headerbar">Game Development</h2>
-            {GetProjectsJSX(projectdata.gamedev)}
-        </div>
-        
-        <div className="projects-container">
-            <h2 className="projects-headerbar">Web Development</h2>
-            {GetProjectsJSX(projectdata.web)}
-        </div>
+            <div className="projects-container" id={props.id}>
+                <h2 className="projects-headerbar">{props.name}</h2>
+                {GetProjectsJSX(props.project)}
+            </div>
         </>
     );
 }

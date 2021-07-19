@@ -17,30 +17,15 @@ function App() {
   return (
     <Router>
       <main>
-        {/* <MainFX /> */}
-        <Switch>
-          {/* FIXME All of the commented out lines here are JUST for the PageUnderConstruction quickfix. Please uncomment! */}
-          {/* ANCHOR Gallery */}
-          {/* <Route exact path="/gallery"> */}
-            {/* <Navbar variant="default"/> */}
-            {/* <div className="container"> */}
-            {/* </div> */}
-          {/* </Route> */}
-
-          {/* ANCHOR Portfolio */}
-          {/* <Route exact path="/portfolio"> */}
-            {/* <Navbar variant="default"/> */}
-            {/* <div className="container"> */}
-              {/* <Portfolio /> */}
-            {/* </div> */}
-          {/* </Route>  */}
-          
-          {/* ANCHOR Home Page, needs to be last so it is the default page */}
-          <Route path="/">
-            <PageHome/>
-          </Route>
-          
-        </Switch>
+        <div id="page-container">
+          <Switch>
+            {/* ANCHOR Home Page, needs to be last so it is the default page */}
+            <Route path="/">
+              <PageHome/>
+            </Route>
+            
+          </Switch>
+        </div>
       </main>
     </Router>
   );

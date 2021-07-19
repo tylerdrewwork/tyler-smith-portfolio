@@ -1,7 +1,18 @@
-$clr-primary: #45A29E;
-$clr-primary-light: #66FCF1;
-$clr-primary-dark: #1F2833;
-$clr-gray: #C5C6C7;
+$clr-primary: #45a29e;
+$clr-primary-tint: #66FCF1;
+$clr-primary-shade: #1F2833;
+$clr-secondary: #b4464c;
+// $clr-secondary:
+
+$clr-base-300: #eeeeee;
+$clr-base-500: #cfcfcf;
+$clr-base-700: #9c9c9c;
+$clr-base-800: #616161;
+$clr-base-900: #2a2a2a;
+
+// these have been renamed, but can't refactor without going thru the entire code so they are pointing to another variable
+$clr-gray: $clr-base-500;
+$clr-white: #e4e4e4;
 $clr-black: #0B0C10;
 
 // $clr-primary: #E0A742;

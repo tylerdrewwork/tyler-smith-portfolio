@@ -1,1 +1,29 @@
 $bp-mobile: 'max-width: 425px';
+
+@mixin bp-all {
+    @include bp-mobile;
+    @include bp-tablet;
+    @include bp-laptop;
+}
+
+@mixin bp-mobile {
+    @media only screen and (max-width: 424px) {
+        max-width: calc(100% - 2em);
+    }
+
+    @media only screen and (min-width: 425px) {
+        max-width: calc(100% - 2em);
+    }
+}
+
+@mixin bp-tablet {
+    @media only screen and (min-width: 768px) {
+        max-width: calc(90% - 4em);
+    }
+}
+
+@mixin bp-laptop {
+    @media only screen and (min-width: 1200px) {
+        max-width: calc(80% - 12em);
+    }
+}

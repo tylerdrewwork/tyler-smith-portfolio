@@ -8,9 +8,10 @@
     }
 }
 
+// Returns in pixels
 @mixin responsive-static ($property, $sizeMin, $sizeMax) {
-    $vpMin: 320;
-    $vpMax: 1000;
+    $vpMin: 425;
+    $vpMax: 1200;
     #{$property}: #{$sizeMin}px;
     @media screen and (min-width: #{$vpMin}px) {
         #{$property}: calc(#{$sizeMin}px + (#{$sizeMax} - #{$sizeMin}) * ((100vw - #{$vpMin}px) / (#{$vpMax} - #{$vpMin})));

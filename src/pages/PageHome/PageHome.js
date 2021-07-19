@@ -1,6 +1,6 @@
+/* eslint-disable react/display-name */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-// import ProjectsGallery from 'components/ProjectsGallery/ProjectsGallery';
 import SectionBrowser from 'components/SectionBrowser/SectionBrowser';
 import FeaturedProjects from './Sections/FeaturedProjects';
 import AboutMe from './Sections/AboutMe';
