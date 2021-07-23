@@ -4,13 +4,19 @@ import React from 'react';
 import SectionBrowser from 'components/SectionBrowser/SectionBrowser';
 import FeaturedProjects from './Sections/FeaturedProjects';
 import AboutMe from './Sections/AboutMe';
-import './PageHome.scss';
 import WebProjects from './Sections/WebProjects';
-// Gsap Imports\
+
+import './PageHome.scss';
+import './PageHomeStars.scss';
 
 function Home () {
     return (
         <>
+        <div id="stars-container">
+            <div id="stars-small"></div>
+            <div id="stars-medium"></div>
+            <div id="stars-large"></div>
+        </div>
         <section>
             <div id="landing-intro">
                 <h1>Tyler Smith</h1>

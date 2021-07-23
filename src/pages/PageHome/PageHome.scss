@@ -1,4 +1,4 @@
-@import 'style/responsive', 'style/colors';
+@import 'style/responsive', 'style/colors', 'style/fonts';
 
 section {
     margin: auto;   
@@ -23,4 +23,17 @@ section {
 #landing-intro {
     color: white;
     padding: 15% 0;
+
+    h1, p {
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        @include responsive-static(font-size, 50, 80);
+    }
+
+    p {
+        @include responsive-static(font-size, 20, 50);
+    }
 }

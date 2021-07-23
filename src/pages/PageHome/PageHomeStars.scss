@@ -1,0 +1,108 @@
+// Idea from  https://codepen.io/saransh/pen/BKJun
+
+/// CONFIGURATION ///
+
+// Number of stars
+$stars-small: 300;
+$stars-medium: 100;
+$stars-large: 40;
+
+// Animation Length
+$duration-small: 520s;
+$duration-medium: 320s;
+$duration-large: 160s;
+
+// Size of stars
+$size-small: 1px;
+$size-medium: 2px;
+$size-large: 4px;
+
+///
+
+@function multiple-box-shadow($n) {
+    $value: '#{random(100)}vw #{random(200)}vh #FFFFFF';
+    @for $i from 2 through $n {
+      $value: '#{$value} , #{random(100)}vw #{random(200)}vh #FFFFFF';
+    }
+  
+    @return unquote($value);
+}
+  
+
+#stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#stars-small {
+    position: relative;
+    width: $size-small;
+    height: $size-small;
+    background: transparent;
+    box-shadow: multiple-box-shadow($stars-small);
+
+    animation: animStar $duration-small linear infinite;
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 100vh;
+        width: $size-small;
+        height: $size-small;
+        background: transparent;
+        box-shadow: multiple-box-shadow($stars-small);
+    }
+}
+
+#stars-medium {
+    position: relative;
+    width: $size-medium;
+    height: $size-medium;
+    background: transparent;
+    box-shadow: multiple-box-shadow($stars-medium);
+
+    animation: animStar $duration-medium linear infinite;
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 100vh;
+        width: $size-medium;
+        height: $size-medium;
+        background: transparent;
+        box-shadow: multiple-box-shadow($stars-medium);
+    }
+}
+
+#stars-large {
+    position: relative;
+    width: $size-large;
+    height: $size-large;
+    background: transparent;
+    box-shadow: multiple-box-shadow($stars-large);
+    animation: animStar $duration-large linear infinite;
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 100vh;
+        width: $size-large;
+        height: $size-large;
+        background: transparent;
+        box-shadow: multiple-box-shadow($stars-large);
+
+        border-radius: 1px;
+    }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px)
+  }
+  to {		
+    transform: translateY(-100vh)
+  }
+}

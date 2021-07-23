@@ -6,12 +6,18 @@ html {
 
 main {
     position: relative;
-    background-color: $clr-primary-shade;
+    // background-color: $clr-primary-shade;
+    background: rgb(35,86,112);
+    background: -moz-linear-gradient(205deg, rgba(35,86,112,1) 0%, rgba(35,31,75,1) 75%, rgba(35,31,75,1) 75%, rgba(81,43,43,1) 80%, rgba(157,48,49,1) 81%, rgba(185,172,74,1) 100%);
+    background: -webkit-linear-gradient(205deg, rgba(35,86,112,1) 0%, rgba(35,31,75,1) 75%, rgba(35,31,75,1) 75%, rgba(81,43,43,1) 80%, rgba(157,48,49,1) 81%, rgba(185,172,74,1) 100%);
+    background: linear-gradient(205deg, rgba(35,86,112,1) 0%, rgba(35,31,75,1) 75%, rgba(35,31,75,1) 75%, rgba(81,43,43,1) 80%, rgba(157,48,49,1) 81%, rgba(185,172,74,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#235670",endColorstr="#b9ac4a",GradientType=1);
     min-height: 100vh;
 
 
     #page-container {        
         margin: auto;
+        height: 100%;
         @include bp-all;
     }
 }
