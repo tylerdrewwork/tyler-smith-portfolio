@@ -13,14 +13,17 @@ function Home () {
     return (
         <>
         <div id="stars-container">
+            {/* Configure the starfield on PageHomeStars.scss */}
             <div id="stars-small"></div>
             <div id="stars-medium"></div>
             <div id="stars-large"></div>
         </div>
+        <div id="earth-container"></div>
+
         <section>
             <div id="landing-intro">
                 <h1>Tyler Smith</h1>
-                <p>Another developer</p>
+                <p>Full Stack MERN & C# Developer</p>
             </div>
 
             <SectionBrowser sections={sections}/>

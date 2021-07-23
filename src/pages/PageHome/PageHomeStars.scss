@@ -1,4 +1,11 @@
-// Idea from  https://codepen.io/saransh/pen/BKJun
+///*  *** ** **  *\\\
+/// STARFIELD SCSS \\\
+/// *   * *     * * \\\
+
+// Saransh - Original codepen
+// |- https://codepen.io/saransh/pen/BKJun
+// Sakiskid - Updated to include config and fit most viewports
+// |- https://www.github.com/Sakiskid
 
 /// CONFIGURATION ///
 
@@ -35,6 +42,8 @@ $size-large: 4px;
     left: 0;
     height: 100vh;
     width: 100vw;
+
+    z-index: -2;
 }
 
 #stars-small {
