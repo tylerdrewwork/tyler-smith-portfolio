@@ -15,13 +15,17 @@
         width: 100%;
         padding: 0.5em 0.5em;
         
-        background-color: gray;
+        background-color: $clr-white;
         color: black;
         
         a {
-            background-color: white;
+            background-color: $clr-white;
             padding: 0.5em 2em;
             border-radius: 10px;
+        }
+
+        a:hover {
+            background-color: $clr-gray;
         }
     }
 

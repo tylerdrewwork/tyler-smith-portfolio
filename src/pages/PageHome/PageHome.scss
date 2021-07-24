@@ -1,6 +1,8 @@
 @import 'style/responsive', 'style/colors', 'style/fonts';
 
 section {
+    position: relative;
+    z-index: 5;
     margin: auto;   
     text-align: center;
 
@@ -51,7 +53,8 @@ section {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#6977bd",GradientType=1);
     
     border-radius: 10px 10px 0px 0px;
-    z-index: -1;
+    z-index: 3;
+    pointer-events: none;
 
     &:after {
         content: '';

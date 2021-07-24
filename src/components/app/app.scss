@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    // pointer-events: none;
 }
 
 main {
@@ -13,12 +14,11 @@ main {
     background: linear-gradient(181deg, rgba(0,0,0,1) 0%, rgba(0,2,36,1) 27%, rgba(0,2,36,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#8894d2",GradientType=1);
     min-height: 100vh;
+    // pointer-events: none;
 
     #page-container {        
         margin: auto;
         height: 100%;
         @include bp-all;
     }
-
-    z-index: -3;
 }

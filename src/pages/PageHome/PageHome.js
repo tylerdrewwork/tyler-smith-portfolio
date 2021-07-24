@@ -12,13 +12,6 @@ import './PageHomeStars.scss';
 function Home () {
     return (
         <>
-        <div id="stars-container">
-            {/* Configure the starfield on PageHomeStars.scss */}
-            <div id="stars-small"></div>
-            <div id="stars-medium"></div>
-            <div id="stars-large"></div>
-        </div>
-        <div id="earth-container"></div>
 
         <section>
             <div id="landing-intro">
@@ -28,6 +21,16 @@ function Home () {
 
             <SectionBrowser sections={sections}/>
         </section>
+
+        {/* STARFIELD */}
+        <div id="stars-container">
+            {/* Configure the starfield on PageHomeStars.scss */}
+            <div id="stars-small"></div>
+            <div id="stars-medium"></div>
+            <div id="stars-large"></div>
+        </div>
+        <div id="earth-container"></div>
+
         </>
     )
 }
