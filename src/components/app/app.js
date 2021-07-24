@@ -12,8 +12,6 @@ import './mainfx.scss';
 import PageHome from '../../pages/PageHome/PageHome';
 
 function App() {
-
-
   return (
     <Router>
       <main>

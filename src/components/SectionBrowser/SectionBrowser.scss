@@ -51,8 +51,16 @@ $ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
 
     // The sections themselves
     .sectionbrowser-content-section {
-        padding: 20px 0 10px 0;
-        padding: 300px 0 200px 0; // TODO THIS IS PURELY FOR DEBUG GET RID OF THIS
+        padding: 20px 10% 10px 10%;
+        padding: 300px 10% 200px 10%; // TODO THIS IS PURELY FOR DEBUG GET RID OF THIS
+
+        h2 {
+            @include font-lato;
+        }
+
+        p {
+            @include font-sourcesans;
+        }
     }
 
     // The HR between each content
@@ -63,7 +71,7 @@ $ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
 
     // The colorful HR
     h2 hr {
-        margin: 1rem 35%;
+        margin: 1.5rem 43%;
         border-top: 0;
         height: 2px;
         border-radius: 50px;
