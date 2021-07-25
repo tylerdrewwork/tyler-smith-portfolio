@@ -13,9 +13,11 @@ footer {
     grid-template-areas:
         "more contact"; 
         
-    height: 250px;
+    min-height: 250px;
+    height: 25vh;
     width: 100%;
-    padding: 45px 0;
+    margin-top: 4vh;
+    padding: 0 5%;
 
     color: $clr-white;
     // align-items: center;

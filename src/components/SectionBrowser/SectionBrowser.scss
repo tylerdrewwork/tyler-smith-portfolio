@@ -58,8 +58,10 @@ $ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
 
     // The sections themselves
     .sectionbrowser-content-section {
-        padding: 20px 10% 10px 10%;
-        padding: 300px 10% 200px 10%; // TODO THIS IS PURELY FOR DEBUG GET RID OF THIS
+
+        // padding: 40px 10% 40px 10%;
+        padding: 5vh 10% 5vh 10%;
+        // padding: 300px 10% 200px 10%; // TODO THIS IS PURELY FOR DEBUG GET RID OF THIS
 
         h2 {
             @include font-lato;

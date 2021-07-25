@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import Project from 'components/Project/Project';
-import React from 'react';
+import ProjectsGallery from 'components/ProjectsGallery/ProjectsGallery';
 import projectdata from 'data/projectdata';
+import React from 'react';
 
 function WebProjects () {
     return (
@@ -15,8 +16,10 @@ function WebProjects () {
                 Projects in both Game and Web Development that I'm proud of.
             </p>
 
-            <Project project={projectdata.offYourChest}/>
-            <Project project={projectdata.elt}/>
+            <ProjectsGallery>
+                <Project project={projectdata.offYourChest}/>
+                <Project project={projectdata.elt}/>
+            </ProjectsGallery>
         </div>
     )
 }

@@ -17,7 +17,9 @@ function SectionBrowser (props) {
         <div className="sectionbrowser" sections={props.sections}>
 
             {/* Navigation Header */}
-            <Scrollspy className={"sectionbrowser-header fancy-shadow"} items={GetItemsForScrollspy(props.sections)} currentClassName="current">
+            <Scrollspy className={"sectionbrowser-header"} 
+            items={GetItemsForScrollspy(props.sections)} 
+            currentClassName="current">
                 {RenderSectionHeader(props.sections)}
             </Scrollspy>
 
