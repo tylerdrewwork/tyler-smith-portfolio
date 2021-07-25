@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import SectionBrowser from 'components/SectionBrowser/SectionBrowser';
+import Footer from 'components/Footer/Footer';
 import FeaturedProjects from './Sections/FeaturedProjects';
 import AboutMe from './Sections/AboutMe';
 import WebProjects from './Sections/WebProjects';
@@ -21,6 +22,8 @@ function Home () {
 
             <SectionBrowser sections={sections}/>
         </section>
+
+        <Footer />
 
         {/* STARFIELD */}
         <div id="stars-container">

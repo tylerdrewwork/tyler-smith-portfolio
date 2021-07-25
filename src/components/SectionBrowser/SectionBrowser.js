@@ -1,52 +1,45 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import Scrollspy from 'react-scrollspy';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "./SectionBrowser.scss";
 
-let isHeaderPinned = false;
-
 function SectionBrowser (props) {
     gsap.registerPlugin(ScrollTrigger);
-    StartScrollPinTrigger();
+    
+    // Trigger only once
+    useEffect(() => {
+        StartScrollPinTrigger();
+    }, []);
 
     return (
         <div className="sectionbrowser" sections={props.sections}>
 
             {/* Navigation Header */}
-            <Scrollspy className={"sectionbrowser-header"} items={GetItemsForScrollspy(props.sections)} currentClassName="current">
+            <Scrollspy className={"sectionbrowser-header fancy-shadow"} items={GetItemsForScrollspy(props.sections)} currentClassName="current">
                 {RenderSectionHeader(props.sections)}
-                {isHeaderPinned == true && <h1>PINNED!!!</h1>}
             </Scrollspy>
 
             {/* Navigation Content */}
-            <div className="sectionbrowser-content">
+            <div className="sectionbrowser-content fancy-shadow">
                 {RenderSections(props.sections)}
             </div>
 
         </div>
     );
+
+    function StartScrollPinTrigger () {
+        ScrollTrigger.create({
+            // markers: true,
+            trigger: ".sectionbrowser",
+            start: "top top",
+            end: "bottom top",
+            toggleClass: "pinned",
+        })
+    }
 }
 
-function StartScrollPinTrigger () {
-    ScrollTrigger.create({
-        trigger: "#sectionbrowser-header",
-        start: "top top",
-        onEnter: UpdatePinnedClass(true),
-        onEnterBack: (() => isHeaderPinned = false),
-    })
-}
-
-
-
-function UpdatePinnedClass (isPinned) {
-    isHeaderPinned = isPinned;
-}
-
-function RemovePinnedClassFromHeader () {
-
-}
 
 function RenderSectionHeader (sections) {
     return sections.map(section => {

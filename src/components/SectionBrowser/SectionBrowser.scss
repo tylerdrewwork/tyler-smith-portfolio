@@ -3,8 +3,6 @@
 $ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
 
 .sectionbrowser {
-    background-color: white;
-    // color: $clr-black;   
 
     .sectionbrowser-header {
         position: sticky;
@@ -15,10 +13,16 @@ $ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
         justify-content: space-around;
 
         width: 100%;
-        padding: 1em 0.5em;
+        // height: 5em;
+        padding: 1.5em 0.5em;
+        margin: 0;
         
         background-color: $clr-white;
         color: black;
+        border-radius: 10px 10px 0 0;
+
+        transition: font-size 0.5s;
+        transition: padding 0.5s;
         
         // The list elements in the header (each of the sections in the header)
         li {
@@ -28,10 +32,13 @@ $ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
             a {
                 color: black;
                 background-color: transparent;
-                padding: 0.5em 2em;
+                padding: 0.5em 1.0em;
                 border-radius: 10px;
 
+                @include responsive-static(font-size, 8, 30);
+
                 transition: background-color 0.2s $ease-out-cubic;
+                transition: font-size 0.4s $ease-out-cubic;
             }
 
             // Hover over a button
@@ -81,5 +88,30 @@ $ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
         background: -webkit-linear-gradient(90deg, rgba(142,55,166,1) 0%, rgba(202,41,41,1) 51%, rgba(253,29,235,1) 88%, rgba(250,253,29,1) 100%);
         background: linear-gradient(90deg, rgba(142,55,166,1) 0%, rgba(202,41,41,1) 51%, rgba(253,29,235,1) 88%, rgba(250,253,29,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8e37a6",endColorstr="#fafd1d",GradientType=1);
+    }
+}
+
+// Everything under the header
+.sectionbrowser-content {
+    background-color: white;
+}
+
+//  The Section Browser while pinned to
+.sectionbrowser.pinned {
+    .sectionbrowser-header {
+        // padding: 1.5em 0.4em;
+        // height: 5em;
+
+        li {
+
+            a {
+                @include responsive-static(font-size, 8, 20);
+            }
+
+            &.current a {
+                @include responsive-static(font-size, 8, 30);
+            }
+            
+        }
     }
 }

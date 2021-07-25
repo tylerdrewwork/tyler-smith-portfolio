@@ -1,7 +1,15 @@
 @import 'style';
+$border-img: "/images/border/fancy-border.png";
+
+// Global Styling Found Below
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     // pointer-events: none;
 }
 
@@ -21,4 +29,17 @@ main {
         height: 100%;
         @include bp-all;
     }
+}
+
+// Global Styling
+
+.fancy-border {
+    border: 5px solid black;
+    border-image-source: url($border-img);
+    border-image-slice: 3;
+    border-image-outset: 1;
+}
+
+.fancy-shadow {
+    box-shadow: black 0px 0px 10px;
 }
