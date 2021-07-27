@@ -20,17 +20,68 @@ footer {
     padding: 0 5%;
 
     color: $clr-white;
-    // align-items: center;
-    // text-align: center;
-    
-    // background-color: $clr-white;
+
+    hr {
+        border: 0;
+        background: rgb(223,152,222);
+        background: -moz-linear-gradient(90deg, rgba(223,152,222,1) 0%, rgba(255,255,255,0) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(223,152,222,1) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(90deg, rgba(223,152,222,1) 0%, rgba(255,255,255,0) 100%);
+        height: 1px;
+        margin: 0px 50% 10px 0px;
+    }
     
 }
 
+// Font sizing for the footer and font families
+#footer-contact, #footer-more {
+    h2 {
+        @include responsive-static(font-size, 20, 25);
+        @include font-lato;
+        font-weight: 500;
+        letter-spacing: 4px;
+    }
+
+    h3 {
+        @include responsive-static(font-size, 10, 18);
+        @include font-lato;
+        margin: 8% 0;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: $clr-base-500;
+        align-self: center;
+    }
+
+    p, a {
+        @include responsive-static(font-size, 8, 14);
+        @include font-lato;
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: $clr-base-500;
+        align-self: center;
+    }
+}
+
+// Contact specific
 #footer-contact {
     grid-area: contact;
+
+    #contact-body {
+        display: grid;
+        grid-template-columns: [h3] 1fr [link] 2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        h3 {
+            grid-column: h3;
+        }
+
+        a {
+            grid-column: link;
+        }
+    }
 }
 
+// More specific
 #footer-more {
     grid-area: more;
 }

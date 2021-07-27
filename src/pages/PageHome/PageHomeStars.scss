@@ -7,6 +7,8 @@
 // Sakiskid - Updated to include config and fit most viewports
 // |- https://www.github.com/Sakiskid
 
+@use "sass:color";
+
 /// CONFIGURATION ///
 
 // Number of stars
@@ -24,12 +26,17 @@ $size-small: 1px;
 $size-medium: 2px;
 $size-large: 4px;
 
+// Colors of stars
+$stars-clr-primary: #fd78e0;
+$stars-clr-saturation: 0%;
+
 ///
+$color: color.scale($stars-clr-primary, $saturation: $stars-clr-saturation);
 
 @function multiple-box-shadow($n) {
-    $value: '#{random(100)}vw #{random(200)}vh #FFFFFF';
+    $value: '#{random(100)}vw #{random(200)}vh #{$stars-clr-primary}';
     @for $i from 2 through $n {
-      $value: '#{$value} , #{random(100)}vw #{random(200)}vh #FFFFFF';
+      $value: '#{$value} , #{random(100)}vw #{random(200)}vh #{$stars-clr-primary}';
     }
   
     @return unquote($value);

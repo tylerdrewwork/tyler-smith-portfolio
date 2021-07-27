@@ -19,6 +19,11 @@ function WebProjects () {
             <ProjectsGallery>
                 <Project project={projectdata.offYourChest}/>
                 <Project project={projectdata.elt}/>
+                <Project project={projectdata.owld}/>
+                <Project project={projectdata.surveasy}/>
+                <Project project={projectdata.teamPayrollManager}/>
+                <Project project={projectdata.bigPicture}/>
+                <Project project={projectdata.weatherDashboard}/>
             </ProjectsGallery>
         </div>
     )
