@@ -8,6 +8,7 @@
 // |- https://www.github.com/Sakiskid
 
 @use "sass:color";
+@use "sass:math";
 
 /// CONFIGURATION ///
 
@@ -28,17 +29,36 @@ $size-large: 4px;
 
 // Colors of stars
 $stars-clr-primary: #fd78e0;
-$stars-clr-saturation: 0%;
-
-///
-$color: color.scale($stars-clr-primary, $saturation: $stars-clr-saturation);
+$stars-clr-saturation: 0;
+$stars-clr-lightness: 0;
+$stars-clr-alpha: 0;
 
 @function multiple-box-shadow($n) {
-    $value: '#{random(100)}vw #{random(200)}vh #{$stars-clr-primary}';
+    $color: color.scale(
+        $stars-clr-primary, 
+        $saturation: 100%,
+        $lightness: 100%,
+        $alpha: 100%);
+    $cur-saturation-mod: math.percentage(math.random($limit: null) * $stars-clr-saturation);
+    $cur-lightness-mod: math.percentage(math.random($limit: null) * $stars-clr-lightness);
+    $cur-alpha-mod: math.percentage(math.random($limit: null) * $stars-clr-alpha);
+    $value: '#{random(100)}vw #{random(200)}vh #{$color}';
+    
+
     @for $i from 2 through $n {
-      $value: '#{$value} , #{random(100)}vw #{random(200)}vh #{$stars-clr-primary}';
+        $cur-saturation-mod: math.percentage(math.random($limit: null) * $stars-clr-saturation);
+        $cur-lightness-mod: math.percentage(math.random($limit: null) * $stars-clr-lightness);
+        $cur-alpha-mod: math.percentage(math.random($limit: null) * $stars-clr-alpha);
+        
+
+        $color: color.scale(
+            $stars-clr-primary, 
+            $saturation: $cur-saturation-mod,
+            $lightness: $cur-lightness-mod,
+            $alpha: 100%);
+        $value: '#{$value} , #{random(100)}vw #{random(200)}vh #{$color}';
     }
-  
+
     @return unquote($value);
 }
   
