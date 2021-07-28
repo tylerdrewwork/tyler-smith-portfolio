@@ -4,15 +4,16 @@ import { Accordion } from 'react-bootstrap';
 import "./ProjectsGallery.scss";
 
 function ProjectsGallery (props) {
-    console.log("children: ", props.children);
+    // console.log("children: ", props.children);
     return (
         <>
             <div className="project-gallery">
-                {MapProjectsIntoAccordionJSX}
+                {props.children}
             </div>
         </>
     );
 
+    // eslint-disable-next-line no-unused-vars
     function MapProjectsIntoAccordionJSX () {
         for (let i = 0; i < props.children.length; i++) {
             let project = props.children[i];

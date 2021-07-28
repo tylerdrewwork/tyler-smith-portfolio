@@ -2,12 +2,11 @@
 
 .project {
     display: grid;
-    min-width: 40%;
+    min-width: 240px;
     max-width: 250px;
-    margin: 0;
 
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
     grid-template-areas:
         "image"
         "title"
@@ -17,8 +16,7 @@
 
     border-radius: 100px;
 
-    padding: 1em;
-    margin: 0.5em;
+    padding: 0px 15px 15px 15px;
 }
 
 .project-image-wrapper {
@@ -27,6 +25,7 @@
     grid-area: image;
     grid-template-areas: "inner-div";
     height: 100%;
+    padding: 10px 0px;
     width: 50%;
     margin: 0px;
 
@@ -44,8 +43,13 @@
         max-height: 70%;
         color: red;
     }
+
 }
 
 .project-title {
     @include responsive-static(font-size, 15, 25);
+}
+
+.project-description {
+    align-self: start;
 }

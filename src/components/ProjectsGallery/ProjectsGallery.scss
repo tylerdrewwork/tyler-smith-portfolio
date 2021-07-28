@@ -1,5 +1,16 @@
 @import 'style/fonts', 'style/colors', 'style/responsive';
 
+// This file holds just the positioning and flex properties. Any other project-related things go into Project.scss
+
 .project-gallery {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    
+    .project {
+        flex-basis: 30%;
+        // flex-shrink: 1;
+        // flex-grow: 1;
+    }
 }

@@ -17,6 +17,7 @@ $ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
         width: 100%;
         left: 0;
         content: '';
+        pointer-events: none;
         
         border-radius: 10px 10px 0 0;
         box-shadow: 0px -1vh 50vw 2vw rgba(255, 128, 234, 0.37); 
