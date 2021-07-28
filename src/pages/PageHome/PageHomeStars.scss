@@ -1,16 +1,18 @@
-///*  *** ** **  *\\\
-/// STARFIELD SCSS \\\
-/// *   * *     * * \\\
+  //*******************\\
+ // STARFIELD SCSS V1.0 \\
+//***********************\\
 
 // Saransh - Original codepen
 // |- https://codepen.io/saransh/pen/BKJun
-// Sakiskid - Updated to include config and fit most viewports
+// Sakiskid - Updated to include expansive configuration and fit most viewports
 // |- https://www.github.com/Sakiskid
 
 @use "sass:color";
 @use "sass:math";
 
-/// CONFIGURATION ///
+//////////////////////
+/// CONFIGURATION ////
+//////////////////////
 
 // Number of stars
 $stars-small: 300;
@@ -27,32 +29,37 @@ $size-small: 1px;
 $size-medium: 2px;
 $size-large: 4px;
 
-// Colors of stars
-$stars-clr-primary: #fd78e0;
-$stars-clr-saturation: 0;
-$stars-clr-lightness: 0;
-$stars-clr-alpha: 0;
+// Colors of stars and color mods.
+// Note: Valid mod ranges are -1.0 to 1.0 -- anything else will produce errors.
+$stars-clrs: #cab2ce, #C4DDFF, #FFFFFF; // Colors are randomly chosen from this array!
+$mod-clr-saturation: 0.2; // eg: a value of 0.5 will make saturation 50% closer to maximum saturation without being fully saturated
+$mod-clr-lightness: -0.2;
+$mod-clr-alpha: -0.8;
+
+//
+// End of configuration
+//
 
 @function multiple-box-shadow($n) {
+    $color: nth($stars-clrs, random(length($stars-clrs)));
     $color: color.scale(
-        $stars-clr-primary, 
+        $color, 
         $saturation: 100%,
         $lightness: 100%,
         $alpha: 100%);
-    $cur-saturation-mod: math.percentage(math.random($limit: null) * $stars-clr-saturation);
-    $cur-lightness-mod: math.percentage(math.random($limit: null) * $stars-clr-lightness);
-    $cur-alpha-mod: math.percentage(math.random($limit: null) * $stars-clr-alpha);
+    $cur-saturation-mod: math.percentage(math.random($limit: null) * $mod-clr-saturation);
+    $cur-lightness-mod: math.percentage(math.random($limit: null) * $mod-clr-lightness);
+    $cur-alpha-mod: math.percentage(math.random($limit: null) * $mod-clr-alpha);
     $value: '#{random(100)}vw #{random(200)}vh #{$color}';
-    
 
     @for $i from 2 through $n {
-        $cur-saturation-mod: math.percentage(math.random($limit: null) * $stars-clr-saturation);
-        $cur-lightness-mod: math.percentage(math.random($limit: null) * $stars-clr-lightness);
-        $cur-alpha-mod: math.percentage(math.random($limit: null) * $stars-clr-alpha);
+        $color: nth($stars-clrs, random(length($stars-clrs)));
+        $cur-saturation-mod: math.percentage(math.random($limit: null) * $mod-clr-saturation);
+        $cur-lightness-mod: math.percentage(math.random($limit: null) * $mod-clr-lightness);
+        $cur-alpha-mod: math.percentage(math.random($limit: null) * $mod-clr-alpha);
         
-
         $color: color.scale(
-            $stars-clr-primary, 
+            $color, 
             $saturation: $cur-saturation-mod,
             $lightness: $cur-lightness-mod,
             $alpha: 100%);
