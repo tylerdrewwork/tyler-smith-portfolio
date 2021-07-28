@@ -7,7 +7,7 @@ footer {
     
     // Grid
     display: grid;
-    column-gap: 10%;
+    // column-gap: 10%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
@@ -43,7 +43,7 @@ footer {
     }
 
     h3 {
-        @include responsive-static(font-size, 10, 18);
+        @include responsive-static(font-size, 16, 18);
         @include font-lato;
         margin: 8% 0;
         font-weight: 400;
@@ -53,7 +53,7 @@ footer {
     }
 
     p, a {
-        @include responsive-static(font-size, 8, 14);
+        @include responsive-static(font-size, 12, 14);
         @include font-lato;
         font-weight: 300;
         letter-spacing: 1px;
