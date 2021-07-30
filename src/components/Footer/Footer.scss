@@ -7,7 +7,7 @@ footer {
     
     // Grid
     display: grid;
-    // column-gap: 10%;
+    column-gap: 4%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
@@ -84,4 +84,8 @@ footer {
 // More specific
 #footer-more {
     grid-area: more;
+
+    p {
+        // margin-top: 4% 0;
+    }
 }
