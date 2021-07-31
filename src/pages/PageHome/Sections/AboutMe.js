@@ -3,7 +3,7 @@ import React from 'react';
 
 function AboutMe () {
     return (
-        <div>
+        <div className="browser-padding">
             <h2>
                 About Me
                 <hr/>
