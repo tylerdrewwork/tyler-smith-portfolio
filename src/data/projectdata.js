@@ -57,22 +57,25 @@ const projectdata = {
         "Surveasy",
         "Create and publish surveys online for people to take, then anaylize the results. Planned features include iframe or webgl integration, more administration, and more configuration to include all types of polls.",
         surveasy,
+        "https://surveasy.herokuapp.com/",
     ),
     teamPayrollManager: new Project(
         "Team Payroll Manager",
         "Manage your employees and their salary with this useful CLI application.",
         payroll,
+        "https://github.com/Sakiskid/Team-Payroll-Manager",
     ),
     bigPicture: new Project(
         "Big Picture",
         "Figure out which positions in your field are in demand by stepping back and looking at the Big Picture. This web application scrapes popular job boards for metadata like titles, descriptions, and regions. It then analyzes the results and presents them in a graph for easier visualization.",
         bigpicture,
-
+        "https://github.com/Sakiskid/Big-Picture",
     ),
     weatherDashboard: new Project(
         "Weather Dashboard",
         "One of my first web applications. Add your city and enjoy a beautiful view while taking in local weather information.",
         weatherdashboard,
+        "https://sakiskid.github.io/Weather-Dashboard/",
     ),
 
 }

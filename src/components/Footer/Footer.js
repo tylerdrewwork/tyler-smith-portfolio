@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.scss';
+import resume from '../../data/Tyler Smith - Experienced Full Stack Web Developer Resume.docx';
 
 function Footer () {
     return (
@@ -9,16 +10,16 @@ function Footer () {
                 <hr />
                 <div id="contact-body">
                     <h3>Resume</h3> 
-                    <a href="test">Click to download</a>
+                    <a href={resume}>Click to download</a>
                     
                     <h3>Email</h3> 
-                    <a href="test">tylerdrew.work@gmail.com</a>
+                    <a href="mailto:@tylerdrew.work@gmail.com">tylerdrew.work@gmail.com</a>
                     
                     <h3>LinkedIn</h3> 
-                    <a href="test">linkedin.com/tyler-smith-atx</a>
+                    <a href="https://www.linkedin.com/in/tyler-smith-atx/">linkedin.com/tyler-smith-atx</a>
                     
                     <h3>GitHub</h3> 
-                    <a href="test">github.com/sakiskid</a>
+                    <a href="https://github.com/Sakiskid">github.com/sakiskid</a>
                 </div>
             </div>
             <div id="footer-more">

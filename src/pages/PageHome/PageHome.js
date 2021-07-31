@@ -41,7 +41,7 @@ function Home () {
 let sections = [
     {title: "About Me", component: <AboutMe />},
     {title: "Web Projects", component: <WebProjects />},
-    {title: "Game Dev Projects", component: <GameProjects />},
+    {title: "Unity C# Projects", component: <GameProjects />},
 ]
 
 export default Home;
