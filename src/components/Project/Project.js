@@ -5,7 +5,7 @@ import projectOutline from '../../images/projects/project_container_svg.svg';
 function Project (props) {
     return (
         <div className="project">
-            <div className="project-image-wrapper">
+            <div className={"project-image-wrapper " + ShouldBorderImage()}>
                 <img className="project-image-outline" src={projectOutline}></img>
                 <img className="project-image" src={props.project.image}></img>
             </div>
@@ -13,6 +13,15 @@ function Project (props) {
             <div className="project-description">{props.project.description}</div>
         </div>
     )
+
+    function ShouldBorderImage () {
+        if (props.borderimage) {
+            return "border-image";
+        }
+        else {
+            return;
+        }
+    }
 }
 
 export default Project;

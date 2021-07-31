@@ -3,8 +3,8 @@
 import React from 'react';
 import SectionBrowser from 'components/SectionBrowser/SectionBrowser';
 import Footer from 'components/Footer/Footer';
-import FeaturedProjects from './Sections/FeaturedProjects';
 import AboutMe from './Sections/AboutMe';
+import GameProjects from './Sections/GameProjects';
 import WebProjects from './Sections/WebProjects';
 
 import './PageHome.scss';
@@ -40,8 +40,8 @@ function Home () {
 
 let sections = [
     {title: "About Me", component: <AboutMe />},
-    {title: "Featured Projects", component: <FeaturedProjects />},
     {title: "Web Projects", component: <WebProjects />},
+    {title: "Game Dev Projects", component: <GameProjects />},
 ]
 
 export default Home;
