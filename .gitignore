@@ -24,3 +24,5 @@ yarn-error.log*
 
 # custom
 instructions.md
+# Local Netlify folder
+.netlify

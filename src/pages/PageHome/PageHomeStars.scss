@@ -15,26 +15,26 @@
 //////////////////////
 
 // Number of stars
-$stars-small: 300;
-$stars-medium: 100;
-$stars-large: 40;
+$stars-small: 300; // Default 300
+$stars-medium: 100; // Default 100
+$stars-large: 40; // Default 40
 
 // Animation Length
-$duration-small: 400s;
-$duration-medium: 280s;
-$duration-large: 120s;
+$duration-small: 400s; // Default 400s
+$duration-medium: 280s; // Default 280s
+$duration-large: 120s; // Default 120s
 
 // Size of stars
-$size-small: 1px;
-$size-medium: 2px;
-$size-large: 4px;
+$size-small: 1px; // Default 1px
+$size-medium: 2px; // Default 2px
+$size-large: 4px; // Default 3px
 
 // Colors of stars and color mods.
 // Note: Valid mod ranges are -1.0 to 1.0 -- anything else will produce errors.
 $stars-clrs: #cab2ce, #C4DDFF, #FFFFFF; // Colors are randomly chosen from this array!
-$mod-clr-saturation: 0.2; // eg: a value of 0.5 will make saturation 50% closer to maximum saturation without being fully saturated
-$mod-clr-lightness: -0.2;
-$mod-clr-alpha: -0.8;
+$mod-clr-saturation: 0.2; // Default 0.2
+$mod-clr-lightness: -0.2; // Default -0.2
+$mod-clr-alpha: -0.8; // Default -0.8 (this means it can be anywhere from 0% to 80% closer to fully transparent)
 
 //
 // End of configuration
