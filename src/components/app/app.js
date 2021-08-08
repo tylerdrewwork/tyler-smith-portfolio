@@ -13,7 +13,7 @@ import './mainfx.scss';
 import PageHome from '../../pages/PageHome/PageHome';
 
 // =========== CONFIGURATION =========== // 
-const possibleTitleSuffixes = ['MERN Superstar', "REACT Superstar", "SASS Superstar", "😍", "Hire me!", "Why yes this is my portfolio 😏", "Use Coding Design Patterns!", "Download the starfield scss!", "Currently developing a game!"];
+const possibleTitleSuffixes = ['MERN Superstar', "REACT Superstar", "SASS Superstar", "😍", "Hire me!", "Why yes this is my portfolio 😏", "Use Coding Design Patterns!", "Download the starfield scss!", "Currently developing a game!", "Hot Singletons In Your Area"];
 const timerInterval = 5000;
 
 function App() {
